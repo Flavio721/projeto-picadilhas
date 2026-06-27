@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Sansterdam';
+  src: url("../fonts/sansterdam-font/Sansterdam\ Med\ Cond.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    font-family: 'Sansterdam', sans-serif;
+    display: flex;
+    justify-content: space-between;
+
+    .title-nav{
+        color: red;
+        font-weight: 100;
+        font-size: 46px;
+        margin-left: 15px;
+    }
+    .nav-right{
+        gap: 10px;
+
+        a{
+            color: red;
+            font-size: 30px;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: .5s;
+        }
+
+        a:hover{
+            color: rgb(176, 4, 4);
+            text-decoration: underline;
+        }
+    }
+}
+
+.main-article{
+    background-image: url('../assets/bg-main.jpg');
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+
+    .image-main{
+        height: 150px;
+    }
+}
