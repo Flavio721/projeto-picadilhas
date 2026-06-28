@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="../style/style.css">
-    <!-- Fonte de titulo -->
     <title>Picadilhas</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
         </div>
         <div class="nav-right">
             <a href="#">Home</a>
-            <a href="#">Sobre</a>
+            <a href="#sobre">Sobre</a>
             <a href="#">Uniforme</a>
             <a href="#">Apoie o time</a>
             <a href="#">Faça parte</a>
@@ -23,14 +23,120 @@
         </div>
     </nav>    
     <main>
-        <article class="main-article">
+        <article class="main-article" id="home">
             <div class="box-image">
                 <img src="../assets/img-snoopey.png" class="image-main" alt="">
             </div>
+            <div class="overlay"></div>
         </article>
-        <section class="sect-about" id="about"></section>
+        <section class="sect-carrosel" id="about">
+            <h1>Picadilhas ©</h1>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide carrousel-about-us">
+                        <a href="#sobre">
+                            <h2 class="text-top">QUEM</h2>
+                            <img src="../assets/ft-carrosel-3.webp" alt="">
+                            <h2 class="text-bottom">NÓS SOMOS?</h2>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide carrousel-uniforme">
+                        <a href="#uniforme">
+                            <img src="../assets/ft-carrosel-4.jpg" alt="">
+                            <h2 class="text-center">UNIFORME.</h2>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide carrousel-support-us">
+                        <a href="#apoie">
+                            <h2 class="text-center-left">APOIE O TIME.</h2>
+                            <img src="../assets/ft-carrosel.webp" alt="">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide carrousel-join-us">
+                        <a href="#faca-parte">
+                            <img src="../assets/ft-carrosel-2.webp" alt="">
+                            <h2 class="text-bottom">FAÇA PARTE.</h2>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide carrousel-contact">
+                        <a href="#contato">
+                            <img src="../assets/ft-carrosel-5.jpg" alt="">
+                            <h2 class="text-center-right">CONTATO.</h2>
+                        </a>
+                    </div>
+
+                    <!-- Clones -->
+                     <div class="swiper-slide carrousel-about-us">
+                        <a href="#sobre">
+                            <h2 class="text-top">QUEM</h2>
+                            <img src="../assets/ft-carrosel-3.webp" alt="">
+                            <h2 class="text-bottom">NÓS SOMOS?</h2>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide carrousel-uniforme">
+                        <a href="#uniforme">
+                            <img src="../assets/ft-carrosel-4.jpg" alt="">
+                            <h2 class="text-center">UNIFORME.</h2>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide carrousel-support-us">
+                        <a href="#apoie">
+                            <h2 class="text-center-left">APOIE O TIME.</h2>
+                            <img src="../assets/ft-carrosel.webp" alt="">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide carrousel-join-us">
+                        <a href="#faca-parte">
+                            <img src="../assets/ft-carrosel-2.webp" alt="">
+                            <h2 class="text-bottom">FAÇA PARTE.</h2>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide carrousel-contact">
+                        <a href="#contato">
+                            <img src="../assets/ft-carrosel-5.jpg" alt="">
+                            <h2 class="text-center-right">CONTATO.</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h2 class="final-text-carrosel">*( Picadilhas © - Is not just a team, is a mindset )</h2>
+        </section>
+        <article id="sobre" class="art-about-us">
+            <div class="overlay-about"></div>
+            <div class="left">
+                <h2>Picadilhas © - Quem nós somos?</h2>
+                <div class="main-about-us-text">
+                    <h1 class="text-about-us">Quem</h1>
+                    <div class="second-line">
+                        <h1 class="text-about-us">nós*</h1>
+                        <div class="image-about-us">
+                            <h1 class="text-about-us">(</h1>
+                            <img src="../assets/foto-text-about-us.png" alt="">
+                            <h1 class="text-about-us">)</h1>
+                        </div>
+                        <h1 class="text-about-us">somos?</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="../assets/ft-about-us.webp" alt="">
+                <a href="#home" class="navbar-link">Home</a>
+            </div>
+        </article>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../script/index.js"></script>
 </body>
 </html>
