@@ -80,7 +80,7 @@ nav{
     z-index: 2;
     background: white;
     overflow: hidden;
-
+    height: 90vh;
     h1{
         color: red;
         font-family: 'Sansterdam', sans-serif;
@@ -350,4 +350,110 @@ nav{
     background: linear-gradient(to bottom, transparent);
     pointer-events: none;
     z-index: 1;
+}
+
+.capitaes{
+    position: relative;
+    height: 120vh;
+    z-index: 3;
+    background-color: #1a1a1a;
+    background-image: 
+        radial-gradient(ellipse 40% 40% at 10% 0%, rgba(210, 195, 160, 0.6) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 90% 0%, rgba(210, 195, 160, 0.6) 0%, transparent 70%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .navbar-art{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+
+        h2, a{
+            color: red;
+            text-decoration: none;
+            font-family: 'Sansterdam', sans-serif;
+            font-weight: 100;
+            font-size: 37px;
+            transition: .5s;
+        }
+        a:hover{
+            color: rgb(176, 4, 4);
+            text-decoration: underline;
+        }
+    }
+
+    .main-captains-text{
+        text-align: center;
+        color: red;
+        text-decoration: none;
+        font-family: 'Sansterdam', sans-serif;
+        font-weight: 100;
+        font-size: 139px;
+    }
+
+    .modalities{
+        width: 100%;
+        display: flex;
+        margin-top: 100px;
+        justify-content: space-around;
+
+        .modalitie{
+            color: red;
+            font-size: 107px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+    }
+
+    .image-captains {
+        position: relative;
+        background-image: url(../assets/ft-capitaes.jpg);
+        background-size: cover;
+        background-position: center;
+        flex: 1;
+        width: 100%;
+    }
+
+    .modalitie-volei {
+        position: absolute;
+        top: 8px; 
+        left: 50%; 
+        transform: translateX(-50%);
+        color: red;
+        font-size: 100px;
+    }
+}
+.all-captains{
+    position: relative;
+    height: 80vh;
+    background-color: #fcf4e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.box-captains{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    .items{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: red;
+
+        img{
+            height: 350px;
+        }
+
+        h2, p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+    }
 }

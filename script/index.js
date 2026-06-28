@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "none",
         scrollTrigger: {
             trigger: ".art-about-us",
-            start: "top 80px",
+            start: "top center",
             end: "top top",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none reverse",
         }
     });
 
