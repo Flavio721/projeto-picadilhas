@@ -25,6 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    gsap.utils.toArray('.player, .items, .main-teams-text, .main-captains-text, .modalitie, .swiper-slide, .title-carrosel, .text-about-us, .modalitie-volei').forEach(el => {
+    gsap.from(el, {
+        opacity: 0,
+        y: 50,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+        }
+    });
+});
+
     const swiper = new Swiper('.swiper', {
         loop: true,
         slidesPerView: 'auto',
