@@ -13,6 +13,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    ScrollTrigger.create({
+        trigger: ".art-about-us",
+        start: "top center",
+        onEnter: () => document.querySelector('.home-fixo').style.display = 'block',
+        onLeaveBack: () => document.querySelector('.home-fixo').style.display = 'none'
+    });
+
+    const overlay = document.querySelector('.scroll-overlay');
+    let scrollTimer;
+
+    window.addEventListener('scroll', () => {
+        overlay.style.opacity = '1';
+        
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+            overlay.style.opacity = '0';
+        }, 800); // some 800ms depois que o usuário parar de scrollar
+    });
 
     gsap.to(".navbar", {
         opacity: 0,
