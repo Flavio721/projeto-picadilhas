@@ -1,0 +1,2 @@
+Criar sessão de exibição do uniforme conforme design do chat gpt
+No botão de ver modelos coloque ver modelo white e que faça uma transição partindo da esquerda para direita deixando o fundo branco e textos, que eram brancos, pretos

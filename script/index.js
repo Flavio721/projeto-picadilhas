@@ -55,6 +55,19 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleActions: "play none none reverse"
         }
     });
+
+    gsap.to(".uniforme-3d", {
+        y: -500,
+        scale: .75,
+        ease: "none",
+
+        scrollTrigger:{
+            trigger: ".sect-uniforme",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true
+        }
+    });
 });
 
     const swiper = new Swiper('.swiper', {
