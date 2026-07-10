@@ -89,7 +89,7 @@ nav{
 
 .main-article {
     height: 100vh;
-    position: sticky;
+    position: relative;
     top: 0;
     background-image: url('../assets/bg-main.jpg');
     background-size: cover;
@@ -716,39 +716,638 @@ nav{
         transform: translate(40%, 90%);
     }
 }
-.about-uniforme{
+
+.about-uniforme {
     position: relative;
-    height: 85vh;
-    background-color: var(--color-black);
+    width: 100%;
+    height: 106dvh;
+    min-height: 900px;
+    overflow: hidden;
+    background-color: #0a0a0a;
+}
+
+/* ========== SLIDES ========== */
+.about-uniforme .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 40px 4% 60px 4%;
+    opacity: 0;
+    clip-path: circle(0% at 89% 50%);
+    transition: clip-path 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 1;
+}
 
-    .main-title{
-        color: var(--color-red);
-        font-size: 5em;
-        font-weight: 550;
-        text-align: center;
-        transform: translateY(-110%);
+.about-uniforme .slide.dark {
+    background-color: #0a0a0a;
+}
+
+.about-uniforme .slide:not(.dark) {
+    background-color: #FCF4E5;
+}
+
+.about-uniforme .slide.active {
+    opacity: 1;
+    clip-path: circle(150% at 89% 50%);
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.about-uniforme .slide:first-child {
+    opacity: 1;
+    clip-path: circle(150% at 89% 50%);
+    pointer-events: auto;
+    z-index: 1;
+}
+
+/* ========== TÍTULOS ========== */
+.about-uniforme .slide .container-titles {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+
+.about-uniforme .slide .container-titles .main-subtitle {
+    font-family: 'Sansterdam', sans-serif;
+    font-weight: 500;
+    font-size: 5.2em;
+    text-align: center;
+    margin: 0;
+    line-height: 1.3;
+    letter-spacing: 3px;
+}
+
+.about-uniforme .slide .container-titles .red {
+    color: #E52C0D !important;
+    font-size: 3.8em;
+}
+
+.about-uniforme .slide .main-title {
+    display: none;
+}
+
+/* Cores dos textos */
+.about-uniforme .slide.dark .change {
+    color: #FCF4E5;
+}
+
+.about-uniforme .slide.dark .red {
+    color: #E52C0D !important;
+}
+
+.about-uniforme .slide:not(.dark) .change {
+    color: #1D1C1C;
+}
+
+.about-uniforme .slide:not(.dark) .red {
+    color: #E52C0D !important;
+}
+
+/* ========== CONTAINER PRINCIPAL ========== */
+.about-uniforme .slide .main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 0;
+    position: relative;
+    flex: 1;
+    min-height: 500px;
+    margin-left: 20px;
+}
+
+/* ========== ITEMS LATERAIS ========== */
+.about-uniforme .slide .items-left,
+.about-uniforme .slide .items-right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex: 0 0 380px;
+    max-width: 380px;
+    z-index: 5;
+    position: relative;
+}
+
+/* ========== ITEM INDIVIDUAL ========== */
+.about-uniforme .slide .item {
+    border: 2px solid #E52C0D;
+    border-radius: 16px;
+    padding: 22px 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(229, 44, 13, 0.05);
+    transition: all 0.3s ease;
+    min-height: 120px;
+    height: 200px;
+    width: 100%;
+    backdrop-filter: blur(2px);
+}
+
+.about-uniforme .slide.dark .item {
+    background: rgba(229, 44, 13, 0.08);
+    border-color: #E52C0D;
+}
+
+.about-uniforme .slide:not(.dark) .item {
+    background: rgba(229, 44, 13, 0.05);
+    border-color: #E52C0D;
+}
+
+.about-uniforme .slide .item:hover {
+    transform: translateX(8px) scale(1.02);
+    background: rgba(229, 44, 13, 0.15);
+    box-shadow: 0 4px 30px rgba(229, 44, 13, 0.15);
+}
+
+.about-uniforme .slide .items-right .item:hover {
+    transform: translateX(-8px) scale(1.02);
+}
+
+.about-uniforme .slide .item .icon {
+    flex-shrink: 0;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-uniforme .slide .item .icon span,
+.about-uniforme .slide .item .icon i {
+    font-size: 100px;
+    color: #E52C0D;
+}
+
+.about-uniforme .slide .item .text {
+    flex: 1;
+    text-align: center;
+}
+
+.about-uniforme .slide .item .text .title-card {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.about-uniforme .slide .item .text .subtitle-card {
+    font-size: 1.2em;
+    margin: 0;
+    opacity: 0.85;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.4;
+}
+
+/* ========== IMAGEM CENTRAL - DESTAQUE ========== */
+.about-uniforme .slide .item-center {
+    background:
+        radial-gradient(circle,
+        rgba(255,40,40,.12) 0%,
+        transparent 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 0 20px;
+    position: relative;
+    z-index: 3;
+    min-height: 500px;
+}
+
+.about-uniforme .slide .item-center img {
+    height: 450px;
+    max-height: 80vh;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.5));
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 3;
+}
+
+/* Efeito de brilho atrás da camisa */
+.about-uniforme .slide .item-center::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(ellipse at center, rgba(229, 44, 13, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+.about-uniforme .slide:not(.dark) .item-center::before {
+    background: radial-gradient(ellipse at center, rgba(229, 44, 13, 0.10) 0%, transparent 70%);
+}
+
+.about-uniforme .slide .item-center img:hover {
+    transform: scale(1.04) rotate(-2deg);
+}
+
+/* ========== ANIMAÇÃO DO BRILHO ========== */
+@keyframes glowPulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* ========== BOTTOM CONTAINER ========== */
+.about-uniforme .slide .bottom-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 10;
+    position: relative;
+}
+
+.about-uniforme .slide .bottom-container .items-bottom {
+    border: 1.5px solid #E52C0D;
+    border-radius: 12px;
+    padding: 12px 24px;
+    background: rgba(229, 44, 13, 0.05);
+    transition: all 0.3s ease;
+}
+
+.about-uniforme .slide.dark .bottom-container .items-bottom {
+    background: rgba(229, 44, 13, 0.08);
+}
+
+.about-uniforme .slide .bottom-container .items-bottom:hover {
+    background: rgba(229, 44, 13, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(229, 44, 13, 0.15);
+}
+
+.about-uniforme .slide .bottom-container .items-bottom h2 {
+    font-size: 1rem;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-weight: 500;
+}
+
+.about-uniforme .slide .bottom-container .items-bottom h2::before {
+    content: "→ ";
+    color: #E52C0D;
+    font-weight: bold;
+}
+
+/* ============================================
+   BOTÃO
+   ============================================ */
+
+.about-uniforme .slide .botao-slide {
+    position: relative;
+    z-index: 100;
+    margin-top: 30px;
+    padding: 16px 50px;
+    font-size: 1.1rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border-radius: 50px;
+    border: 2.5px solid;
+    background: transparent;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    text-transform: uppercase;
+}
+
+.about-uniforme .slide.dark .botao-slide {
+    color: #FCF4E5;
+    border-color: #FCF4E5;
+    background: transparent;
+}
+
+.about-uniforme .slide.dark .botao-slide:hover {
+    background: #FCF4E5;
+    color: #0a0a0a;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(252, 244, 229, 0.15);
+}
+
+.about-uniforme .slide:not(.dark) .botao-slide {
+    color: #1D1C1C;
+    border-color: #1D1C1C;
+    background: transparent;
+}
+
+.about-uniforme .slide:not(.dark) .botao-slide:hover {
+    background: #1D1C1C;
+    color: #FCF4E5;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(29, 28, 28, 0.15);
+}
+
+.about-uniforme .slide.active .botao-slide {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+/* Telas grandes */
+@media (min-width: 1600px) {
+    .about-uniforme .slide .items-left,
+    .about-uniforme .slide .items-right {
+        flex: 0 0 450px;
+        max-width: 450px;
     }
-    .main-subtitle{
-        color: var(--color-red);
-        font-size: 3em;
-        font-weight: 550;
-        text-align: center;
-        transform: translateY(-120%);
+
+    .about-uniforme .slide .item {
+        padding: 28px 32px;
+        min-height: 140px;
     }
 
-    ul{
-        transform: translateX(20%);
-        list-style-type: none;
+    .about-uniforme .slide .item .text .title-card {
+        font-size: 1.5em;
+    }
 
-        li{
-            font-size: 1.5em;
-            color: var(--color-red);
-        }
-        li::marker{
-            content: "— ";
-        }
+    .about-uniforme .slide .item .text .subtitle-card {
+        font-size: 1.1em;
+    }
+
+    .about-uniforme .slide .item-center img {
+        height: 750px;
+    }
+
+    .about-uniforme .slide .container-titles .main-subtitle {
+        font-size: 4.5em;
+    }
+}
+
+/* Desktop */
+@media (max-width: 1400px) {
+    .about-uniforme .slide .items-left,
+    .about-uniforme .slide .items-right {
+        flex: 0 0 340px;
+        max-width: 340px;
+    }
+
+    .about-uniforme .slide .item {
+        padding: 18px 22px;
+        min-height: 105px;
+    }
+
+    .about-uniforme .slide .item .text .title-card {
+        font-size: 1.1em;
+    }
+
+    .about-uniforme .slide .item .text .subtitle-card {
+        font-size: 0.9em;
+    }
+
+    .about-uniforme .slide .item-center img {
+        height: 550px;
+    }
+
+    .about-uniforme .slide .container-titles .main-subtitle {
+        font-size: 3.2em;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1100px) {
+    .about-uniforme .slide .main-container {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .about-uniforme .slide .items-left,
+    .about-uniforme .slide .items-right {
+        flex: 1 1 300px;
+        max-width: 350px;
+    }
+
+    .about-uniforme .slide .item {
+        padding: 16px 20px;
+        min-height: 95px;
+    }
+
+    .about-uniforme .slide .item .icon span,
+    .about-uniforme .slide .item .icon i {
+        font-size: 40px;
+        min-width: 40px;
+    }
+
+    .about-uniforme .slide .item-center {
+        order: -1;
+        width: 100%;
+        min-height: 300px;
+        padding: 10px;
+    }
+
+    .about-uniforme .slide .item-center img {
+        height: 400px;
+        max-height: 50vh;
+    }
+
+    .about-uniforme .slide .container-titles .main-subtitle {
+        font-size: 2.8em;
+    }
+
+    .about-uniforme .slide .bottom-container {
+        gap: 12px;
+    }
+
+    .about-uniforme .slide .bottom-container .items-bottom {
+        padding: 10px 18px;
+    }
+
+    .about-uniforme .slide .bottom-container .items-bottom h2 {
+        font-size: 0.9rem;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .about-uniforme {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+
+    .about-uniforme .slide {
+        position: relative;
+        padding: 30px 15px 50px 15px;
+        height: auto;
+        min-height: 100vh;
+        clip-path: none !important;
+        opacity: 1 !important;
+        display: none;
+    }
+
+    .about-uniforme .slide.active {
+        display: flex !important;
+        opacity: 1 !important;
+        clip-path: none !important;
+    }
+
+    .about-uniforme .slide:first-child {
+        display: flex !important;
+    }
+
+    .about-uniforme .slide .container-titles .main-subtitle {
+        font-size: 2.2em;
+    }
+
+    .about-uniforme .slide .container-titles .red {
+        font-size: 2.2em;
+    }
+
+    .about-uniforme .slide .main-container {
+        flex-direction: column;
+        gap: 15px;
+        min-height: auto;
+        padding: 10px 0;
+    }
+
+    .about-uniforme .slide .items-left,
+    .about-uniforme .slide .items-right {
+        flex: 1 1 100%;
+        max-width: 100%;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .about-uniforme .slide .item {
+        width: 100%;
+        max-width: 100%;
+        min-height: 80px;
+        padding: 14px 16px;
+        gap: 14px;
+    }
+
+    .about-uniforme .slide .item .icon span,
+    .about-uniforme .slide .item .icon i {
+        font-size: 32px;
+        min-width: 32px;
+    }
+
+    .about-uniforme .slide .item .text .title-card {
+        font-size: 1em;
+    }
+
+    .about-uniforme .slide .item .text .subtitle-card {
+        font-size: 0.85em;
+    }
+
+    .about-uniforme .slide .item-center {
+        order: -1;
+        width: 100%;
+        min-height: 250px;
+        padding: 10px;
+    }
+
+    .about-uniforme .slide .item-center::before {
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-uniforme .slide .item-center img {
+        height: 280px;
+        max-height: 40vh;
+    }
+
+    .about-uniforme .slide .bottom-container {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .about-uniforme .slide .bottom-container .items-bottom {
+        padding: 10px 16px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .about-uniforme .slide .bottom-container .items-bottom h2 {
+        font-size: 0.85rem;
+    }
+
+    .about-uniforme .slide .botao-slide {
+        padding: 14px 30px;
+        font-size: 0.95rem;
+        margin-top: 25px;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 480px) {
+    .about-uniforme .slide {
+        padding: 20px 12px 40px 12px;
+    }
+
+    .about-uniforme .slide .container-titles .main-subtitle {
+        font-size: 1.6em;
+    }
+
+    .about-uniforme .slide .container-titles .red {
+        font-size: 1.6em;
+    }
+
+    .about-uniforme .slide .item {
+        padding: 12px 14px;
+        min-height: 70px;
+        gap: 12px;
+    }
+
+    .about-uniforme .slide .item .icon span,
+    .about-uniforme .slide .item .icon i {
+        font-size: 26px;
+        min-width: 26px;
+    }
+
+    .about-uniforme .slide .item .text .title-card {
+        font-size: 0.85em;
+    }
+
+    .about-uniforme .slide .item .text .subtitle-card {
+        font-size: 0.75em;
+    }
+
+    .about-uniforme .slide .item-center img {
+        height: 220px;
+    }
+
+    .about-uniforme .slide .bottom-container .items-bottom {
+        padding: 8px 12px;
+    }
+
+    .about-uniforme .slide .bottom-container .items-bottom h2 {
+        font-size: 0.75rem;
+    }
+
+    .about-uniforme .slide .botao-slide {
+        padding: 12px 20px;
+        font-size: 0.8rem;
+        max-width: 250px;
     }
 }

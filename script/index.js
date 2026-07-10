@@ -1,3 +1,40 @@
+function initSlides() {
+    const slides = document.querySelectorAll('.about-uniforme .slide');
+    const botao1 = document.getElementById('botaoSlide1');
+    const botao2 = document.getElementById('botaoSlide2');
+    let currentSlide = 0;
+    
+    // Garantir que apenas o primeiro slide esteja visível
+    slides.forEach((slide, index) => {
+        if (index === 0) {
+            slide.classList.add('active');
+        } else {
+            slide.classList.remove('active');
+        }
+    });
+    
+    // Função para trocar slide
+    function changeSlide() {
+        // Remover active do slide atual
+        slides[currentSlide].classList.remove('active');
+        
+        // Avançar para próximo slide
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        // Adicionar active no próximo slide
+        slides[currentSlide].classList.add('active');
+        
+        // Atualizar textos dos botões
+        const isDark = slides[currentSlide].classList.contains('dark');
+        if (botao1) botao1.textContent = isDark ? 'VER MODELO WHITE' : 'VER MODELO BLACK';
+        if (botao2) botao2.textContent = isDark ? 'VER MODELO WHITE' : 'VER MODELO BLACK';
+    }
+    
+    // Adicionar eventos aos botões
+    if (botao1) botao1.addEventListener('click', changeSlide);
+    if (botao2) botao2.addEventListener('click', changeSlide);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
     gsap.registerPlugin(ScrollTrigger);
@@ -55,20 +92,18 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleActions: "play none none reverse"
         }
     });
-
-    gsap.to(".uniforme-3d", {
-        y: -500,
-        scale: .75,
-        ease: "none",
-
-        scrollTrigger:{
-            trigger: ".sect-uniforme",
-            start: "top top",
-            end: "bottom bottom",
-            scrub: true
-        }
-    });
 });
+
+    // gsap.to(".overlay-sect", {
+    //     opacity: 1,
+    //     ease: "none",
+    //     scrollTrigger: {
+    //         trigger: ".sect-uniforme",
+    //         start: "top top",
+    //         end: "bottom top",
+    //         scrub: 1
+    //     }
+    // });
 
     const swiper = new Swiper('.swiper', {
         loop: true,
@@ -84,4 +119,34 @@ document.addEventListener('DOMContentLoaded', () => {
         allowTouchMove: true
     });
 
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.slide');
+        const botao = document.getElementById('botaoSlide');
+        let currentSlide = 0;
+        
+        // Mostrar primeiro slide inicialmente
+        slides[0].classList.add('active');
+        
+        botao.addEventListener('click', function() {
+            // Esconder slide atual
+            slides[currentSlide].classList.remove('active');
+            
+            // Avançar para próximo slide
+            currentSlide = (currentSlide + 1) % slides.length;
+            
+            // Mostrar próximo slide
+            slides[currentSlide].classList.add('active');
+            
+            // Atualizar texto do botão
+            const isWhite = currentSlide === 0;
+            botao.textContent = isWhite ? 'VER MODELO WHITE' : 'VER MODELO BLACK';
+
+            const textColor = document.querySelectorAll(".change")
+
+            textColor.style.color = isWhite ? '#1D1C1C' : '#FCF4E5';
+        });
+    });
+
+    initSlides();
 });
