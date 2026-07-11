@@ -1065,6 +1065,205 @@ nav{
     pointer-events: auto !important;
 }
 
+.uniforme-names {
+    height: 100vh;
+    min-height: 800px;
+    max-height: 100vh;
+    background-color: var(--color-black, #1D1C1C);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ========== UNIFORME BRANCO ========== */
+.uniforme-names .white {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    width: 100%;
+    max-width: 1500px;
+    flex: 1;
+    margin-top: 40px;
+}
+
+.uniforme-names .white-shirt {
+    position: relative;
+    flex: 0 0 30%;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    
+}
+
+.uniforme-names .title-main {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 9rem;
+    line-height: 1.2;
+    font-family: 'Sansterdam', sans-serif;
+    font-weight: 100;
+    color: var(--color-red, #E52C0D);
+    margin: 0;
+    white-space: nowrap;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+}
+
+.uniforme-names .img-shirt {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    height: 480px;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.5));
+    transition: transform 0.4s ease;
+}
+
+.uniforme-names .img-shirt:hover {
+    transform: scale(1.04) rotate(-3deg);
+}
+
+.uniforme-names .white-shirt-infos {
+    flex: 1;
+    color: var(--color-red, #E52C0D);
+    padding-left: 30px;
+}
+
+.uniforme-names .white-shirt-infos .infos-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+.uniforme-names .white-shirt-infos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.uniforme-names .white-shirt-infos ul li {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+    font-family: 'Arial', sans-serif;
+    opacity: 0.95;
+}
+
+.uniforme-names .white-shirt-infos ul li::before {
+    content: "— ";
+    color: var(--color-red, #E52C0D);
+    font-weight: bold;
+}
+
+/* ========== UNIFORME PRETO ========== */
+.uniforme-names .black {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1500px;
+    flex: 1;
+}
+
+.uniforme-names .black-shirt-wrapper {
+    position: relative;
+    flex: 0 0 40%;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+}
+
+.uniforme-names .title-black {
+    position: relative;
+    top: 50%;
+    right: 58%;
+    transform: translateX(-80%) translateY(-10%);
+    z-index: 1;
+    font-size: 8rem;
+    line-height: 1.05;
+    font-family: 'Sansterdam', sans-serif;
+    font-weight: 100;
+    color: var(--color-red, #E52C0D);
+    margin: 0;
+    white-space: nowrap;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+}
+
+.uniforme-names .black-shirt-wrapper .img-shirt {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    height: 480px;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.5));
+    transform: translateX(20%);
+    transition: transform 0.4s ease;
+}
+
+.uniforme-names .black-shirt-wrapper .img-shirt:hover {
+    transform: scale(1.04) rotate(3deg) translateX(20%);
+}
+
+.uniforme-names .black-shirt-infos {
+    flex: 1;
+    color: var(--color-red, #E52C0D);
+    padding-right: 30px;
+    text-align: right;
+}
+
+.uniforme-names .black-shirt-infos .infos-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+.uniforme-names .black-shirt-infos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.uniforme-names .black-shirt-infos ul li {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+    font-family: 'Arial', sans-serif;
+    opacity: 0.95;
+}
+
+.uniforme-names .black-shirt-infos ul li::before {
+    content: "— ";
+    color: var(--color-red, #E52C0D);
+    font-weight: bold;
+}
+
+/* ========== DIVISÓRIA ========== */
+.uniforme-names .divider {
+    width: 85%;
+    max-width: 1300px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--color-red, #E52C0D), transparent);
+    margin: 5px 0;
+    opacity: 0.4;
+    flex-shrink: 0;
+}
+
 /* ============================================
    RESPONSIVIDADE
    ============================================ */
@@ -1096,6 +1295,26 @@ nav{
 
     .about-uniforme .slide .container-titles .main-subtitle {
         font-size: 4.5em;
+    }
+
+    .uniforme-names .title-main,
+    .uniforme-names .title-black {
+        font-size: 8rem;
+    }
+
+    .uniforme-names .img-shirt,
+    .uniforme-names .black-shirt-wrapper .img-shirt {
+        height: 420px;
+    }
+
+    .uniforme-names .white-shirt-infos .infos-title,
+    .uniforme-names .black-shirt-infos .infos-title {
+        font-size: 2.8rem;
+    }
+
+    .uniforme-names .white-shirt-infos ul li,
+    .uniforme-names .black-shirt-infos ul li {
+        font-size: 1.6rem;
     }
 }
 
@@ -1179,6 +1398,82 @@ nav{
 
     .about-uniforme .slide .bottom-container .items-bottom h2 {
         font-size: 0.9rem;
+    }
+    .uniforme-names {
+        height: auto;
+        min-height: 100vh;
+        max-height: none;
+        padding: 30px 20px;
+        overflow-y: auto;
+    }
+
+    .uniforme-names .white,
+    .uniforme-names .black {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .uniforme-names .white-shirt,
+    .uniforme-names .black-shirt-wrapper {
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-height: 200px;
+        width: 100%;
+    }
+
+    .uniforme-names .title-main {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        font-size: 3.5rem;
+        text-align: center;
+        white-space: normal;
+        margin-bottom: 10px;
+    }
+
+    .uniforme-names .title-black {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        font-size: 3.5rem;
+        text-align: center;
+        white-space: normal;
+        margin-bottom: 10px;
+    }
+
+    .uniforme-names .img-shirt,
+    .uniforme-names .black-shirt-wrapper .img-shirt {
+        height: 250px;
+        width: 100%;
+    }
+
+    .uniforme-names .white-shirt-infos {
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .uniforme-names .black-shirt-infos {
+        padding-right: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .uniforme-names .white-shirt-infos ul li,
+    .uniforme-names .black-shirt-infos ul li {
+        font-size: 1.1rem;
+    }
+
+    .uniforme-names .black {
+        flex-direction: column-reverse;
+    }
+
+    .uniforme-names .divider {
+        width: 90%;
+        margin: 15px 0;
     }
 }
 
@@ -1297,6 +1592,35 @@ nav{
         max-width: 300px;
         text-align: center;
     }
+    .uniforme-names {
+        padding: 20px 15px;
+        min-height: 90vh;
+    }
+
+    .uniforme-names .title-main,
+    .uniforme-names .title-black {
+        font-size: 2.8rem;
+    }
+
+    .uniforme-names .img-shirt,
+    .uniforme-names .black-shirt-wrapper .img-shirt {
+        height: 200px;
+    }
+
+    .uniforme-names .white-shirt-infos .infos-title,
+    .uniforme-names .black-shirt-infos .infos-title {
+        font-size: 1.5rem;
+    }
+
+    .uniforme-names .white-shirt-infos ul li,
+    .uniforme-names .black-shirt-infos ul li {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .uniforme-names .divider {
+        margin: 10px 0;
+    }
 }
 
 /* Celulares muito pequenos */
@@ -1349,5 +1673,25 @@ nav{
         padding: 12px 20px;
         font-size: 0.8rem;
         max-width: 250px;
+    }
+
+    .uniforme-names .title-main,
+    .uniforme-names .title-black {
+        font-size: 2.2rem;
+    }
+
+    .uniforme-names .img-shirt,
+    .uniforme-names .black-shirt-wrapper .img-shirt {
+        height: 160px;
+    }
+
+    .uniforme-names .white-shirt-infos .infos-title,
+    .uniforme-names .black-shirt-infos .infos-title {
+        font-size: 1.2rem;
+    }
+
+    .uniforme-names .white-shirt-infos ul li,
+    .uniforme-names .black-shirt-infos ul li {
+        font-size: 0.9rem;
     }
 }
