@@ -1268,13 +1268,13 @@ nav{
 .sect-apoie {
     position: relative;
     height: 100vh;
-    background-color: var(--color-black);
+    background-color: #1a1a1a;
     display: flex;
     align-items: center;
-    overflow: hidden;
-    padding: 10px;
+    padding: 20px;
 }
 
+/* Textos flutuantes */
 .apoie-text {
     position: absolute;
     color: var(--color-red);
@@ -1290,6 +1290,7 @@ nav{
 .t3 { top: 55%; left: 50%; }
 .t4 { bottom: 5%; right: 5%; }
 
+/* Lado esquerdo */
 .apoie-left {
     position: relative;
     z-index: 2;
@@ -1297,7 +1298,6 @@ nav{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-left: 30px;
 }
 
 .apoie-title {
@@ -1305,7 +1305,7 @@ nav{
     font-weight: 100;
     color: var(--color-red);
     font-size: 10em;
-    line-height: 1.8;
+    line-height: 1.55;
 }
 
 .apoie-desc {
@@ -1319,10 +1319,10 @@ nav{
     display: inline-block;
     background: var(--color-red);
     color: white;
-    padding: 10px 24px;
-    border-radius: 999px;
+    padding: 16px 24px;
+    border-radius: 20px;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.5em;
     text-decoration: none;
     width: fit-content;
 }
@@ -1333,6 +1333,7 @@ nav{
     margin-top: 40px;
 }
 
+/* Grid de imagens */
 .apoie-grid {
     position: absolute;
     right: 0;
@@ -1343,20 +1344,20 @@ nav{
 
 .grid-img {
     position: absolute;
+    object-fit: cover;
     border-radius: 6px;
 }
 
-.g1 { top: 0;    right: 0;   width: 45%; height: 50%; z-index: 1; background-color: #3a3a3a; }
-.g2 { top: 0;    right: 46%; width: 30%; height: 45%; z-index: 2; background-color: #2e2e2e; }
-.g3 { bottom: 0; left: 20%;  width: 40%; height: 52%; z-index: 2; background-color: #444444; }
-.g4 { bottom: 0; right: 0;   width: 45%; height: 50%; z-index: 1; background-color: #333333; }
-
+/* posicionamento individual de cada imagem */
+.g1 { top: 0;   right: 0;    width: 65%; height: 70%; z-index: 1; }
+.g2 { top: 30%;   right: 46%;  width: 60%; height: 45%; z-index: 2; }
+.g3 { bottom: 0; right: 90%;  width: 40%; height: 42%; z-index: 2; }
+.g4 { bottom: -10%; right: 0;   width: 35%; height: 50%; z-index: 1; }
 
 .support-us {
     position: relative;
     height: 100vh;
     background-color: #c0392b;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
