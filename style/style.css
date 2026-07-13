@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Helvetica';
+  src: url("../fonts/helvetica-255/Helvetica-Bold.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -26,7 +33,7 @@ body{
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Helvetica", sans-serif;
 }
 
 nav{
@@ -404,9 +411,6 @@ nav{
     height: 120vh;
     z-index: 3;
     background-color: #1a1a1a;
-    background-image: 
-        radial-gradient(ellipse 40% 40% at 10% 0%, rgba(210, 195, 160, 0.6) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 90% 0%, rgba(210, 195, 160, 0.6) 0%, transparent 70%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -450,7 +454,7 @@ nav{
         .modalitie{
             color: var(--color-red);
             font-size: 107px;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "Helvetica", sans-serif;
             font-weight: bold;
         }
     }
@@ -499,7 +503,7 @@ nav{
         }
 
         h2, p{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "Helvetica", sans-serif;
             font-weight: bold;
         }
     }
@@ -539,7 +543,7 @@ nav{
     text-align: center;
     font-size: 70px;
     color: var(--color-red);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Helvetica", sans-serif;
     font-weight: bold;
 }
 .navbar-art{
@@ -570,7 +574,7 @@ nav{
         color: var(--color-red);
 
         h2, p{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "Helvetica", sans-serif;
             font-weight: bold;
             text-align: center;
         }
@@ -897,7 +901,7 @@ nav{
     font-size: 1.6em;
     font-weight: 700;
     margin: 0 0 6px 0;
-    font-family: 'Arial', sans-serif;
+    font-family: "Helvetica", sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -906,7 +910,7 @@ nav{
     font-size: 1.2em;
     margin: 0;
     opacity: 0.85;
-    font-family: 'Arial', sans-serif;
+    font-family: "Helvetica", sans-serif;
     line-height: 1.4;
 }
 
@@ -998,7 +1002,7 @@ nav{
 .about-uniforme .slide .bottom-container .items-bottom h2 {
     font-size: 1rem;
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: "Helvetica", sans-serif;
     font-weight: 500;
 }
 
@@ -1018,7 +1022,7 @@ nav{
     margin-top: 30px;
     padding: 16px 50px;
     font-size: 1.1rem;
-    font-family: 'Arial', sans-serif;
+    font-family: "Helvetica", sans-serif;
     font-weight: 700;
     letter-spacing: 2px;
     cursor: pointer;
@@ -1065,206 +1069,6 @@ nav{
     pointer-events: auto !important;
 }
 
-.uniforme-names {
-    height: 100vh;
-    min-height: 800px;
-    max-height: 100vh;
-    background-color: var(--color-black);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 60px;
-    overflow: hidden;
-    position: relative;
-}
-
-/* ========== UNIFORME BRANCO ========== */
-.uniforme-names .white {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 120px;
-    width: 100%;
-    max-width: 1500px;
-    flex: 1;
-    margin-top: 40px;
-    transform: translateY(5%);
-}
-
-.uniforme-names .white-shirt {
-    position: relative;
-    flex: 0 0 30%;
-    max-width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 350px;
-    
-}
-
-.uniforme-names .title-main {
-    position: absolute;
-    top: 50%;
-    left: 75%;
-    transform: translateY(-50%);
-    z-index: 1;
-    font-size: 9rem;
-    line-height: 1.2;
-    font-family: 'Sansterdam', sans-serif;
-    font-weight: 100;
-    color: var(--color-red, #E52C0D);
-    margin: 0;
-    white-space: nowrap;
-    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
-}
-
-.uniforme-names .img-shirt {
-    position: relative;
-    z-index: 2;
-    max-width: 100%;
-    height: 480px;
-    object-fit: contain;
-    filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.5));
-    transition: transform 0.4s ease;
-}
-
-.uniforme-names .img-shirt:hover {
-    transform: scale(1.04) rotate(-3deg);
-}
-
-.uniforme-names .white-shirt-infos {
-    flex: 1;
-    color: var(--color-red, #E52C0D);
-    padding-left: 30px;
-}
-
-.uniforme-names .white-shirt-infos .infos-title {
-    font-size: 3.2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
-    letter-spacing: 1px;
-}
-
-.uniforme-names .white-shirt-infos ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.uniforme-names .white-shirt-infos ul li {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 12px;
-    font-family: 'Arial', sans-serif;
-    opacity: 0.95;
-}
-
-.uniforme-names .white-shirt-infos ul li::before {
-    content: "— ";
-    color: var(--color-red, #E52C0D);
-    font-weight: bold;
-}
-
-/* ========== UNIFORME PRETO ========== */
-.uniforme-names .black {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    width: 100%;
-    max-width: 1500px;
-    flex: 1;
-    transform: translateY(-15%);
-}
-
-.uniforme-names .black-shirt-wrapper {
-    position: relative;
-    flex: 0 0 40%;
-    max-width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 350px;
-}
-
-.uniforme-names .title-black {
-    position: relative;
-    top: 50%;
-    right: 58%;
-    transform: translateX(-80%) translateY(-10%);
-    z-index: 1;
-    font-size: 8rem;
-    line-height: 1.05;
-    font-family: 'Sansterdam', sans-serif;
-    font-weight: 100;
-    color: var(--color-red, #E52C0D);
-    margin: 0;
-    white-space: nowrap;
-    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
-}
-
-.uniforme-names .black-shirt-wrapper .img-shirt {
-    position: relative;
-    z-index: 2;
-    max-width: 100%;
-    height: 480px;
-    object-fit: contain;
-    filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.5));
-    transform: translateX(20%);
-    transition: transform 0.4s ease;
-}
-
-.uniforme-names .black-shirt-wrapper .img-shirt:hover {
-    transform: scale(1.04) rotate(3deg) translateX(20%);
-}
-
-.uniforme-names .black-shirt-infos {
-    flex: 1;
-    color: var(--color-red, #E52C0D);
-    padding-right: 30px;
-    text-align: right;
-}
-
-.uniforme-names .black-shirt-infos .infos-title {
-    font-size: 3.2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
-    letter-spacing: 1px;
-}
-
-.uniforme-names .black-shirt-infos ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.uniforme-names .black-shirt-infos ul li {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 12px;
-    font-family: 'Arial', sans-serif;
-    opacity: 0.95;
-}
-
-.uniforme-names .black-shirt-infos ul li::before {
-    content: "— ";
-    color: var(--color-red, #E52C0D);
-    font-weight: bold;
-}
-
-.uniforme-names .divider {
-    width: 85%;
-    max-width: 1300px;
-    height: 2px;
-    background: linear-gradient(to right, transparent, var(--color-red, #E52C0D), transparent);
-    margin: 5px 0;
-    opacity: 0.4;
-    flex-shrink: 0;
-}
-
 .sect-apoie {
     position: relative;
     height: 100vh;
@@ -1278,7 +1082,7 @@ nav{
 .apoie-text {
     position: absolute;
     color: var(--color-red);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Helvetica", sans-serif;
     font-weight: bold;
     font-size: 5em;
     z-index: 3;
