@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    gsap.utils.toArray('.player, .items, .main-teams-text, .main-captains-text, .modalitie, .swiper-slide, .title-carrosel, .text-about-us, .modalitie-volei').forEach(el => {
+    gsap.utils.toArray('.animation-fade, .swiper-slide, .player, .items').forEach(el => {
     gsap.from(el, {
         opacity: 0,
         y: 50,
@@ -118,6 +118,93 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         allowTouchMove: true
     });
+
+        const wrappers = document.querySelectorAll('.player-wrapper');
+
+        wrappers.forEach(wrapper => {
+          const tooltip = wrapper.querySelector('.player-tooltip');
+          if (!tooltip) return;
+
+          let hoverTimeline = null;
+
+          wrapper.addEventListener('mouseenter', function(e) {
+            if (hoverTimeline) {
+              hoverTimeline.kill();
+              hoverTimeline = null;
+            }
+
+            // Verifica se o tooltip deve aparecer para cima ou para baixo
+            const direction = wrapper.dataset.tooltipDirection || 'up';
+            
+            // Configura a direção no tooltip (já definida via classe, mas garantimos)
+            if (direction === 'down') {
+              tooltip.classList.add('tooltip-down');
+              tooltip.classList.remove('tooltip-up');
+            } else {
+              tooltip.classList.add('tooltip-up');
+              tooltip.classList.remove('tooltip-down');
+            }
+
+            // Posição inicial da animação
+            const startY = direction === 'down' ? -10 : 10;
+            const endY = 0;
+
+            gsap.set(tooltip, { 
+              visibility: 'visible', 
+              opacity: 0, 
+              scale: 0.85, 
+              y: startY 
+            });
+
+            hoverTimeline = gsap.timeline({
+              defaults: { ease: 'back.out(1.7)', duration: 0.5 },
+              onComplete: () => { hoverTimeline = null; }
+            });
+
+            hoverTimeline
+              .to(tooltip, {
+                opacity: 1,
+                scale: 1,
+                y: endY,
+                duration: 0.45,
+                ease: 'back.out(1.4)'
+              })
+              .to(tooltip, {
+                boxShadow: '0 16px 40px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,215,100,0.2)',
+                duration: 0.2,
+                ease: 'power1.out'
+              }, 0);
+          });
+
+          wrapper.addEventListener('mouseleave', function(e) {
+            if (hoverTimeline) {
+              hoverTimeline.kill();
+              hoverTimeline = null;
+            }
+
+            const direction = wrapper.dataset.tooltipDirection || 'up';
+            const endY = direction === 'down' ? -8 : 8;
+
+            hoverTimeline = gsap.timeline({
+              defaults: { ease: 'power2.inOut', duration: 0.25 },
+              onComplete: () => {
+                gsap.set(tooltip, { visibility: 'hidden' });
+                hoverTimeline = null;
+              }
+            });
+
+            hoverTimeline
+              .to(tooltip, {
+                opacity: 0,
+                scale: 0.9,
+                y: endY,
+                duration: 0.2,
+                ease: 'power2.in'
+              })
+              .set(tooltip, { visibility: 'hidden' }, 0.25);
+          });
+        });
+      
 
 
     document.addEventListener('DOMContentLoaded', function() {

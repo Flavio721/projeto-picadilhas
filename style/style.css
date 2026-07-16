@@ -293,94 +293,68 @@ nav{
 }
 
 .art-about-us {
-    background: linear-gradient(135deg, #64010e 0%, #1a1a1a 50%, #1a1a1a 100%);
+    background-color: var(--color-black);
     color: var(--color-red);
     position: relative;
     height: 100vh;
     z-index: 2;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
     margin-top: 20px;
-    
-    .left{
+
+    .top {
+        width: 100%;
+        height: 40%;
+        background-image: url(../assets/ft-about-us.webp);
+        background-size: cover;
+        background-position: center;
+        position: relative; /* necessário para o ::after funcionar */
+    }
+
+    .top::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55); /* ajuste o 0.55 para mais ou menos escuro */
+        pointer-events: none;
+    }
+
+    .top .main-about-title {
+        position: relative;
+        z-index: 1; /* fica acima do overlay */
+        color: var(--color-red);
+        font-family: 'Sansterdam', sans-serif;
+        font-weight: 100;
+        font-size: 37px;
+        transform: translate(2%, 30%);
+    }
+
+    .bottom{
+        height: 60%;
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
 
-        h2{
-            font-family: 'Sansterdam', sans-serif;
-            font-weight: 100;
-            font-size: 40px;
-        }
-        .main-about-us-text {
+        .main-about-us-text{
+            width: 50%;
             display: flex;
-            flex-direction: column;
-            padding-left: 100px;
-            gap: 0;
-            margin: auto;
-        }
-
-        .text-about-us{
-            font-family: 'Sansterdam', sans-serif;
-            font-weight: 100;
-            font-size: 150px;
-        }
-
-        .second-line {
-            display: flex;
+            justify-content: center;
             align-items: center;
             gap: 20px;
-        }
 
-        .image-about-us {
-            display: flex;
-            align-items: center;
-
-            img {
-                height: 190px;
-                margin-top: 40px;
-                border-radius: 5px;
+            h1{
+                color: var(--color-red);
+                font-family: 'Sansterdam', sans-serif;
+                font-weight: 100;
+                font-size: 10em;
+            }
+            img{
+                height: 180px;
+                transform: translateY(20%);
             }
         }
     }
-
-    .right{
-        width: 25%;
-        
-        img{
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;            
-            -webkit-mask-image: 
-                linear-gradient(to right, transparent 0%, black 60%),
-                linear-gradient(to bottom, transparent 0%, white 15%);
-            mask-image: 
-                linear-gradient(to right, transparent 0%, black 60%),
-                linear-gradient(to bottom, transparent 0%, white 15%);
-            -webkit-mask-composite: intersect;
-            mask-composite: intersect;
-        }
-        .navbar-link{
-            color: var(--color-red);
-            text-decoration: none;
-            font-family: 'Sansterdam', sans-serif;
-            font-weight: 100;
-            font-size: 40px;
-            position: absolute;
-            width: 100%;
-            top: 8px; 
-            right: 50%; 
-            transform: translateX(140%);
-        }
-        a:hover{
-            color: rgb(176, 4, 4);
-            text-decoration: underline;
-        }
-        
-    }
-
 }
 
 .art-about-us::before {
@@ -414,6 +388,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 60px;
 
     .navbar-art{
         width: 100%;
@@ -518,95 +493,378 @@ nav{
 .futsal-division{
     position: relative;
     height: 100vh;
+    padding: 15px;
     background-color: #fcf4e5;
-    background-image: 
-        radial-gradient(ellipse 100% 40% at 50% 100%, #d8082374 0%, transparent 70%),
-        radial-gradient(ellipse 100% 40% at 10% 100%, #d8082374 0%, transparent 70%),
-        radial-gradient(ellipse 100% 40% at 100% 100%, #d8082374 0%, transparent 70%);
-        /* ellipse — forma do gradiente (elipse). A alternativa é circle
-            40% 40% — largura e altura da elipse em relação ao container. 40% 40% = elipse pequena e redonda. 100% 50% = elipse larga e achatada
-            at 90% 0% — posição do centro da elipse. 90% = horizontal (quase na direita), 0% = vertical (topo). Para colocar no final: at 90% 100%
-            #64010e 0% — a cor começa 100% opaca no centro da elipse
-            transparent 70% — a cor dissolve até transparente aos 70% do raio da elipse */
-        
     display: flex;
-    flex-direction: column;
+    gap: 30px;
 
-    .team{
-        img{
-            height: 280px;
-            border-radius: 5px;
+    .player{
+        height: 180px;
+        border-radius: 5px;
+    }
+    .left{
+        height: 75%;
+        width: 60%;
+        display: grid;
+        grid-template-columns: repeat(5, 150px);
+        grid-template-rows: repeat(5, 120px);
+        gap: 8px;
+
+        .goleiro{
+            grid-column-start: 2;
+        }
+        .fixo{
+            grid-row-start: 2;
+        }
+        .ala-e{
+            grid-column-start: 2;
+            grid-row-start: 3;
+        }
+        .ala-d{
+            grid-column-start: 3;
+            grid-row-start: 2;
+        }
+        .pivo{
+            grid-column-start: 5;
+            grid-row-start: 3;
+        }
+        .reserva-1{
+            grid-column-start: 4;
+            grid-row-start: 4;
+        }
+        .reserva-2{
+            grid-column-start: 3;
+            grid-row-start: 5;
+        }
+        .reserva-3{
+            grid-column-start: 1;
+            grid-row-start: 4;
         }
     }
+
+    .player {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      display: block;
+      background: #cdd8e0;
+      cursor: default;
+    }
+
+    .player-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .player-wrapper .player {
+      height: 160px;
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    /* ── Tooltip base ── */
+    .player-tooltip {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) scale(0.9);
+      background: var(--color-black);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: #f5f0ea;
+      padding: 8px 16px 10px 16px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 215, 140, 0.15);
+      border: 1px solid var(--color-red);
+      pointer-events: none;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 85vw;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* seta do tooltip - padrão para baixo (tooltip em cima) */
+    .player-tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: var(--color-red);
+    }
+
+    /* ── Tooltip para baixo (quando o jogador está no topo) ── */
+    .player-tooltip.tooltip-down {
+      top: calc(100% + 10px);
+      bottom: auto;
+    }
+    .player-tooltip.tooltip-down::after {
+      top: auto;
+      bottom: 100%;
+      border-top-color: transparent;
+      border-bottom-color: var(--color-red)
+    }
+
+    /* tooltip para cima (padrão) */
+    .player-tooltip.tooltip-up {
+      bottom: calc(100% + 10px);
+      top: auto;
+    }
+    .player-tooltip.tooltip-up::after {
+      top: 100%;
+      bottom: auto;
+      border-top-color: var(--color-red);
+      border-bottom-color: transparent;
+    }
+
+    .player-tooltip .tooltip-nome {
+      font-weight: 700;
+      color: var(--color-light);
+    }
+
+    .player-tooltip .tooltip-pos {
+      background: rgba(255, 215, 100, 0.15);
+      padding: 0.1rem 0.9rem;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #f5b84a;
+      border: 1px solid rgba(245, 184, 74, 0.2);
+    }
+
+    .player-tooltip .tooltip-num {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 0 10px;
+      border-radius: 40px;
+      font-weight: 400;
+      color: #b8ccdd;
+    }
+    .right {
+        flex: 1;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 16px;
+        align-content: start;
+    }
+
+    .main-teams-text {
+        grid-column: 1 / -1; /* ocupa as 2 colunas */
+        grid-row: 1;
+    }
+
+    .player-wrapper[data-nome="Bruno Barros"] {
+        grid-column: 1;
+        grid-row: 3;
+        margin-left: 30px;
+    }
+
+    .player-wrapper[data-nome="Lucas Ezequiel"] {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .left .player-wrapper:nth-child(2) .player-tooltip,
+        .left .player-wrapper:nth-child(8) .player-tooltip {
+            left: 0;
+            transform: translateX(0) scale(0.9);
+        }
+
+        /* Coluna 5 (direita) - tooltip alinhado à esquerda */
+        .left .player-wrapper:nth-child(5) .player-tooltip,
+        .left .player-wrapper:nth-child(6) .player-tooltip {
+            left: auto;
+            right: 0;
+            transform: translateX(0) scale(0.9);
+        }
+
+        /* Ajuste da seta para coluna 1 (esquerda) */
+        .left .player-wrapper:nth-child(2) .player-tooltip.tooltip-up::after,
+        .left .player-wrapper:nth-child(2) .player-tooltip.tooltip-down::after,
+        .left .player-wrapper:nth-child(8) .player-tooltip.tooltip-up::after,
+        .left .player-wrapper:nth-child(8) .player-tooltip.tooltip-down::after {
+            left: 85%;
+        }
+
+        /* Ajuste da seta para coluna 5 (direita) */
+        .left .player-wrapper:nth-child(5) .player-tooltip.tooltip-up::after,
+        .left .player-wrapper:nth-child(5) .player-tooltip.tooltip-down::after,
+        .left .player-wrapper:nth-child(6) .player-tooltip.tooltip-up::after,
+        .left .player-wrapper:nth-child(6) .player-tooltip.tooltip-down::after {
+            left: 15%;
+        }
 }
+
 .main-teams-text{
-    text-align: center;
     font-size: 70px;
     color: var(--color-red);
     font-family: "Helvetica", sans-serif;
     font-weight: bold;
 }
-.navbar-art{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        z-index: 99;
 
-        h2, a{
-            color: white;
-            text-decoration: none;
-            font-family: 'Sansterdam', sans-serif;
-            font-weight: 100;
-            font-size: 37px;
-            transition: .5s;
-        }
-        a:hover{
-            text-decoration: underline;
-        }
-    }
-.team{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 100px;
-        color: var(--color-red);
 
-        h2, p{
-            font-family: "Helvetica", sans-serif;
-            font-weight: bold;
-            text-align: center;
-        }
-}
-
-.volei-division{
+.volei-division {
     position: relative;
     height: 100vh;
-    background-image:
-        radial-gradient(ellipse 40% 50% at 50% 30%, #d8082374  0%, transparent 50%),
-        radial-gradient(ellipse 40% 50% at 10% 30%, #d8082374  0%, transparent 50%),
-        radial-gradient(ellipse 40% 50% at 100% 30%, #d8082374 0%, transparent 50%),
-        radial-gradient(ellipse 100% 50% at 90% 15%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 100% 50% at 10% 15%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 100% 50% at 90% 30%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 100% 50% at 10% 30%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 100% 50% at 10% 50%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 100% 50% at 90% 50%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 100% 50% at 90% 70%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 100% 50% at 10% 70%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 100% 50% at 90% 90%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 100% 50% at 10% 90%, #1a1a1a 0%, transparent 70%);
-        
+    width: 100%;
+    background-color: blue;
     display: flex;
-    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
 
-    .team{
-        img{
-            height: 230px;
-            border-radius: 5px;
+    .player {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        display: block;
+        background: #cdd8e0;
+        cursor: default;
+    }
+
+    .player-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .player-wrapper .player {
+        height: 160px;
+        width: 100%;
+        border-radius: 16px;
+        object-fit: cover;
+    }
+
+    /* ── LEFT ── */
+    .left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+
+        .left-top{
+            display: flex;
+            gap: 30px;
+
+            .player-2{
+                margin-bottom: 50px;
+            }
         }
     }
+
+    .left .player-wrapper {
+        width: 80%;
+        position: relative;
+    }
+
+    /* ── RIGHT CORRIGIDO ── */
+    .right {
+        height: 75%;
+        width: 60%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 8px;
+        .player-3 {
+            grid-column-start: 1;
+            grid-row-start: 4;
+        }
+    
+        .player-4 {
+            grid-column-start: 2;
+            grid-row-start: 3;
+        }
+    
+        .player-5 {
+            grid-column-start: 3;
+            grid-row-start: 4;
+        }
+    
+        .player-6 {
+            grid-column-start: 5;
+            grid-row-start: 4;
+        }
+    
+        .player-7 {
+            grid-column-start: 5;
+            grid-row-start: 1;
+        }
+    
+        .player-8 {
+            grid-column-start: 4;
+            grid-row-start: 3;
+        }
+    }
+
+    /* Força os wrappers do right a ocuparem toda a célula */
+    .right .player-wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    /* Garante que as imagens ocupem todo o espaço */
+    .right .player-wrapper .player {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+
+    /* ── Tooltip base ── */
+    .player-tooltip {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scale(0.9);
+        background: var(--color-black);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        color: #f5f0ea;
+        padding: 8px 16px 10px 16px;
+        border-radius: 40px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        white-space: nowrap;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 215, 140, 0.15);
+        border: 1px solid var(--color-red);
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        max-width: 85vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
 }
 
 .basket-division{
@@ -614,21 +872,19 @@ nav{
     height: 100vh;
     background-color: #b20b21;
     background-image: 
-        radial-gradient(ellipse 30% 40% at 0% 0%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 30% 40% at 5% 0%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 30% 40% at 10% 0%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 30% 40% at 20% 0%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 30% 40% at 30% 0%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 30% 40% at 40% 0%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 30% 40% at 50% 0%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 30% 40% at 60% 0%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 30% 40% at 70% 0%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 30% 40% at 80% 0%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 30% 40% at 90% 0%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 30% 40% at 100% 0%, #1a1a1a 0%, transparent 70%),
-        radial-gradient(ellipse 40% 50% at 50% 30%, #dd0925bb  0%, transparent 50%),
-        radial-gradient(ellipse 40% 50% at 10% 30%, #dd0925bb  0%, transparent 50%),
-        radial-gradient(ellipse 40% 50% at 100% 30%, #dd0925bb 0%, transparent 50%);
+        radial-gradient(ellipse 30% 40% at 0% 0%, #efe8dd 0%, transparent 70%),
+        radial-gradient(ellipse 30% 40% at 5% 0%, #efe8dd 0%, transparent 70%),
+        radial-gradient(ellipse 30% 40% at 10% 0%, #efe8dd 0%, transparent 70%),
+        radial-gradient(ellipse 30% 40% at 20% 0%, #efe8dd 0%, transparent 70%),
+        radial-gradient(ellipse 30% 40% at 30% 0%, #efe8dd 0%, transparent 70%),
+        radial-gradient(ellipse 30% 40% at 40% 0%, #efe8dd 0%, transparent 70%),
+        radial-gradient(ellipse 30% 40% at 50% 0%, #efe8dd 0%, transparent 70%),
+        radial-gradient(ellipse 30% 40% at 60% 0%, #efe8dd 0%, transparent 70%),
+        radial-gradient(ellipse 30% 40% at 70% 0%, #efe8dd 0%, transparent 70%),
+        radial-gradient(ellipse 30% 40% at 80% 0%, #efe8dd 0%, transparent 70%),
+        radial-gradient(ellipse 30% 40% at 90% 0%, #efe8dd 0%, transparent 70%),
+        radial-gradient(ellipse 30% 40% at 100% 0%, #efe8dd 0%, transparent 70%);
+        
     display: flex;
     flex-direction: column;
 
@@ -654,27 +910,10 @@ nav{
     margin-top: -1px;
 }
 
-/* FUTSAL -> VÔLEI */
-.futsal-division::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -1px;
-    height: 100px;
-    background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        rgba(107, 5, 19, 0.35) 35%,
-        rgba(26, 26, 26, 0.82) 78%,
-        #1a1a1a 100%
-    );
-    pointer-events: none;
-    z-index: 4;
-}
+
 
 .volei-division {
-    background-color: #1a1a1a;
+    background-color: var(--color-light);
 }
 
 /* VÔLEI -> BASQUETE */
@@ -688,8 +927,8 @@ nav{
     background: linear-gradient(
         to bottom,
         transparent 0%,
-        rgba(26, 26, 26, 0.82) 70%,
-        #1a1a1a 100%
+        var(--color-light) 70%,
+        #efe8dd 100%
     );
     pointer-events: none;
     z-index: 4;
@@ -1452,6 +1691,31 @@ nav{
         width: 90%;
         margin: 15px 0;
     }
+    .left {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 100px);
+        height: auto;
+        gap: 6px;
+        width: 100%;
+      }
+      .left .player-wrapper {
+        height: 100%;
+      }
+      .left .player {
+        height: 100%;
+        width: 100%;
+      }
+      /* reset posições para não quebrar em telas menores */
+      .left .goleiro { grid-column: 2 / 3; grid-row: 1 / 2; }
+      .left .fixo { grid-column: 1 / 2; grid-row: 2 / 3; }
+      .left .ala-e { grid-column: 2 / 3; grid-row: 3 / 4; }
+      .left .ala-d { grid-column: 3 / 4; grid-row: 2 / 3; }
+      .left .pivo { grid-column: 4 / 5; grid-row: 3 / 4; }
+      .left .reserva-1 { grid-column: 3 / 4; grid-row: 4 / 5; }
+      .left .reserva-2 { grid-column: 2 / 3; grid-row: 5 / 6; }
+      .left .reserva-3 { grid-column: 1 / 2; grid-row: 4 / 5; }
+      .right { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+      .main-teams-text { font-size: 1.2rem; white-space: normal; }
 }
 
 /* Celulares */
@@ -1671,4 +1935,16 @@ nav{
     .uniforme-names .black-shirt-infos ul li {
         font-size: 0.9rem;
     }
+     .left {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 90px);
+      }
+      .left .goleiro { grid-column: 2 / 3; grid-row: 1 / 2; }
+      .left .fixo { grid-column: 1 / 2; grid-row: 2 / 3; }
+      .left .ala-e { grid-column: 2 / 3; grid-row: 3 / 4; }
+      .left .ala-d { grid-column: 3 / 4; grid-row: 2 / 3; }
+      .left .pivo { grid-column: 3 / 4; grid-row: 3 / 4; }
+      .left .reserva-1 { grid-column: 2 / 3; grid-row: 4 / 5; }
+      .left .reserva-2 { grid-column: 1 / 2; grid-row: 5 / 6; }
+      .left .reserva-3 { grid-column: 3 / 4; grid-row: 5 / 6; }
 }

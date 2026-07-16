@@ -1,2 +1,9 @@
 Criar sessão de exibição do uniforme conforme design do chat gpt
 No botão de ver modelos coloque ver modelo white e que faça uma transição partindo da esquerda para direita deixando o fundo branco e textos, que eram brancos, pretos
+
+
+ ellipse — forma do gradiente (elipse). A alternativa é circle
+            40% 40% — largura e altura da elipse em relação ao container. 40% 40% = elipse pequena e redonda. 100% 50% = elipse larga e achatada
+            at 90% 0% — posição do centro da elipse. 90% = horizontal (quase na direita), 0% = vertical (topo). Para colocar no final: at 90% 100%
+            #64010e 0% — a cor começa 100% opaca no centro da elipse
+            transparent 70% — a cor dissolve até transparente aos 70% do raio da elipse 
