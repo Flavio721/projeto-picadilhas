@@ -1,0 +1,74 @@
+@media (max-width: 768px) {
+    body { overflow-x: hidden; }
+
+    .navbar { flex-direction: row; flex-wrap: wrap; padding: 8px; }
+    .nav-right { gap: 2px 8px; }
+    .nav-right a { font-size: 14px; margin-right: 0; }
+    .title-nav { font-size: 24px; margin-left: 6px; }
+    .home-fixo { font-size: 24px; }
+
+    .main-article .image-main { height: 100px; }
+
+    .swiper img { height: 220px; width: 260px; }
+    .swiper-slide { width: 220px; }
+    .sect-carrosel h1 { font-size: 26px; margin: 20px; }
+    .final-text-carrosel { font-size: 22px; }
+
+    .capitaes .main-captains-text { font-size: 48px; }
+    .capitaes .modalities { flex-direction: column; align-items: center; margin-top: 30px; gap: 10px; }
+    .capitaes .modalities .modalitie { font-size: 40px; margin-top: 0 !important; }
+    .capitaes .modalitie-volei { font-size: 34px; }
+    .capitaes .image-captains { min-height: 200px; }
+
+    .box-captains { flex-direction: column; align-items: center; }
+    .box-captains .items { width: 90%; }
+    .box-captains .items img { height: 220px; }
+
+    /* Times: acima de 5 colunas fixas não faz sentido em tela de celular —
+       aqui os cards viram lista vertical simples com legenda ao lado */
+    .futsal-division { height: auto; }
+    .futsal-division .left {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 90px);
+    }
+    .futsal-division .right { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .main-teams-text { font-size: 32px; }
+
+    .volei-division { flex-direction: column; padding: 15px; }
+    .volei-division .left,
+    .volei-division .right { width: 100%; }
+    .volei-division .right {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 100px);
+    }
+
+    .basket-division { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 90px; padding: 15px; gap: 10px; }
+    .basket-division .main-texts h2 { font-size: 1.4rem; }
+    .basket-division .main-texts ul { font-size: 0.85rem; }
+
+    .sect-uniforme { height: auto; min-height: 60vh; }
+    .sect-uniforme .title-main { font-size: 3em; transform: none; position: relative; text-align: center; }
+    .sect-uniforme .title-section { font-size: 1.8em; }
+
+    /* Apoie: a composição de textos flutuantes (t1-t4) foi pensada
+       para overlay sobre imagens grandes — em coluna única ela só
+       atrapalha, então escondemos os decorativos e deixamos o essencial */
+    .apoie-text { display: none; }
+    .apoie-title { font-size: 3.4em; line-height: 1.2; }
+    .apoie-desc { font-size: 1.2em; }
+    .apoie-grid { height: 260px; }
+    .grid-img { position: static !important; width: 48% !important; height: 120px !important; display: inline-block; margin: 1%; }
+
+    .support-us .title-main { font-size: 3em; }
+    .container-left { height: 180px; }
+
+    .art-faca-parte { flex-direction: column; height: auto; }
+    .art-faca-parte .card { height: 33vh; }
+    .art-faca-parte .title-main { position: relative; left: auto; transform: none; text-align: center; font-size: 1.6em; padding: 20px; }
+    .art-faca-parte .btn-main { position: relative; bottom: auto; transform: none; margin-top: 10px; }
+
+    .contact-word { font-size: 5.5em; }
+    .contact-info h2 { font-size: 1.4em; }
+    .person h3, .person p { font-size: 1.2em; }
+    .contact-images { grid-template-columns: 1fr 1fr; height: 200px; }
+}

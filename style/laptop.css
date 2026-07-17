@@ -1,0 +1,59 @@
+@media (max-width: 1200px) {
+    .swiper img { height: 280px; width: 320px; }
+    .swiper-slide { width: 260px; }
+
+    .art-about-us .bottom .main-about-us-text { width: 70%; }
+    .art-about-us .bottom .main-about-us-text h1 { font-size: 6em; }
+
+    .capitaes { height: auto; min-height: 100vh; padding-bottom: 40px; }
+    .capitaes .main-captains-text { font-size: 80px; }
+    .capitaes .modalities { margin-top: 60px; }
+    .capitaes .modalities .modalitie { font-size: 60px; }
+    .capitaes .modalitie-volei { font-size: 56px; }
+    .capitaes .image-captains { min-height: 300px; }
+
+    .box-captains .items { width: 30%; }
+    .box-captains .items img { height: 260px; }
+
+    /* Futsal: grid rígido de 150x120 não cabe mais — realinha em 4 colunas */
+    .futsal-division { height: auto; min-height: 100vh; flex-direction: column; }
+    .futsal-division .left {
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 110px);
+    }
+    .futsal-division .right { width: 100%; }
+
+    /* Vôlei: mesma lógica, grid fixo de 5 colunas vira fluido */
+    .volei-division { flex-direction: column; height: auto; min-height: 100vh; }
+    .volei-division .left,
+    .volei-division .right { width: 100%; }
+    .volei-division .right {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 130px);
+    }
+
+    .basket-division { height: auto; min-height: 100vh; grid-auto-rows: 110px; }
+
+    .sect-uniforme .title-main { font-size: 5.5em; transform: translate(20%, 80%); }
+
+    .sect-apoie { flex-direction: column; height: auto; padding: 60px 20px; }
+    .apoie-left { width: 100%; }
+    .apoie-grid { position: relative; width: 100%; height: 400px; margin-top: 30px; }
+    .apoie-title { font-size: 5em; }
+
+    .support-us { height: auto; min-height: 100vh; padding: 60px 0; }
+    .container-left { position: relative; width: 100%; height: 260px; flex-direction: row; }
+    .support-us .title-main { font-size: 5em; }
+    .container-center-right,
+    .container-bottom-right { display: none; } /* colagem decorativa não cabe — melhor esconder que espremer */
+
+    .art-faca-parte .title-main { font-size: 2.2em; }
+
+    .contact-section { grid-template-columns: 100%; grid-template-rows: auto auto auto; height: auto; }
+    .contact-left { height: 220px; }
+    .contact-word { font-size: 9em; position: relative; left: auto; top: auto; transform: none; text-align: center; padding: 20px 0; }
+    .contact-images { grid-column: 1; grid-row: auto; height: 240px; }
+    .contact-top { padding: 20px; }
+    .contact-info { width: 100%; text-align: left; padding: 0 20px; }
+}

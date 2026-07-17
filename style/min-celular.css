@@ -1,0 +1,37 @@
+@media (max-width: 575px) {
+    .title-nav { font-size: 18px; }
+    .nav-right a { font-size: 12px; }
+
+    .sect-carrosel h1 { font-size: 20px; }
+    .swiper img { height: 180px; width: 200px; }
+    .swiper-slide { width: 180px; }
+
+    .art-about-us .bottom .main-about-us-text h1 { font-size: 2.2em; }
+    .art-about-us .bottom .main-about-us-text img { height: 60px; }
+
+    .capitaes .main-captains-text { font-size: 34px; }
+    .capitaes .modalities .modalitie { font-size: 28px; }
+    .capitaes .modalitie-volei { font-size: 26px; }
+
+    .box-captains .items { width: 100%; }
+
+    .futsal-division .left { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(8, 85px); }
+    .futsal-division .right { padding: 0; }
+    .main-teams-text { font-size: 26px; }
+
+    .volei-division .right { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 90px); }
+
+    .basket-division { grid-template-columns: repeat(2, 1fr); }
+    .basket-division .main-texts h2 { font-size: 1.1rem; }
+
+    .apoie-title { font-size: 2.4em; }
+    .apoie-desc { font-size: 1em; }
+    .apoie-btn { font-size: 1.1em; padding: 12px 18px; }
+
+    .support-us .title-main { font-size: 2.2em; }
+
+    .contact-word { font-size: 3.2em; }
+    .contact-left { height: 160px; }
+    .contact-info { width: 100%; }
+    .contact-info h2 { font-size: 1.15em; margin-bottom: 30px; }
+}

@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://cloudflare.com">
     
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" media="(max-width: 575px)" href="../style/min-celular.css">
+    <link rel="stylesheet" media="(max-width: 768px)" href="../style/celular.css">
+    <link rel="stylesheet" media="(max-width: 992px)" href="../style/tablet.css">
+    <link rel="stylesheet" media="(max-width: 1200px)" href="../style/laptop.css">
+    <link rel="stylesheet" media="(max-width: 1440px)" href="../style/notebook.css">
     <title>Picadilhas</title>
 </head>
 <body>
@@ -18,12 +23,12 @@
             <h2 class="title-nav">Picadilhas ©</h2>
         </div>
         <div class="nav-right">
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
             <a href="#sobre">Sobre</a>
             <a href="#uniforme">Uniforme</a>
             <a href="#support">Apoie o time</a>
-            <a href="#">Faça parte</a>
-            <a href="#">Contato</a>
+            <a href="#part">Faça parte</a>
+            <a href="#contato">Contato</a>
         </div>
     </nav>  
     <a href="#home" class="home-fixo">Home</a>  
@@ -56,14 +61,14 @@
                     </div>
 
                     <div class="swiper-slide carrousel-support-us">
-                        <a href="#apoie">
+                        <a href="#support">
                             <h2 class="text-center-left">APOIE O TIME.</h2>
                             <img src="../assets/ft-carrosel.webp" alt="">
                         </a>
                     </div>
 
                     <div class="swiper-slide carrousel-join-us">
-                        <a href="#faca-parte">
+                        <a href="#part">
                             <img src="../assets/ft-carrosel-2.webp" alt="">
                             <h2 class="text-bottom">FAÇA PARTE.</h2>
                         </a>
@@ -247,9 +252,23 @@
                 </div>
 
                 <div class="right">
-                <h2 class="main-teams-text">
-                    *(FUTSAL)
-                </h2>
+                <div class="main-texts">
+                    <h2 class="main-teams-text">
+                        *(FUTSAL)
+                    </h2>
+                    <ul>
+                        <li>Flávio Inocêncio - Goleiro</li>
+                        <li>Ryan Uchôa - Fixo</li>
+                        <li>Juan Pablo - Ala Direita</li>
+                        <li>Gabriel Gonçalves - Ala Esquerda</li>
+                        <li>Isaac Galvão - Pivô</li>
+                        <li>Lucas Ezequiel - Fixo Reserva</li>
+                        <li>Arthur Henrique Ala Direita Reserva</li>
+                        <li>João Gabriel Ala Esquerda Reserva</li>
+                        <li>Angelo Gerola - Ala Esquerda Reserva</li>
+                        <li>Bruno Barros - Pivô Reserva</li>
+                    </ul>
+                </div>
 
                 <div class="player-wrapper" data-nome="Bruno Barros" data-pos="Reserva" data-num="9" style="width:50%; max-width:200px; position:relative;">
                     <img src="../assets/player-futsal-7.enc" alt="Bruno Barros" class="player reserva-4" style="width:100%; object-fit:cover; border-radius:16px;">
@@ -356,42 +375,94 @@
                     </div>
             </section>
             <section class="basket-division">
-                <h2 class="main-teams-text" style="margin-top: 30px; color: white;">DIVISÃO *(BASQUETE)</h2>
-                <div class="team">
-                    <div class="player">
-                        <h2 class="player-text" style="color: white;">Nicolas Muller</h2>
-                        <div class="image">
-                            <img src="../assets/cap-basquete.enc" alt="">
+                <div class="main-texts">
+                    <h2 class="main-teams-text">DIVISÃO *(BASQUETE)</h2>
+                    <ul>
+                        <div class="titulares">
+                            <li>Nicolas Muller - Armador</li>
+                            <li>Flávio Inocêncio - Ala-Armador</li>
+                            <li>Luis Nuno - Ala</li>
+                            <li>Ryan Uchôa - Ala-Pivô</li>
+                            <li>Luis Goulart - Pivô</li>
                         </div>
-                        <h2 class="player-text" style="color: white;">Armador</h2>
+                        <div class="reservas">
+                            <li>Davi Ribeiro - Ala-Armador</li>
+                            <li>Vinicius Gusmão - Ala</li>
+                            <li>Ian - Ala-Pivô</li>
+                            <li>Victor Soares - Ala-Pivô</li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="player-wrapper player-1" data-nome="Nicolas Muller" data-pos="Armador" data-num="1">
+                    <img src="../assets/cap-basquete.enc" alt="Nicolas Muller" class="player player-1">
+                    <div class="player-tooltip">
+                        <span class="tooltip-nome">Nicolas Muller</span>
+                        <span class="tooltip-pos">Armador</span>
+                        <span class="tooltip-num">#1</span>
                     </div>
-                    <div class="player">
-                        <h2 class="player-text" style="color: white;">Flávio Inocêncio</h2>
-                        <div class="image">
-                            <img src="../assets/player-futsal-1.enc" alt="">
-                        </div>
-                        <h2 class="player-text" style="color: white;">Ala-Armador</h2>
+                </div>
+                <div class="player-wrapper player-2" data-nome="Flávio Inocêncio" data-pos="Ala-Armador" data-num="72">
+                    <img src="../assets/player-futsal-1.enc" alt="Flávio Inocêncio" class="player player-2">
+                    <div class="player-tooltip">
+                        <span class="tooltip-nome">Flávio Inocêncio</span>
+                        <span class="tooltip-pos">Ala-Armador</span>
+                        <span class="tooltip-num">#72</span>
                     </div>
-                    <div class="player">
-                        <h2 class="player-text" style="color: white;">Luis Nuno</h2>
-                        <div class="image">
-                            <img src="../assets/player-basket-1.enc" alt="">
-                        </div>
-                        <h2 class="player-text" style="color: white;">Ala</h2>
+                </div>
+                <div class="player-wrapper player-3" data-nome="Luis Nuno" data-pos="Ala" data-num="23">
+                    <img src="../assets/player-basket-1.enc" alt="Luis Nuno" class="player player-3">
+                    <div class="player-tooltip">
+                        <span class="tooltip-nome">Luis Nuno</span>
+                        <span class="tooltip-pos">Ala</span>
+                        <span class="tooltip-num">#23</span>
                     </div>
-                    <div class="player">
-                        <h2 class="player-text" style="color: white;">Victor Soares</h2>
-                        <div class="image">
-                            <img src="../assets/cap-volei.enc" alt="">
-                        </div>
-                        <h2 class="player-text" style="color: white;">Ala-Pivô</h2>
+                </div>
+                <div class="player-wrapper player-4" data-nome="Ryan Uchôa" data-pos="Ala-Pivô" data-num="4">
+                    <img src="../assets/cap-futsal.enc" alt="Ryan Uchôa" class="player player-4">
+                    <div class="player-tooltip">
+                        <span class="tooltip-nome">Ryan Uchôa</span>
+                        <span class="tooltip-pos">Ala-Pivô</span>
+                        <span class="tooltip-num">#4</span>
                     </div>
-                    <div class="player">
-                        <h2 class="player-text" style="color: white;">Luis Goulart</h2>
-                        <div class="image">
-                            <img src="../assets/player-basket-3.enc" alt="">
-                        </div>
-                        <h2 class="player-text" style="color: white;">Pivô</h2>
+                </div>
+                <div class="player-wrapper player-5" data-nome="Luis Goulart" data-pos="Pivô" data-num="5">
+                    <img src="../assets/player-basket-3.enc" alt="Luis Goulart" class="player player-5">
+                    <div class="player-tooltip">
+                        <span class="tooltip-nome">Luis Goulart</span>
+                        <span class="tooltip-pos">Pivô</span>
+                        <span class="tooltip-num">#5</span>
+                    </div>
+                </div>
+                <div class="player-wrapper player-6" data-nome="Davi Ribeiro" data-pos="Ala-Armador" data-num="67">
+                    <img src="../assets/player-volei-2.enc" alt="Davi Ribeiro" class="player player-6">
+                    <div class="player-tooltip">
+                        <span class="tooltip-nome">Davi Ribeiro</span>
+                        <span class="tooltip-pos">Ala-Armador</span>
+                        <span class="tooltip-num">#67</span>
+                    </div>
+                </div>
+                <div class="player-wrapper player-7" data-nome="Vinicius Gusmão" data-pos="Ala" data-num="7">
+                    <img src="../assets/player-volei-2.enc" alt="Vinicius Gusmão" class="player player-7">
+                    <div class="player-tooltip">
+                        <span class="tooltip-nome">Vinicius Gusmão</span>
+                        <span class="tooltip-pos">Ala</span>
+                        <span class="tooltip-num">#7</span>
+                    </div>
+                </div>
+                <div class="player-wrapper player-8" data-nome="Ian" data-pos="Ala-Pivô" data-num="8">
+                    <img src="../assets/player-volei-2.enc" alt="Ian" class="player player-8">
+                    <div class="player-tooltip">
+                        <span class="tooltip-nome">Ian</span>
+                        <span class="tooltip-pos">Ala-Pivô</span>
+                        <span class="tooltip-num">#8</span>
+                    </div>
+                </div>
+                <div class="player-wrapper player-9" data-nome="Victor Soares" data-pos="Ala-Pivô" data-num="10">
+                    <img src="../assets/cap-volei.enc" alt="Victor Soares" class="player player-8">
+                    <div class="player-tooltip">
+                        <span class="tooltip-nome">Victor Soares</span>
+                        <span class="tooltip-pos">Ala-Pivô</span>
+                        <span class="tooltip-num">#10</span>
                     </div>
                 </div>
             </section>
@@ -553,9 +624,9 @@
     <section class="support-us" id="support">
         <h2 class="title-section">Picadlihas © - Apoie o time</h2>
         <div class="container-left">
-            <div class="image"></div>
-            <div class="image"></div>
-            <div class="image"></div>
+            <div class="image-70"></div>
+            <div class="image-mid"></div>
+            <div class="image-30"></div>
         </div>
         <h2 class="title-main white">Apoie o time</h2>
         <div class="container-center-right">
@@ -564,6 +635,51 @@
         <div class="container-bottom-right">
             <div class="image"></div>
         </div>
+    </section>
+    <article class="art-faca-parte" id="part">
+        <div class="card sponsor">
+            <h2 class="title-main">
+                SEJA
+                <span>*(PATROCINADOR)</span>
+            </h2>
+            <button class="btn-main">*(CLIQUE AQUI)</button>
+        </div>
+        <div class="card torcida">
+            <h2 class="title-main">
+                SEJA
+                <span>*(TORCIDA)</span>
+            </h2>
+            <button class="btn-main">*(CLIQUE AQUI)</button>
+        </div>
+        <div class="card jogador">
+            <h2 class="title-main">
+                SEJA
+                <span>*(JOGADOR)</span>
+            </h2>
+            <button class="btn-main">*(CLIQUE AQUI)</button>
+        </div>
+    </article>
+    <section class="contact-section">
+        <div class="contact-left">
+            <p class="small-title">Picadilhas © - Contato.</p>
+        </div>
+        <div class="contact-top">
+            <div class="contact-info">
+                <h2>Entre em contato com o representante do time.</h2>
+                <div class="person">
+                    <h3>Ryan Maciel Uchôa</h3>
+                    <p>(XX) XXXXXXX-XXXX</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact-images">
+            <div class="contact-player"></div>
+            <div class="contact-ball"></div>
+        </div>
+        <h1 class="contact-word">Contato.</h1>
+        <p class="bottom-text">
+            *( Picadilhas © - Is not just a team, is a mindset )
+        </p>
     </section>
     </main>
 

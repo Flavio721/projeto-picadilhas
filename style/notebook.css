@@ -1,0 +1,21 @@
+@media (max-width: 1440px) {
+    .title-nav { font-size: 38px; }
+    .nav-right a { font-size: 24px; }
+
+    .art-about-us .bottom .main-about-us-text h1 { font-size: 7em; }
+    .art-about-us .bottom .main-about-us-text img { height: 140px; }
+
+    .capitaes .main-captains-text { font-size: 100px; }
+    .capitaes .modalities .modalitie { font-size: 80px; }
+    .capitaes .modalitie-volei { font-size: 76px; }
+
+    .sect-uniforme .title-main { font-size: 7em; }
+
+    .apoie-title { font-size: 7em; }
+    .apoie-desc { font-size: 1.5em; }
+
+    .support-us .title-main { font-size: 7em; }
+
+    .contact-word { font-size: 16em; }
+    .contact-info h2 { font-size: 2em; }
+}

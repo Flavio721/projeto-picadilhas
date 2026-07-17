@@ -69,8 +69,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 800); // some 800ms depois que o usuário parar de scrollar
     });
 
+    gsap.to(".main-article", {
+        backgroundPosition: "50% 30%", // desloca o foco do bg
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".main-article",
+            start: "top top",
+            end: "bottom top",
+            scrub: 1
+        }
+        });
+
     gsap.to(".navbar", {
         opacity: 0,
+        display:'none',
         ease: "none",
         scrollTrigger: {
             trigger: ".art-about-us",
@@ -105,12 +117,14 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }
     // });
 
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
     const swiper = new Swiper('.swiper', {
         loop: true,
         slidesPerView: 'auto',
         loopedSlides: 15,
         spaceBetween: 20,
-        speed: 3000,
+        speed: isMobile ? 5000 : 3000,
         autoplay: {
             delay: 0,
             disableOnInteraction: false,
@@ -121,7 +135,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const wrappers = document.querySelectorAll('.player-wrapper');
 
+        const isTouch = window.matchMedia('(hover: none)').matches;
+
+        if (isTouch) {
+        let tooltipAberta = null;
         wrappers.forEach(wrapper => {
+            wrapper.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const tooltip = wrapper.querySelector('.player-tooltip');
+            if (tooltipAberta && tooltipAberta !== tooltip) {
+                gsap.to(tooltipAberta, { opacity: 0, onComplete: () => tooltipAberta.style.visibility = 'hidden' });
+            }
+            const isOpen = tooltip.style.visibility === 'visible';
+            gsap.set(tooltip, { visibility: isOpen ? 'hidden' : 'visible' });
+            gsap.to(tooltip, { opacity: isOpen ? 0 : 1, duration: 0.3 });
+            tooltipAberta = isOpen ? null : tooltip;
+            });
+        });
+        document.addEventListener('click', () => {
+            if (tooltipAberta) gsap.to(tooltipAberta, { opacity: 0, onComplete: () => tooltipAberta.style.visibility = 'hidden' });
+        });
+        } else {
+            wrappers.forEach(wrapper => {
           const tooltip = wrapper.querySelector('.player-tooltip');
           if (!tooltip) return;
 
@@ -204,6 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
               .set(tooltip, { visibility: 'hidden' }, 0.25);
           });
         });
+        }
       
 
 
