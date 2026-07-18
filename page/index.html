@@ -20,17 +20,24 @@
 <body>
     <nav class="navbar fixed-top">
         <div class="nav-left">
+            <!-- Botão Hambúrguer -->
+            <button class="menu-hamburguer" onclick="toggleMenu()" aria-label="Abrir menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <h2 class="title-nav">Picadilhas ©</h2>
         </div>
         <div class="nav-right">
-            <a href="#home">Home</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#uniforme">Uniforme</a>
-            <a href="#support">Apoie o time</a>
-            <a href="#part">Faça parte</a>
-            <a href="#contato">Contato</a>
+            <a href="#home" onclick="toggleMenu()">Home</a>
+            <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+            <a href="#uniforme" onclick="toggleMenu()">Uniforme</a>
+            <a href="#support" onclick="toggleMenu()">Apoie o time</a>
+            <a href="#part" onclick="toggleMenu()">Faça parte</a>
+            <a href="#contato" onclick="toggleMenu()">Contato</a>
         </div>
-    </nav>  
+    </nav> 
+
     <a href="#home" class="home-fixo">Home</a>  
     <div class="scroll-overlay"></div>
     <main>
@@ -526,7 +533,7 @@
                     </div>
                 </div>
                 <div class="bottom-container">
-                        <div class="items-bottom">
+                        <div class="items-bottom left-margin">
                             <h2 class="change">Mesmo tecido da camisa Etec 195 para o Interetec 2025</h2>
                         </div>
                         <div class="items-bottom">

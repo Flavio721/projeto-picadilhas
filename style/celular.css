@@ -1,29 +1,82 @@
 @media (max-width: 768px) {
     body { overflow-x: hidden; }
+ 
+    nav {
+        .menu-hamburguer {
+            display: flex; /* Exibe o botão no mobile */
+        }
 
+        .nav-right {
+            display: none; /* Esconde os links por padrão */
+            flex-direction: column;
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            width: 100%;
+            background-color: #1D1C1C;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);  
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+            gap: 20px;
+            z-index: 99;
+
+            a {
+                margin-right: 0;
+                font-size: 2em;
+                display: block;
+            }
+        }
+
+        /* Classe ativada via JavaScript para abrir o menu */
+        &.active{
+            background-color: #1D1C1C;
+        }
+
+        /* Animação do Hambúrguer virando "X" */
+        .menu-hamburguer.active {
+            .bar:nth-child(1) {
+                transform: translateY(10px) rotate(45deg);
+            }
+            .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .bar:nth-child(3) {
+                transform: translateY(-11px) rotate(-45deg);
+            }
+        }
+    }
     .navbar { flex-direction: row; flex-wrap: wrap; padding: 8px; }
     .nav-right { gap: 2px 8px; }
     .nav-right a { font-size: 14px; margin-right: 0; }
     .title-nav { font-size: 24px; margin-left: 6px; }
-    .home-fixo { font-size: 24px; }
-
+    .home-fixo { font-size: 2.5em; }
+ 
     .main-article .image-main { height: 100px; }
 
+    .art-about-us .top{
+        height: 200px;
+    }
+    .art-about-us .main-about-us-text h1{
+        font-size: 9em !important;
+    }
+ 
     .swiper img { height: 220px; width: 260px; }
     .swiper-slide { width: 220px; }
     .sect-carrosel h1 { font-size: 26px; margin: 20px; }
     .final-text-carrosel { font-size: 22px; }
-
+ 
     .capitaes .main-captains-text { font-size: 48px; }
     .capitaes .modalities { flex-direction: column; align-items: center; margin-top: 30px; gap: 10px; }
     .capitaes .modalities .modalitie { font-size: 40px; margin-top: 0 !important; }
     .capitaes .modalitie-volei { font-size: 34px; }
     .capitaes .image-captains { min-height: 200px; }
-
+ 
     .box-captains { flex-direction: column; align-items: center; }
     .box-captains .items { width: 90%; }
     .box-captains .items img { height: 220px; }
-
+ 
     /* Times: acima de 5 colunas fixas não faz sentido em tela de celular —
        aqui os cards viram lista vertical simples com legenda ao lado */
     .futsal-division { height: auto; }
@@ -33,7 +86,7 @@
     }
     .futsal-division .right { grid-template-columns: 1fr; grid-template-rows: auto; }
     .main-teams-text { font-size: 32px; }
-
+ 
     .volei-division { flex-direction: column; padding: 15px; }
     .volei-division .left,
     .volei-division .right { width: 100%; }
@@ -41,15 +94,15 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 100px);
     }
-
+ 
     .basket-division { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 90px; padding: 15px; gap: 10px; }
     .basket-division .main-texts h2 { font-size: 1.4rem; }
     .basket-division .main-texts ul { font-size: 0.85rem; }
-
+ 
     .sect-uniforme { height: auto; min-height: 60vh; }
     .sect-uniforme .title-main { font-size: 3em; transform: none; position: relative; text-align: center; }
     .sect-uniforme .title-section { font-size: 1.8em; }
-
+ 
     /* Apoie: a composição de textos flutuantes (t1-t4) foi pensada
        para overlay sobre imagens grandes — em coluna única ela só
        atrapalha, então escondemos os decorativos e deixamos o essencial */
@@ -58,17 +111,29 @@
     .apoie-desc { font-size: 1.2em; }
     .apoie-grid { height: 260px; }
     .grid-img { position: static !important; width: 48% !important; height: 120px !important; display: inline-block; margin: 1%; }
-
+ 
     .support-us .title-main { font-size: 3em; }
     .container-left { height: 180px; }
-
+ 
     .art-faca-parte { flex-direction: column; height: auto; }
     .art-faca-parte .card { height: 33vh; }
     .art-faca-parte .title-main { position: relative; left: auto; transform: none; text-align: center; font-size: 1.6em; padding: 20px; }
     .art-faca-parte .btn-main { position: relative; bottom: auto; transform: none; margin-top: 10px; }
-
+ 
     .contact-word { font-size: 5.5em; }
     .contact-info h2 { font-size: 1.4em; }
     .person h3, .person p { font-size: 1.2em; }
     .contact-images { grid-template-columns: 1fr 1fr; height: 200px; }
+ 
+    .about-uniforme .slide { padding: 30px 15px 40px; }
+    .about-uniforme .slide .items-left, .about-uniforme .slide .items-right { flex: 1 1 100%; max-width: 100%; gap: 12px; }
+    .about-uniforme .slide .item { min-height: 76px; padding: 12px 16px; gap: 14px; }
+    .about-uniforme .slide .item .icon span, .about-uniforme .slide .item .icon i { font-size: 40px; min-width: 40px; }
+    .about-uniforme .slide .item .text .title-card { font-size: 1.1em; }
+    .about-uniforme .slide .item .text .subtitle-card { font-size: 0.9em; }
+    .about-uniforme .slide .item-center { min-height: 220px; }
+    .about-uniforme .slide .item-center img { height: 240px; }
+    .about-uniforme .slide .container-titles .main-subtitle { font-size: 2.2em; }
+    .about-uniforme .slide .bottom-container .items-bottom h2 { font-size: 0.85rem; }
+    .about-uniforme .slide .botao-slide { width: 100%; max-width: 300px; text-align: center; padding: 14px 20px; }
 }

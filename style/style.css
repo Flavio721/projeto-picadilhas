@@ -36,21 +36,54 @@ body{
     font-family: "Helvetica", sans-serif;
 }
 
-nav{
+nav {
     font-family: 'Sansterdam', sans-serif;
     display: flex;
     justify-content: space-between;
+    align-items: center; 
+    position: relative; 
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
 
-    .title-nav{
+    /* Botão Hambúrguer Estilizado */
+    .menu-hamburguer {
+        display: none; /* Oculto no computador */
+        flex-direction: column;
+        justify-content: space-between;
+        width: 35px;
+        height: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin-left: 15px;
+        z-index: 100; /* Garante que fica por cima de tudo */
+
+        .bar {
+            width: 100%;
+            height: 3px;
+            background-color: var(--color-red);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .title-nav {
         color: var(--color-red);
         font-weight: 100;
         font-size: 46px;
         margin-left: 15px;
     }
-    .nav-right{
-        gap: 10px;
 
-        a{
+    .nav-right {
+        display: flex;
+        gap: 10px;
+        transition: all 0.3s ease-in-out;
+
+        a {
             color: var(--color-red);
             font-size: 30px;
             margin-right: 10px;
@@ -58,7 +91,7 @@ nav{
             transition: .5s;
         }
 
-        a:hover{
+        a:hover {
             color: rgb(176, 4, 4);
             text-decoration: underline;
         }

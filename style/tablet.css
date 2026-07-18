@@ -7,30 +7,42 @@
     .sect-carrosel h1 { font-size: 32px; }
     .final-text-carrosel { font-size: 30px; }
 
+    .nav-right { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+    .nav-right a { font-size: 18px; }
+    .title-nav { font-size: 30px; }
+ 
+    .sect-carrosel { height: auto; padding-bottom: 40px; }
+    .sect-carrosel h1 { font-size: 32px; }
+    .final-text-carrosel { font-size: 30px; }
+ 
     .art-about-us { height: auto; min-height: 100vh; }
     .art-about-us .main-about-title { font-size: 26px; }
     .art-about-us .bottom { height: auto; padding: 40px 20px; }
     .art-about-us .bottom .main-about-us-text { width: 100%; flex-wrap: wrap; justify-content: center; }
     .art-about-us .bottom .main-about-us-text h1 { font-size: 3.2em; }
     .art-about-us .bottom .main-about-us-text img { height: 90px; }
-
+ 
     .all-captains { height: auto; padding: 40px 0; }
     .box-captains { flex-wrap: wrap; row-gap: 30px; justify-content: center; }
     .box-captains .items { width: 45%; }
-
+ 
     .futsal-division { padding: 20px; }
     .futsal-division .left { grid-template-rows: repeat(5, 90px); gap: 6px; }
     .futsal-division .right { grid-template-columns: repeat(2, 1fr); }
     .main-teams-text { font-size: 42px; }
-
+ 
     .volei-division { padding: 20px; }
     .volei-division .right { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(5, 110px); }
     .volei-division .left .left-top { flex-wrap: wrap; justify-content: center; }
-
+ 
     .basket-division { grid-template-columns: repeat(4, 1fr); padding: 20px; }
     .basket-division .main-texts { grid-column: 1 / -1; grid-row: auto; }
     .basket-division .main-texts ul { flex-wrap: wrap; }
-
+ 
     .sect-uniforme .title-main { font-size: 4.2em; transform: translate(0, 60%); left: 0; }
     .sect-uniforme .title-section { font-size: 2.2em; }
+ 
+    .about-uniforme .slide .main-container { margin-left: 0 !important; }
+    .about-uniforme .slide .items-left, .about-uniforme .slide .items-right { flex: 1 1 45%; max-width: 45%; }
+    .about-uniforme .slide .item-center img { height: 300px; }  
 }

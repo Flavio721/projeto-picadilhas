@@ -1,3 +1,19 @@
+// MENU RESPONSIVo
+function toggleMenu() {
+    if (window.innerWidth <= 768) {
+        const nav = document.querySelector('nav');
+        const navRight = document.querySelector('.nav-right');
+        const menuHamburguer = document.querySelector('.menu-hamburguer');
+        
+        if (nav && navRight && menuHamburguer) {
+            nav.classList.toggle('active');
+            navRight.classList.toggle('active');
+            menuHamburguer.classList.toggle('active');
+        }
+    }
+}
+
+
 function initSlides() {
     const slides = document.querySelectorAll('.about-uniforme .slide');
     const botao1 = document.getElementById('botaoSlide1');
@@ -268,6 +284,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const textColor = document.querySelectorAll(".change")
 
             textColor.style.color = isWhite ? '#1D1C1C' : '#FCF4E5';
+
+            const container = document.querySelector(".about-uniforme");
+
+            container.style.backgroundColor = isMobile ? '#FCF4E5' : '#1D1C1C'
         });
     });
 

@@ -1,37 +1,409 @@
 @media (max-width: 575px) {
-    .title-nav { font-size: 18px; }
-    .nav-right a { font-size: 12px; }
+    html{ overflow-x: hidden;}
+    nav {
+        .menu-hamburguer {
+            display: flex; /* Exibe o botão no mobile */
+        }
 
+        .nav-right {
+            display: none; /* Esconde os links por padrão */
+            flex-direction: column;
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            width: 100%;
+            background-color: #fff; /* Mesma cor de fundo do seu menu */
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+            gap: 20px;
+            z-index: 99;
+
+            a {
+                margin-right: 0;
+                font-size: 26px;
+                display: block;
+            }
+        }
+
+        /* Classe ativada via JavaScript para abrir o menu */
+        .nav-right.active {
+            display: flex;
+        }
+
+        /* Animação do Hambúrguer virando "X" */
+        .menu-hamburguer.active {
+            .bar:nth-child(1) {
+                transform: translateY(10px) rotate(45deg);
+            }
+            .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .bar:nth-child(3) {
+                transform: translateY(-11px) rotate(-45deg);
+            }
+        }
+    }
+    .title-nav { font-size: 18px; margin-left: 60px !important; }
+    .nav-right a { font-size: 12px; }
+ 
     .sect-carrosel h1 { font-size: 20px; }
     .swiper img { height: 180px; width: 200px; }
     .swiper-slide { width: 180px; }
-
+ 
     .art-about-us .bottom .main-about-us-text h1 { font-size: 2.2em; }
     .art-about-us .bottom .main-about-us-text img { height: 60px; }
-
+ 
     .capitaes .main-captains-text { font-size: 34px; }
     .capitaes .modalities .modalitie { font-size: 28px; }
     .capitaes .modalitie-volei { font-size: 26px; }
-
+ 
     .box-captains .items { width: 100%; }
+    .futsal-division{
+        display: flex !important;
+        flex-direction: column-reverse !important;
+    }
+    .futsal-division .left { 
+        grid-template-columns: repeat(2, 2fr) !important;
+        grid-template-rows: repeat(8, 85px); 
+        width: 100%;
+        align-items: center !important;
+        justify-items: center !important;
+        .goleiro{
+            grid-row: 1;
+            grid-column: 1;
+        }
+        .fixo{
+            grid-row: 2;
+            grid-column: 2;
+        }
+        .ala-d{
+            grid-row: 3;
+            grid-column: 1 !important;
+        }
+        .ala-e{
+            grid-row: 4;
+            grid-column: 2;
+        }
+        .pivo{
+            grid-row: 5;
+            grid-column: 1;
+        }
+        .reserva-1{
+            grid-row: 6;
+            grid-column: 2;
+        }
+        .reserva-2{
+            grid-row: 7;
+            grid-column: 1;
+        }
+        .reserva-3{
+            grid-row: 8;
+            grid-column: 2;
+        }
+    }
+    
+    .player, .player-wrapper, .player-wrapper .player{
+        height: 160px !important;
+        width: 200px !important;
+    }
 
-    .futsal-division .left { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(8, 85px); }
-    .futsal-division .right { padding: 0; }
-    .main-teams-text { font-size: 26px; }
+    .futsal-division .right { 
+        margin-bottom: 50px !important;
+        margin-right: 300px !important;
+        padding: 0; 
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 100%;
+        gap: 0px !important;
 
-    .volei-division .right { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 90px); }
+        .player, .player-wrapper{
+        height: 160px !important;
+        width: 180px !important;
 
-    .basket-division { grid-template-columns: repeat(2, 1fr); }
-    .basket-division .main-texts h2 { font-size: 1.1rem; }
+        .player-wrapper[data-name="Bruno Barros"]{
+            grid-row: 2 !important;
+            grid-column: 1 !important;
+        }
+        .player-wrapper[data-name="Lucas Ezequiel"]{
+            grid-row: 2 !important;
+            grid-column: 2 !important;
+        }
+    }
+    }
+    .main-texts { 
+        flex-direction: column !important;
+        text-align: center;
+        .main-text-title{
+            font-size: 26px; 
+        }
+    }
+    .volei-division{
+        margin: 0 !important;
+        padding:  0 !important;
+    }
+    .volei-division .right { 
+        grid-template-columns: repeat(2, 1fr) !important; 
+        grid-template-rows: repeat(6, 1fr);
+        width: 100% !important;
+        align-items: center !important;
+        justify-items: center !important;
 
-    .apoie-title { font-size: 2.4em; }
-    .apoie-desc { font-size: 1em; }
-    .apoie-btn { font-size: 1.1em; padding: 12px 18px; }
+        .player-3 {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .player-4 {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        .player-5 {
+            grid-column: 1;
+            grid-row: 3;
+        }
+        .player-6 {
+            grid-column: 2;
+            grid-row: 4;
+        }
+        .player-7 {
+            grid-column: 1;
+            grid-row: 5;
+        }
+        .player-8 {
+            grid-column: 2;
+            grid-row: 6;
+        }
+        
+     }
+     .volei-division .left{
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        gap: 20px !important;
+     }
+ 
+    .basket-division {
+        grid-template-columns: repeat(2, 1fr) !important; 
+        grid-template-rows: repeat(10, .5fr) !important;
+        row-gap: 0px !important;
+        padding: 20px !important;
+        padding-left: 40px !important;
+        width: 100%;
+        align-items: center !important;
+        justify-items: center !important;
 
-    .support-us .title-main { font-size: 2.2em; }
+        .player-1 {
+            grid-column: 1;
+            grid-row: 2;
+        }
 
-    .contact-word { font-size: 3.2em; }
-    .contact-left { height: 160px; }
-    .contact-info { width: 100%; }
-    .contact-info h2 { font-size: 1.15em; margin-bottom: 30px; }
+        .player-2 {
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        .player-3 {
+            grid-column: 1;
+            grid-row: 4;
+        }
+
+        .player-4 {
+            grid-column: 2;
+            grid-row: 5;
+            
+        }
+
+        .player-5 {
+            grid-column: 1;
+            grid-row: 6;
+        }
+
+        .player-6 {
+            grid-column: 2;
+            grid-row: 7;
+        }
+
+        .player-7 {
+            grid-column: 1;
+            grid-row: 8;
+        }
+
+        .player-8 {
+            grid-column: 2;
+            grid-row: 9;
+        }
+
+        .player-9 {
+            grid-column: 1;
+            grid-row: 10;
+        }
+    }
+    .basket-division .main-texts{ 
+        margin-left: 30px;
+        .main-teams-text{
+            font-size: 2em;
+        }
+        ul{
+            text-align: center;
+            margin-left: 40px !important;
+
+            li{
+                font-size: 1.3em;
+            }
+        }
+    }
+    .sect-uniforme{
+        padding: 10px;
+        .title-main{
+            top: 0% !important;
+            left: 0% !important;
+            transform: translate(5%, 50%) !important;
+        }
+    }
+    .about-uniforme { height: 100%;overflow: visible; margin: 0 !important; padding: 0 !important;}
+    .about-uniforme .left-margin{
+        margin-left: 30px !important;
+    }
+    .about-uniforme .slide {
+        position: absolute;
+        opacity: 0;
+        clip-path: circle(0% at 89% 50%);
+        transition: clip-path 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+    }
+    .about-uniforme .slide .botao-slide { display: none !important; }
+    .about-uniforme { height: 100%; overflow: visible; }
+    .about-uniforme .slide {
+        position: absolute;
+        display: none !important;
+    }
+    .about-uniforme .slide:first-child {
+        opacity: 1;
+        clip-path: circle(150% at 89% 50%);
+        pointer-events: auto;
+        z-index: 1;
+    }
+    .about-uniforme .slide.active {
+        display: flex !important;
+        clip-path: circle(150% at 89% 50%);
+        pointer-events: auto;
+        z-index: 2;
+    }
+
+    .sect-apoie{
+        padding: 0px !important;
+    }
+    .apoie-title { 
+        padding: 10px;
+        font-size: 2.4em;
+        text-align: center;
+    }
+    .apoie-desc { 
+        padding: 10px;
+        font-size: 1em;
+        text-align: center;
+    }
+    .apoie-btn { 
+        font-size: 1.1em; 
+        padding: 12px 18px;
+        margin: auto;
+     }
+     .apoie-left{
+        img{
+            display: none;
+        }
+     }
+     .apoie-grid{
+        grid-template-columns: 1;
+        grid-template-rows: repeat(4, 1fr);
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        .g1{
+            grid-column: 1;
+            grid-row: 1;
+            height: 150px !important;
+            width: 100% !important;
+        }
+        .g2{
+            grid-column: 1;
+            grid-row: 1;
+            height: 150px !important;
+            width: 100% !important;
+        }
+        .g3{
+            grid-column: 1;
+            grid-row: 1;
+            height: 140px !important;
+            width: 100% !important;
+        }
+     }
+     
+     .support-us{
+        padding: 0px !important;
+        margin: 0px !important;
+        background-color: #1D1C1C;
+     }
+    .support-us .title-main { 
+        font-size: 2.2em;
+        color: #E52C0D;
+    
+    }
+    .support-us .container-left{
+        background-color: blue;
+        height: 100vh !important;
+        width: 70% !important;
+
+        .image-70{
+            height: 100%;
+        }
+    }
+    .art-faca-parte{
+        .card{
+            display: grid !important;
+            grid-template-columns: repeat(1, 1fr) !important;
+            grid-template-rows: repeat(2, 1fr) !important;
+            width: 100% !important;
+            align-items: center !important;
+            justify-items: center !important;
+
+            h2{
+                grid-row: 1;
+                grid-column: 1;
+            }
+            button{
+                grid-row: 2 !important;
+                grid-column: 1 !important;
+                left: 0 !important;
+                top: 0 !important;
+                width: 70% !important;
+            }
+
+            &.jogador{
+                background-position: top !important;
+            }
+        }
+    }
+    .contact-word { display: none;}
+    .contact-left { height: 160px;}
+    .small-title{ z-index: 99;}
+    .contact-info { width: 100%; z-index: 99;}
+    .contact-info h2 { font-size: 1.15em; margin-bottom: 30px; z-index: 99;}
+    .bottom-text{ width: 100%; text-align: center; z-index: 99;}
+    .contact-top{ z-index: 99;}
+
+    .contact-images::before{
+        content:"";
+        position:absolute;
+        inset:0 ;
+        background: #05050560;
+        transition:.4s;
+    }
+ 
+    .about-uniforme .slide .container-titles .main-subtitle { font-size: 1.6em; }
+    .about-uniforme .slide .item-center img { height: 190px; }
+    .about-uniforme .slide .item .icon span, .about-uniforme .slide .item .icon i { font-size: 30px; min-width: 30px; }
+    .about-uniforme .slide .item .text .title-card { font-size: 0.9em; }
+    .about-uniforme .slide .item .text .subtitle-card { font-size: 0.78em; }
 }
