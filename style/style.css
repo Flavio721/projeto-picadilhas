@@ -496,11 +496,9 @@ nav{
     padding: 15px;
     background-color: #fcf4e5;
     display: flex;
-    gap: 30px;
 
     .player{
         height: 180px;
-        border-radius: 5px;
     }
     .left{
         height: 75%;
@@ -543,10 +541,9 @@ nav{
     }
 
     .player {
-      height: 200px;
+      height: 220px;
       width: 100%;
       object-fit: cover;
-      border-radius: 16px;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
       border: 2px solid rgba(255, 255, 255, 0.5);
       display: block;
@@ -564,9 +561,8 @@ nav{
     }
 
     .player-wrapper .player {
-      height: 160px;
+      height: 200px;
       width: 100%;
-      border-radius: 16px;
     }
 
     /* ── Tooltip base ── */
@@ -666,8 +662,9 @@ nav{
     }
 
     .main-texts {
-        grid-column: 1 / -1; /* ocupa as 2 colunas */
+        grid-column: 1 / 3; /* ocupa as 2 colunas */
         grid-row: 1;
+        display: flex;
 
         ul{
             color:  var(--color-red);
@@ -685,8 +682,8 @@ nav{
     }
 
     .player-wrapper[data-nome="Lucas Ezequiel"] {
-        grid-column: 1;
-        grid-row: 4;
+        grid-column: 2;
+        grid-row: 3;
     }
 
     .left .player-wrapper:nth-child(2) .player-tooltip,
@@ -738,10 +735,9 @@ nav{
     padding-top: 55px;
 
     .player {
-        height: 200px;
+        height: 220px;
         width: 100%;
         object-fit: cover;
-        border-radius: 16px;
         box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
         border: 2px solid rgba(255, 255, 255, 0.5);
         display: block;
@@ -759,9 +755,8 @@ nav{
     }
 
     .player-wrapper .player {
-        height: 160px;
+        height: 200px;
         width: 100%;
-        border-radius: 16px;
         object-fit: cover;
     }
 
@@ -847,7 +842,6 @@ nav{
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 16px;
     }
 
 
@@ -956,7 +950,6 @@ nav{
       height: 110px;
       width: 100%;
       object-fit: cover;
-      border-radius: 16px;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
       border: 2px solid rgba(255, 255, 255, 0.5);
       display: block;
@@ -974,9 +967,8 @@ nav{
     }
 
     .player-wrapper .player {
-      height: 160px;
+      height: 200px;
       width: 80%;
-      border-radius: 16px;
     }
 
     /* ── Tooltip base ── */
@@ -1697,7 +1689,7 @@ nav{
         content:"";
         position:absolute;
         inset:0;
-        background: #ffffff1d;
+        background: #05050560;
         transition:.4s;
     }
     
@@ -1737,6 +1729,7 @@ nav{
         z-index:2;
     
         font-size:3em;
+        text-align: right;
     }
     
     .title-main span{
@@ -1854,10 +1847,12 @@ nav{
     position:absolute;
     left:35px;
     top:50%;
-    transform:translateY(-50%);
+    transform:
+        translateY(-50%)
+        translateX(20%);
     margin:0;
     font-family:'Sansterdam', sans-serif;
-    font-size:25em;
+    font-size:27em;
     line-height:.8;
     color:#f7efd9;
     z-index:10;
