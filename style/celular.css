@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 576px) {
     body { overflow-x: hidden; }
  
     nav {
@@ -67,6 +67,9 @@
     .sect-carrosel h1 { font-size: 26px; margin: 20px; }
     .final-text-carrosel { font-size: 22px; }
  
+    .capitaes{
+        height: 100vh !important;
+    }
     .capitaes .main-captains-text { font-size: 48px; }
     .capitaes .modalities { flex-direction: column; align-items: center; margin-top: 30px; gap: 10px; }
     .capitaes .modalities .modalitie { font-size: 40px; margin-top: 0 !important; }

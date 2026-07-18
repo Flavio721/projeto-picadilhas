@@ -1,7 +1,12 @@
-@media (max-width: 992px) {
+@media (max-width: 992px) and (min-width: 769px){
+    html { overflow-x: hidden;}
     .nav-right { display: flex; flex-wrap: wrap; gap: 4px 12px; }
     .nav-right a { font-size: 18px; }
     .title-nav { font-size: 30px; }
+    nav{ 
+        width: 100%;
+        
+    }
 
     .sect-carrosel { height: auto; padding-bottom: 40px; }
     .sect-carrosel h1 { font-size: 32px; }
