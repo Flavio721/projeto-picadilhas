@@ -194,15 +194,16 @@
         display: grid !important;
         padding: 90px 0 0 0  !important;
         margin: 0 !important;
-        grid-template-columns: repeat(3, 1fr) !important; 
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important; 
         grid-template-rows: repeat(5, 150px) !important;
         gap: 0px !important;
         width: 100% !important;
         height: auto !important;
 
         .player-wrapper .player{
-            height: 150px !important;
-            width: 150px !important;
+            height: minmax(130px, 150px) !important;
+            width: 100% !important;
+            max-width: 150px !important;
         }
         
         .player-1 {
@@ -263,7 +264,7 @@
             align-self: center;
             width: 100% !important;
         .main-teams-text{
-            font-size: 2em;
+            font-size: minmax(1.5em, 2em);
             line-height: 1.2em;
         }
         ul{
@@ -272,16 +273,17 @@
 
             
             li{
-                font-size: 1.3em;
+                font-size: minmax(1em, 1.3em);
             }
         }
     }
     .sect-uniforme{
         padding: 10px;
         .title-main{
-            top: 0% !important;
-            left: 0% !important;
-            transform: translate(30%, 100%) !important;
+            position: absolute;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
         }
     }
 
