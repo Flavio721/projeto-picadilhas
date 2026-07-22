@@ -61,11 +61,12 @@
     }
     .capitaes .main-captains-text { font-size: 34px; }
     .capitaes .modalities{ display: flex; flex-direction: column; align-items: center; gap: 0px !important;}
-    .capitaes .modalities .modalitie { font-size: 28px; margin-top: 0 !important;}
-    .capitaes .modalitie-volei { font-size: 26px; }
+    .capitaes .modalities .modalitie { font-size: clamp(3.5em, 4em, 5em) !important; margin: 0 !important;}
+    .capitaes .modalitie-volei { font-size: clamp(3.5em, 4em, 5em); }
     .box-captains { display: flex !important; flex-direction: column !important;}
     .box-captains .items { width: 100%; }
     .box-captains .items h2{ font-size: 2em;}
+    .box-captains .items p{ font-size: clamp(1.2em, 1.8em, 2em);}
     .futsal-division {
         height: auto !important;
         min-height: 100vh;
@@ -86,6 +87,12 @@
             grid-column: unset !important;
             grid-row: unset !important;
             text-align: center;
+
+            ul{
+                li{
+                    font-size: clamp(1.2em, 1.4em, 2em);
+                }
+            }
         }
     }
 
