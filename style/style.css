@@ -534,25 +534,26 @@ nav {
         height: 180px;
     }
     .left{
-        height: 75%;
-        width: 60%;
-        display: grid;
-        grid-template-columns: repeat(5, 150px);
-        grid-template-rows: repeat(5, 120px);
-        gap: 8px;
+        width:min(60%,900px);
+        display:grid;
+
+        grid-template-columns:repeat(5,minmax(110px,1fr));
+        grid-auto-rows:minmax(120px,auto);
+
 
         .goleiro{
-            grid-column-start: 2;
+            grid-column-start: 3;
         }
         .fixo{
             grid-row-start: 2;
+            grid-column-start: 2;
         }
         .ala-e{
-            grid-column-start: 2;
+            grid-column-start: 3;
             grid-row-start: 3;
         }
         .ala-d{
-            grid-column-start: 3;
+            grid-column-start: 4;
             grid-row-start: 2;
         }
         .pivo{
@@ -568,8 +569,16 @@ nav {
             grid-row-start: 5;
         }
         .reserva-3{
-            grid-column-start: 1;
+            grid-column-start: 2;
             grid-row-start: 4;
+        }
+        .reserva-4{
+            grid-column-start: 1;
+            grid-row-start: 3;
+        }
+        .reserva-5{
+            grid-column-start: 1;
+            grid-row-start: 1;
         }
     }
 
@@ -686,36 +695,21 @@ nav {
     }
     .right {
         flex: 1;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        /* grid-template-rows: repeat(5, 1fr); */
-        gap: 16px;
-        align-content: start;
-    }
-
-    .main-texts {
-        grid-column: 1 / 3;
-        grid-row: 1;
         display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+    .main-texts {
 
         ul{
             color:  var(--color-red);
             list-style-type: none;
+            font-size: 1.2em;
         }
         li:before{
             content: "— ";
         }
-    }
-
-    .player-wrapper[data-nome="Bruno Barros"] {
-        grid-column: 1;
-        grid-row: 3;
-        margin-left: 30px;
-    }
-
-    .player-wrapper[data-nome="Lucas Ezequiel"] {
-        grid-column: 2;
-        grid-row: 3;
     }
 
     .left .player-wrapper:nth-child(2) .player-tooltip,
@@ -798,57 +792,53 @@ nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
-        padding: 20px;
-
-        .left-top{
-            display: flex;
-            gap: 30px;
-
-            .player-2{
-                margin-bottom: 50px;
-            }
-        }
+        justify-content: center;
+        padding: 40px;
         ul{
             color: var(--color-red);
             list-style-type: none;
+            font-size: 1.2em;
         }
         li:before{
             content: "— ";
         }
+        h2{
+            font-size: 70px;
+        }
     }
 
-    .left .player-wrapper {
-        width: 80%;
-        position: relative;
-    }
-
-    /* ── RIGHT CORRIGIDO ── */
     .right {
-        height: 75%;
-        width: 60%;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        gap: 8px;
+        width:min(60%,950px);
+        display:grid;
+        grid-template-columns:repeat(5,minmax(120px,1fr));
+        grid-auto-rows:minmax(120px,1fr);
+
+        .player-1 {
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
+        .player-2 {
+            grid-column-start: 3;
+            grid-row-start: 1;
+        }
         .player-3 {
             grid-column-start: 1;
-            grid-row-start: 4;
+            grid-row-start: 3;
         }
     
         .player-4 {
             grid-column-start: 2;
-            grid-row-start: 3;
+            grid-row-start: 2;
         }
     
         .player-5 {
             grid-column-start: 3;
-            grid-row-start: 4;
+            grid-row-start: 3;
         }
     
         .player-6 {
             grid-column-start: 5;
-            grid-row-start: 4;
+            grid-row-start: 3;
         }
     
         .player-7 {
@@ -858,7 +848,7 @@ nav {
     
         .player-8 {
             grid-column-start: 4;
-            grid-row-start: 3;
+            grid-row-start: 2;
         }
     }
 
@@ -911,70 +901,27 @@ nav {
     position: relative;
     padding: 35px;
     height: 100vh;
-    background-color: var(--color-black);    
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 18px;
-
-    .player-1 {
-        grid-column-start: 5;
-        grid-row-start: 1;
-    }
-
-    .player-2 {
-        grid-column-start: 1;
-        grid-row-start: 4;
-    }
-
-    .player-3 {
-        grid-column-start: 1;
-        grid-row-start: 2;
-    }
-
-    .player-4 {
-        grid-column-start: 2;
-        grid-row-start: 1;
-    }
-
-    .player-5 {
-        grid-column-start: 3;
-        grid-row-start: 2;
-    }
-
-    .player-6 {
-        grid-column-start: 2;
-        grid-row-start: 3;
-    }
-
-    .player-7 {
-        grid-column-start: 4;
-        grid-row-start: 3;
-    }
-
-    .player-8 {
-        grid-column-start: 5;
-        grid-row-start: 3;
-    }
-
-    .player-9 {
-        grid-column-start: 5;
-        grid-row-start: 5;
-    }
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: row-reverse;
 
     .main-texts {
-       grid-column: span 3 / span 3;
-        grid-row: span 2 / span 2;
-        grid-column-start: 2;
-        grid-row-start: 4;
-
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         ul{
             color: var(--color-red);
             list-style-type: none;
-            display: flex;
+            font-size: 1.2em;
         }
         li:before{
             content: "— ";
+        }
+        h2 {
+            text-align: center;
+            font-size: 70px;
         }
     }
 
@@ -1088,6 +1035,90 @@ nav {
       border-radius: 40px;
       font-weight: 400;
       color: #b8ccdd;
+    }
+
+    .bottom{
+        display: grid;
+        flex: 1;
+        grid-template-columns:repeat(6,minmax(130px,1fr));
+        grid-auto-rows: minmax(120px,1fr);
+
+
+        .player {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            display: block;
+            background: #cdd8e0;
+            cursor: default;
+        }
+
+        .player-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .player-wrapper .player {
+            height: 100%;
+            width: 100%;
+        }
+        .player-wrapper .player-9 {
+            height: 100%;
+            width: 100%;
+        }
+
+
+        
+        .player-1 {
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
+
+        .player-2 {
+            grid-column-start: 3;
+            grid-row-start: 1;
+        }
+
+        .player-3 {
+            grid-column-start: 5;
+            grid-row-start: 1;
+        }
+
+        .player-4 {
+            grid-column-start: 2;
+            grid-row-start: 2;
+        }
+
+        .player-5 {
+            grid-column-start: 4;
+            grid-row-start: 2;
+        }
+
+        .player-6 {
+            grid-column-start: 1;
+            grid-row-start: 3;
+        }
+
+        .player-7 {
+            grid-column-start: 3;
+            grid-row-start: 3;
+        }
+
+        .player-8 {
+            grid-column-start: 5;
+            grid-row-start: 3;
+        }
+
+        .player-9 {
+            grid-column-start: 6;
+            grid-row-start: 2;
+        }
     }
 }
 /* Transições entre capitães e divisões */

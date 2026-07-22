@@ -1,0 +1,191 @@
+/*
+  Responsividade do projeto.
+  Cada @media é independente: não há regra de um breakpoint que precise da outra.
+*/
+
+html, body { max-width: 100%; overflow-x: clip; }
+img { max-width: 100%; }
+
+/* 1200px a 1439px — notebook */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .futsal-division, .volei-division { height: auto; min-height: 100vh; padding: 32px; gap: 28px; }
+  .futsal-division .left { width: 60%; grid-template-columns: repeat(5, minmax(100px, 1fr)); grid-auto-rows: 130px; }
+  .futsal-division .right { min-width: 320px; }
+  .futsal-division .player-wrapper .player { height: 185px; }
+  .volei-division .left { min-width: 320px; padding: 24px; }
+  .volei-division .right { width: 60%; grid-template-columns: repeat(5, minmax(100px, 1fr)); grid-auto-rows: 130px; }
+  .volei-division .right .player-wrapper .player { height: 100%; }
+  .basket-division { height: auto; min-height: 100vh; padding: 32px; grid-template-columns: repeat(5, minmax(120px, 1fr)); grid-auto-rows: 150px; }
+  .basket-division .player-wrapper .player { height: 180px; width: 100%; }
+  .box-captains { gap: 24px; }
+  .box-captains .items { width: min(31%, 330px); }
+  .box-captains .items img { width: 100%; height: 280px; object-fit: cover; }
+  .about-uniforme .slide .main-container { margin-left: 0 !important; gap: 24px; }
+  .about-uniforme .slide .items-left, .about-uniforme .slide .items-right { flex: 0 1 290px; }
+}
+
+/* 992px a 1199px — laptop compacto */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav-right a { font-size: 1.2rem; margin-right: 0; }
+  .title-nav { font-size: 2rem; }
+  .futsal-division, .volei-division { height: auto; min-height: 100vh; padding: 32px; gap: 24px; }
+  .futsal-division .left { width: 58%; grid-template-columns: repeat(5, minmax(80px, 1fr)); grid-auto-rows: 115px; }
+  .futsal-division .right { min-width: 290px; }
+  .futsal-division .player-wrapper .player { height: 165px; }
+  .volei-division .left { min-width: 290px; padding: 20px; }
+  .volei-division .right { width: 58%; grid-template-columns: repeat(5, minmax(80px, 1fr)); grid-auto-rows: 115px; }
+  .volei-division .right .player-wrapper .player { height: 100%; }
+  .basket-division { height: auto; min-height: 100vh; padding: 30px; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 145px; }
+  .basket-division .main-texts { grid-column: 1 / -1; grid-row: auto; }
+  .basket-division .main-texts ul { flex-wrap: wrap; }
+  .basket-division .player-wrapper .player { height: 165px; width: 100%; }
+  .main-teams-text { font-size: 3.5rem; }
+  .box-captains .items { width: min(31%, 300px); }
+  .box-captains .items img { width: 100%; height: 255px; object-fit: cover; }
+  .about-uniforme { height: auto; min-height: 780px; }
+  .about-uniforme .slide { min-height: 780px; }
+  .about-uniforme .slide .main-container { margin-left: 0 !important; gap: 20px; }
+  .about-uniforme .slide .items-left, .about-uniforme .slide .items-right { flex: 0 1 250px; }
+}
+
+/* 768px a 991px — tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav-right { flex-wrap: wrap; justify-content: flex-end; gap: 4px 12px; }
+  .nav-right a { font-size: 1.05rem; margin-right: 0; }
+  .title-nav { font-size: 1.9rem; }
+  .all-captains { height: auto; padding: 48px 32px; }
+  .box-captains { flex-wrap: wrap; gap: 28px; justify-content: center; }
+  .box-captains .items { width: min(45%, 320px); }
+  .box-captains .items img { width: 100%; height: 250px; object-fit: cover; }
+  .futsal-division { height: auto; min-height: 100vh; padding: 36px 32px; flex-direction: column; gap: 28px; }
+  .futsal-division .left, .futsal-division .right { width: 100%; }
+  .futsal-division .left { grid-template-columns: repeat(5, 1fr); grid-auto-rows: 125px; }
+  .futsal-division .right { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .futsal-division .main-texts { grid-column: 1 / -1; }
+  .futsal-division .player-wrapper .player { height: 160px; }
+  .volei-division { height: auto; min-height: 100vh; padding: 36px 32px; flex-direction: column; gap: 28px; }
+  .volei-division .left, .volei-division .right { width: 100%; }
+  .volei-division .left { padding: 0; }
+  .volei-division .right { grid-template-columns: repeat(5, 1fr); grid-auto-rows: 120px; }
+  .volei-division .right .player-wrapper .player { height: 100%; }
+  .basket-division { height: auto; min-height: 100vh; padding: 32px; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 140px; }
+  .basket-division .main-texts { grid-column: 1 / -1; grid-row: auto; }
+  .basket-division .main-texts ul { flex-wrap: wrap; }
+  .basket-division .player-wrapper .player { height: 155px; width: 100%; }
+  .main-teams-text { font-size: 3rem; }
+  .about-uniforme { height: auto; min-height: 820px; }
+  .about-uniforme .slide { min-height: 820px; padding: 40px 32px; }
+  .about-uniforme .slide .main-container { margin-left: 0 !important; flex-wrap: wrap; justify-content: center; gap: 20px; }
+  .about-uniforme .slide .item-center { order: -1; width: 100%; }
+  .about-uniforme .slide .item-center img { height: 290px; }
+  .contact-section { height: auto; min-height: 650px; grid-template-columns: 1fr; grid-template-rows: auto auto auto; }
+  .contact-left, .contact-images { height: 220px; }
+  .contact-info { width: 100%; padding: 28px 32px; }
+}
+
+/* 576px a 767px — celular grande */
+@media (min-width: 576px) and (max-width: 767px) {
+  nav.navbar { min-height: 64px; padding: 10px 18px; background: var(--color-black); }
+  nav .menu-hamburguer { display: flex; margin-left: 0; }
+  nav .nav-right { display: none; position: absolute; inset: 100% 0 auto; flex-direction: column; padding: 16px 24px 24px; background: var(--color-black); }
+  nav .nav-right.active { display: flex; }
+  nav .nav-right a { margin: 0; padding: 8px; text-align: center; font-size: 1.4rem; }
+  .title-nav { margin-left: 12px; font-size: 1.8rem; }
+  .all-captains { height: auto; padding: 42px 20px; }
+  .box-captains { flex-direction: column; align-items: center; gap: 30px; }
+  .box-captains .items { width: min(100%, 360px); }
+  .box-captains .items img { width: 100%; height: 250px; object-fit: cover; }
+  .futsal-division { height: auto; padding: 30px 20px; flex-direction: column; gap: 24px; }
+  .futsal-division .left { width: 100%; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 115px; gap: 6px; }
+  .futsal-division .right { width: 100%; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .futsal-division .main-texts { grid-column: 1 / -1; text-align: center; }
+  .futsal-division .player-wrapper .player { height: 145px; }
+  .volei-division { height: auto; padding: 30px 20px; flex-direction: column; gap: 24px; }
+  .volei-division .left, .volei-division .right { width: 100%; }
+  .volei-division .left { padding: 0; text-align: center; }
+  .volei-division .right { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 130px; gap: 6px; }
+  .volei-division .right .player-wrapper .player { height: 100%; }
+  .basket-division { height: auto; padding: 28px 20px; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; gap: 8px; }
+  .basket-division .main-texts { grid-column: 1 / -1; grid-row: auto; text-align: center; }
+  .basket-division .main-texts ul { display: block; padding: 0; }
+  .basket-division .player-wrapper .player { height: 135px; width: 100%; }
+  .main-teams-text { font-size: 2rem; }
+  .main-texts ul { padding: 0; font-size: .9rem; }
+  .about-uniforme { height: auto; min-height: 0; }
+  .about-uniforme .slide { min-height: 0; padding: 32px 20px 40px; }
+  .about-uniforme .slide .main-container { margin-left: 0 !important; flex-direction: column; gap: 18px; }
+  .about-uniforme .slide .items-left, .about-uniforme .slide .items-right { width: 100%; max-width: none; }
+  .about-uniforme .slide .item-center img { height: 240px; }
+  .about-uniforme .slide .bottom-container { flex-wrap: wrap; }
+  .about-uniforme .slide .bottom-container .items-bottom { width: 100%; }
+  .sect-apoie { height: auto; padding: 44px 20px; flex-direction: column; gap: 26px; }
+  .apoie-text, .apoie-img-bottom-left { display: none; }
+  .apoie-left, .apoie-grid { width: 100%; }
+  .apoie-left { text-align: center; }
+  .apoie-grid { height: 300px; }
+  .support-us { height: auto; min-height: 520px; padding: 32px 20px; }
+  .support-us .title-main { position: static; transform: none; text-align: center; }
+  .container-left { position: relative; width: 100%; height: 210px; margin-top: 24px; }
+  .container-center-right, .container-bottom-right { display: none; }
+  .art-faca-parte { height: auto; flex-direction: column; }
+  .art-faca-parte .card { width: 100%; height: 280px; }
+  .contact-section { height: auto; grid-template-columns: 1fr; grid-template-rows: auto auto auto; }
+  .contact-left, .contact-images { height: 185px; }
+  .contact-info { width: 100%; padding: 24px 20px; }
+  .contact-word { position: static; transform: none; padding: 12px; text-align: center; font-size: 5rem; }
+  .bottom-text { position: static; padding: 20px; text-align: center; }
+}
+
+/* até 575px — celular */
+@media (max-width: 575px) {
+  nav.navbar { min-height: 60px; padding: 8px 14px; background: var(--color-black); }
+  nav .menu-hamburguer { display: flex; width: 30px; margin-left: 0; }
+  nav .nav-right { display: none; position: absolute; inset: 100% 0 auto; flex-direction: column; padding: 14px 18px 22px; background: var(--color-black); }
+  nav .nav-right.active { display: flex; }
+  nav .nav-right a { margin: 0; padding: 8px; text-align: center; font-size: 1.2rem; }
+  .title-nav { margin-left: 10px; font-size: 1.5rem; }
+  .all-captains { height: auto; padding: 36px 14px; }
+  .box-captains { flex-direction: column; align-items: center; gap: 28px; }
+  .box-captains .items { width: 100%; }
+  .box-captains .items img { width: 100%; height: 230px; object-fit: cover; }
+  .futsal-division { height: auto; padding: 28px 14px; flex-direction: column; gap: 20px; }
+  .futsal-division .left { width: 100%; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 100px; gap: 5px; }
+  .futsal-division .right { width: 100%; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .futsal-division .main-texts { grid-column: 1 / -1; text-align: center; }
+  .futsal-division .player-wrapper .player { height: 125px; }
+  .volei-division { height: auto; padding: 28px 14px; flex-direction: column; gap: 20px; }
+  .volei-division .left, .volei-division .right { width: 100%; }
+  .volei-division .left { padding: 0; text-align: center; }
+  .volei-division .right { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 112px; gap: 5px; }
+  .volei-division .right .player-wrapper .player { height: 100%; }
+  .basket-division { height: auto; padding: 26px 14px; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 125px; gap: 6px; }
+  .basket-division .main-texts { grid-column: 1 / -1; grid-row: auto; text-align: center; }
+  .basket-division .main-texts ul { display: block; padding: 0; }
+  .basket-division .player-wrapper .player { height: 120px; width: 100%; }
+  .main-teams-text { font-size: 1.65rem; }
+  .main-texts ul { padding: 0; font-size: .8rem; }
+  .about-uniforme { height: auto; min-height: 0; }
+  .about-uniforme .slide { min-height: 0; padding: 28px 14px 34px; }
+  .about-uniforme .slide .main-container { margin-left: 0 !important; flex-direction: column; gap: 14px; }
+  .about-uniforme .slide .items-left, .about-uniforme .slide .items-right { width: 100%; max-width: none; }
+  .about-uniforme .slide .item { min-height: 70px; padding: 10px 12px; }
+  .about-uniforme .slide .item-center img { height: 210px; }
+  .about-uniforme .slide .bottom-container { flex-wrap: wrap; }
+  .about-uniforme .slide .bottom-container .items-bottom { width: 100%; }
+  .sect-apoie { height: auto; padding: 40px 14px; flex-direction: column; gap: 22px; }
+  .apoie-text, .apoie-img-bottom-left { display: none; }
+  .apoie-left, .apoie-grid { width: 100%; }
+  .apoie-left { text-align: center; }
+  .apoie-grid { height: 260px; }
+  .support-us { height: auto; min-height: 480px; padding: 28px 14px; }
+  .support-us .title-main { position: static; transform: none; text-align: center; }
+  .container-left { position: relative; width: 100%; height: 190px; margin-top: 20px; }
+  .container-center-right, .container-bottom-right { display: none; }
+  .art-faca-parte { height: auto; flex-direction: column; }
+  .art-faca-parte .card { width: 100%; height: 250px; }
+  .contact-section { height: auto; grid-template-columns: 1fr; grid-template-rows: auto auto auto; }
+  .contact-left, .contact-images { height: 160px; }
+  .contact-info { width: 100%; padding: 22px 14px; }
+  .contact-word { position: static; transform: none; padding: 8px; text-align: center; font-size: 4rem; }
+  .bottom-text { position: static; padding: 18px 14px; text-align: center; }
+}
