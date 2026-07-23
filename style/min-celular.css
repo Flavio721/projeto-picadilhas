@@ -1,6 +1,7 @@
 @media (max-width: 575px) {
     html{ overflow-x: hidden;}
     nav {
+        transition: 0s !important;
         .menu-hamburguer {
             display: flex; /* Exibe o botão no mobile */
         }
@@ -12,7 +13,7 @@
             top: 100%; 
             left: 0;
             width: 100%;
-            background-color: #fff; /* Mesma cor de fundo do seu menu */
+            background-color: #1D1C1C; /* Mesma cor de fundo do seu menu */
             padding: 20px 0;
             text-align: center;
             box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
@@ -29,6 +30,10 @@
         /* Classe ativada via JavaScript para abrir o menu */
         .nav-right.active {
             display: flex;
+        }
+
+        &.active{
+            background-color: #1D1C1C;
         }
 
         /* Animação do Hambúrguer virando "X" */
@@ -202,13 +207,15 @@
         padding: 90px 0 0 0  !important;
         margin: 0 !important;
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important; 
-        grid-template-rows: repeat(5, 150px) !important;
+        grid-template-rows: repeat(5, 200px) !important;
         gap: 0px !important;
         width: 100% !important;
         height: auto !important;
+        min-height: 100vh;
+        place-items: center;
 
         .player-wrapper .player{
-            height: minmax(130px, 150px) !important;
+            height: clamp(120px, 200px, 250px) !important;
             width: 100% !important;
             max-width: 150px !important;
         }
@@ -257,13 +264,12 @@
         .player-9 {
             grid-column: 2 !important;
             grid-row: 5 !important;
-            margin-left: 20px !important;
             padding: 0 !important;
         }
     }
     .basket-division .main-texts{ 
         grid-column: 1  !important;
-            grid-row: 2 !important;
+            grid-row: 1 / 5 !important;
             display: flex !important;
             flex-direction: column !important;
             justify-content: flex-start !important;
@@ -271,7 +277,7 @@
             align-self: center;
             width: 100% !important;
         .main-teams-text{
-            font-size: minmax(1.5em, 2em);
+            font-size: clamp(1.5em, 2em, 2.5em) !important;
             line-height: 1.2em;
         }
         ul{
@@ -280,7 +286,7 @@
 
             
             li{
-                font-size: minmax(1em, 1.3em);
+                font-size: clamp(.8em, 1.6em, 2em);
             }
         }
     }
@@ -434,6 +440,7 @@
     .art-faca-parte .card { height: 33vh; }
     .art-faca-parte .title-main { position: relative; left: auto; transform: none; text-align: center; font-size: 1.6em; padding: 20px; }
     .art-faca-parte .btn-main { position: relative; bottom: auto; transform: none; margin-top: 10px; }
+
     .contact-word { display: none;}
     .contact-left { height: 160px;}
     .small-title{ z-index: 99;}

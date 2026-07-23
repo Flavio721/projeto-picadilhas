@@ -53,6 +53,7 @@ function initSlides() {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".overlay", {
