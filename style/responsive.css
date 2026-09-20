@@ -1,0 +1,1189 @@
+/*
+  Responsividade do projeto.
+  Cada @media é independente: não há regra de um breakpoint que precise da outra.
+*/
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+}
+
+/* 1200px a 1439px — notebook */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .futsal-division,
+  .volei-division {
+    height: auto;
+    min-height: 100vh;
+    padding: 32px;
+    gap: 28px;
+  }
+  .futsal-division .left {
+    width: 60%;
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
+    grid-auto-rows: 130px;
+  }
+  .futsal-division .right {
+    min-width: 320px;
+  }
+  .futsal-division .player-wrapper .player {
+    height: 185px;
+  }
+  .volei-division .left {
+    min-width: 320px;
+    padding: 24px;
+  }
+  .volei-division .right {
+    width: 60%;
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
+    grid-auto-rows: 130px;
+  }
+  .volei-division .right .player-wrapper .player {
+    height: 100%;
+  }
+  .basket-division {
+    height: auto;
+    min-height: 100vh;
+    padding: 32px;
+    grid-template-columns: repeat(5, minmax(120px, 1fr));
+    grid-auto-rows: 150px;
+  }
+  .basket-division .player-wrapper .player {
+    height: 180px;
+    width: 100%;
+  }
+  .box-captains {
+    gap: 24px;
+  }
+  .box-captains .items {
+    width: min(31%, 330px);
+  }
+  .box-captains .items img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+  .about-uniforme .slide .main-container {
+    margin-left: 0 !important;
+    gap: 24px;
+  }
+  .about-uniforme .slide .items-left,
+  .about-uniforme .slide .items-right {
+    flex: 0 1 290px;
+  }
+
+  /* Textos grandes sem escala no base CSS */
+  .sect-uniforme .title-main {
+    font-size: 6em;
+    transform: translate(20%, 80%);
+  }
+  .capitaes .main-captains-text {
+    font-size: 90px;
+  }
+  .capitaes .modalities .modalitie {
+    font-size: 70px;
+  }
+  .capitaes .modalitie-volei {
+    font-size: 66px;
+  }
+  .art-about-us .bottom .main-about-us-text h1 {
+    font-size: 6em;
+  }
+  .art-about-us .bottom .main-about-us-text img {
+    height: 130px;
+  }
+  .apoie-title {
+    font-size: 6em;
+  }
+  .apoie-desc {
+    font-size: 1.6em;
+  }
+  .support-us .title-main {
+    font-size: 6em;
+  }
+  .contact-word {
+    font-size: 14em;
+  }
+  .bottom-text {
+    font-size: 2.2em;
+  }
+  .about-uniforme .container-titles .main-subtitle {
+    font-size: 4em;
+  }
+  .sect-carrosel h1 {
+    font-size: 34px;
+  }
+  .final-text-carrosel {
+    font-size: 34px;
+  }
+  .swiper img {
+    height: 300px;
+    width: 340px;
+  }
+  .swiper-slide {
+    width: 280px;
+  }
+  .swiper h2 {
+    font-size: 2.2em;
+  }
+}
+
+/* 992px a 1199px — laptop compacto */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav-right a {
+    font-size: 1.2rem;
+    margin-right: 0;
+  }
+  .title-nav {
+    font-size: 2rem;
+  }
+  .futsal-division,
+  .volei-division {
+    height: auto;
+    min-height: 100vh;
+    padding: 32px;
+    gap: 24px;
+  }
+  .futsal-division .left {
+    width: 58%;
+    grid-template-columns: repeat(5, minmax(80px, 1fr));
+    grid-auto-rows: 115px;
+  }
+  .futsal-division .right {
+    min-width: 290px;
+  }
+  .futsal-division .player-wrapper .player {
+    height: 165px;
+  }
+  .volei-division .left {
+    min-width: 290px;
+    padding: 20px;
+  }
+  .volei-division .right {
+    width: 58%;
+    grid-template-columns: repeat(5, minmax(80px, 1fr));
+    grid-auto-rows: 115px;
+  }
+  .volei-division .right .player-wrapper .player {
+    height: 100%;
+  }
+  .basket-division {
+    height: auto;
+    min-height: 100vh;
+    padding: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 145px;
+  }
+  .basket-division .main-texts {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+  .basket-division .main-texts ul {
+    flex-wrap: wrap;
+  }
+  .basket-division .player-wrapper .player {
+    height: 165px;
+    width: 100%;
+  }
+  .main-teams-text {
+    font-size: 3.5rem;
+  }
+  .box-captains .items {
+    width: min(31%, 300px);
+  }
+  .box-captains .items img {
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+  }
+  .about-uniforme {
+    height: auto;
+    min-height: 780px;
+  }
+  .about-uniforme .slide {
+    min-height: 780px;
+  }
+  .about-uniforme .slide .main-container {
+    margin-left: 0 !important;
+    gap: 20px;
+  }
+  .about-uniforme .slide .items-left,
+  .about-uniforme .slide .items-right {
+    flex: 0 1 250px;
+  }
+
+  /* Textos grandes sem escala no base CSS */
+  .sect-uniforme .title-main {
+    font-size: 5em;
+    transform: translate(15%, 75%);
+  }
+  .capitaes .main-captains-text {
+    font-size: 70px;
+  }
+  .capitaes .modalities .modalitie {
+    font-size: 56px;
+  }
+  .capitaes .modalitie-volei {
+    font-size: 52px;
+  }
+  .art-about-us .bottom .main-about-us-text h1 {
+    font-size: 5em;
+  }
+  .art-about-us .bottom .main-about-us-text img {
+    height: 110px;
+  }
+  .apoie-title {
+    font-size: 5em;
+  }
+  .apoie-desc {
+    font-size: 1.4em;
+  }
+  .support-us .title-main {
+    font-size: 5em;
+  }
+  .contact-word {
+    font-size: 11em;
+  }
+  .bottom-text {
+    font-size: 1.8em;
+  }
+  .about-uniforme .container-titles .main-subtitle {
+    font-size: 3.4em;
+  }
+  .sect-carrosel h1 {
+    font-size: 30px;
+  }
+  .final-text-carrosel {
+    font-size: 30px;
+  }
+  .swiper img {
+    height: 270px;
+    width: 300px;
+  }
+  .swiper-slide {
+    width: 260px;
+  }
+  .swiper h2 {
+    font-size: 2em;
+  }
+}
+
+/* 768px a 991px — tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav-right {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 4px 12px;
+  }
+  .nav-right a {
+    font-size: 1.05rem;
+    margin-right: 0;
+  }
+  .title-nav {
+    font-size: 1.9rem;
+  }
+  .all-captains {
+    height: auto;
+    padding: 48px 32px;
+  }
+  .box-captains {
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+  }
+  .box-captains .items {
+    width: min(45%, 320px);
+  }
+  .box-captains .items img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  .futsal-division {
+    height: auto;
+    min-height: 100vh;
+    padding: 36px 32px;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .futsal-division .left,
+  .futsal-division .right {
+    width: 100%;
+  }
+  .futsal-division .left {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 125px;
+  }
+  .futsal-division .right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .futsal-division .main-texts {
+    grid-column: 1 / -1;
+  }
+  .futsal-division .player-wrapper .player {
+    height: 160px;
+  }
+  .volei-division {
+    height: auto;
+    min-height: 100vh;
+    padding: 36px 32px;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .volei-division .left,
+  .volei-division .right {
+    width: 100%;
+  }
+  .volei-division .left {
+    padding: 0;
+  }
+  .volei-division .right {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 120px;
+  }
+  .volei-division .right .player-wrapper .player {
+    height: 100%;
+  }
+  .basket-division {
+    height: auto;
+    min-height: 100vh;
+    padding: 32px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 140px;
+  }
+  .basket-division .main-texts {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+  .basket-division .main-texts ul {
+    flex-wrap: wrap;
+  }
+  .basket-division .player-wrapper .player {
+    height: 155px;
+    width: 100%;
+  }
+  .main-teams-text {
+    font-size: 3rem;
+  }
+  .about-uniforme {
+    height: auto;
+    min-height: 820px;
+  }
+  .about-uniforme .slide {
+    min-height: 820px;
+    padding: 40px 32px;
+  }
+  .about-uniforme .slide .main-container {
+    margin-left: 0 !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .about-uniforme .slide .item-center {
+    order: -1;
+    width: 100%;
+  }
+  .about-uniforme .slide .item-center img {
+    height: 290px;
+  }
+  .contact-section {
+    height: auto;
+    min-height: 650px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .contact-left,
+  .contact-images {
+    height: 220px;
+  }
+  .contact-info {
+    width: 100%;
+    padding: 28px 32px;
+  }
+
+  /* Textos grandes sem escala no base CSS */
+  .sect-uniforme .title-main {
+    font-size: 3.6em;
+    transform: translate(5%, 60%);
+    left: 0;
+  }
+  .capitaes .main-captains-text {
+    font-size: 3.2em;
+  }
+  .capitaes .modalities .modalitie {
+    font-size: 2.4em;
+  }
+  .capitaes .modalitie-volei {
+    font-size: 2.2em;
+  }
+  .art-about-us .bottom .main-about-us-text {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .art-about-us .bottom .main-about-us-text h1 {
+    font-size: 3.2em;
+  }
+  .art-about-us .bottom .main-about-us-text img {
+    height: 90px;
+  }
+  .apoie-title {
+    font-size: 3.2em;
+  }
+  .apoie-desc {
+    font-size: 1.2em;
+  }
+  .support-us .title-main {
+    font-size: 3.2em;
+  }
+  .contact-word {
+    font-size: 9em;
+  }
+  .bottom-text {
+    font-size: 1.5em;
+  }
+  .about-uniforme .container-titles .main-subtitle {
+    font-size: 2.8em;
+  }
+  .sect-carrosel h1 {
+    font-size: 1.6rem;
+  }
+  .final-text-carrosel {
+    font-size: 1.6rem;
+  }
+  .swiper img {
+    height: 240px;
+    width: 280px;
+  }
+  .swiper-slide {
+    width: 240px;
+  }
+  .swiper h2 {
+    font-size: 1.6em;
+  }
+}
+
+/* 576px a 767px — celular grande */
+@media (min-width: 576px) and (max-width: 767px) {
+  nav.navbar {
+    min-height: 64px;
+    padding: 10px 18px;
+    background: var(--color-black);
+  }
+  nav .menu-hamburguer {
+    display: flex;
+    margin-left: 0;
+  }
+  nav .nav-right {
+    display: none;
+    position: absolute;
+    inset: 100% 0 auto;
+    flex-direction: column;
+    padding: 16px 24px 24px;
+    background: var(--color-black);
+  }
+  nav .nav-right.active {
+    display: flex;
+  }
+  nav .nav-right a {
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .title-nav {
+    margin-left: 12px;
+    font-size: 1.8rem;
+  }
+  .all-captains {
+    height: auto;
+    padding: 42px 20px;
+  }
+  .box-captains {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .box-captains .items {
+    width: min(100%, 360px);
+  }
+  .box-captains .items img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  .futsal-division {
+    height: auto;
+    padding: 30px 20px;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .futsal-division .left {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 115px;
+    gap: 6px;
+  }
+  .futsal-division .right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .futsal-division .main-texts {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+  .futsal-division .player-wrapper .player {
+    height: 145px;
+  }
+  .volei-division {
+    height: auto;
+    padding: 30px 20px;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .volei-division .left,
+  .volei-division .right {
+    width: 100%;
+  }
+  .volei-division .left {
+    padding: 0;
+    text-align: center;
+  }
+  .volei-division .right {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 130px;
+    gap: 6px;
+  }
+  .volei-division .right .player-wrapper .player {
+    height: 100%;
+  }
+  .basket-division {
+    height: auto;
+    padding: 28px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 140px;
+    gap: 8px;
+  }
+  .basket-division .main-texts {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    text-align: center;
+  }
+  .basket-division .main-texts ul {
+    display: block;
+    padding: 0;
+  }
+  .basket-division .player-wrapper .player {
+    height: 135px;
+    width: 100%;
+  }
+  .main-teams-text {
+    font-size: 2rem;
+  }
+  .main-texts ul {
+    padding: 0;
+    font-size: 0.9rem;
+  }
+  .about-uniforme {
+    height: auto;
+    min-height: 0;
+  }
+  .about-uniforme .slide {
+    min-height: 0;
+    padding: 32px 20px 40px;
+  }
+  .about-uniforme .slide .main-container {
+    margin-left: 0 !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+  .about-uniforme .slide .item-center {
+    order: -1;
+    flex: 1 1 100%;
+    width: 100%;
+    min-height: 260px;
+    padding: 0;
+  }
+  .about-uniforme .slide .item-center img {
+    height: 260px;
+    width: auto;
+    margin: 0 auto;
+  }
+  .about-uniforme .slide .items-left,
+  .about-uniforme .slide .items-right {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: none;
+  }
+  .about-uniforme .slide .bottom-container {
+    flex-wrap: wrap;
+  }
+  .about-uniforme .slide .bottom-container .items-bottom {
+    width: 100%;
+  }
+
+  /* .sect-apoie: imagens viram fundo com véu escuro; texto passa a fluir por cima, legível */
+  .sect-apoie {
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 64px 20px 40px;
+    overflow: hidden;
+    gap: 0;
+  }
+  .apoie-text,
+  .apoie-img-bottom-left {
+    display: none;
+  }
+  .apoie-grid {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    z-index: 0;
+  }
+  .apoie-grid .grid-img {
+    position: static;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .apoie-grid::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.72);
+    z-index: 1;
+  }
+  .apoie-left {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .support-us {
+    height: auto;
+    min-height: 520px;
+    padding: 32px 20px;
+  }
+  .support-us .title-main {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+  .container-left {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    margin-top: 24px;
+  }
+  .container-center-right,
+  .container-bottom-right {
+    display: none;
+  }
+  .art-faca-parte {
+    height: auto;
+    flex-direction: column;
+  }
+  .art-faca-parte .card {
+    width: 100%;
+    height: 280px;
+  }
+  .contact-section {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .contact-left,
+  .contact-images {
+    height: 185px;
+  }
+  .contact-info {
+    width: 100%;
+    padding: 24px 20px;
+  }
+  .contact-word {
+    position: static;
+    transform: none;
+    padding: 12px;
+    text-align: center;
+    font-size: 5rem;
+  }
+  .bottom-text {
+    position: static;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1em;
+  }
+
+  /* Textos grandes sem escala no base CSS */
+  .sect-uniforme .title-main {
+    font-size: 2.4em;
+    transform: translate(5%, 55%);
+    left: 0;
+  }
+  .capitaes .main-captains-text {
+    font-size: 2.2em;
+  }
+  .capitaes .modalities {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-top: 30px;
+  }
+  .capitaes .modalities .modalitie {
+    font-size: 1.8em;
+    margin-top: 0 !important;
+  }
+  .capitaes .modalitie-volei {
+    font-size: 1.6em;
+  }
+  .art-about-us .bottom .main-about-us-text {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .art-about-us .bottom .main-about-us-text h1 {
+    font-size: 2em;
+  }
+  .art-about-us .bottom .main-about-us-text img {
+    height: 60px;
+  }
+  .apoie-title {
+    font-size: 2.2em;
+  }
+  .apoie-desc {
+    font-size: 1em;
+  }
+  .about-uniforme .container-titles .main-subtitle {
+    font-size: 1.8em;
+  }
+  .sect-carrosel h1 {
+    font-size: 1.4rem;
+    margin: 16px;
+  }
+  .final-text-carrosel {
+    font-size: 1.4rem;
+  }
+  .swiper img {
+    height: 220px;
+    width: 240px;
+  }
+  .swiper-slide {
+    width: 200px;
+  }
+  .swiper h2 {
+    font-size: 1.3em;
+  }
+}
+
+/* até 575px — celular */
+@media (max-width: 575px) {
+  nav.navbar {
+    min-height: 60px;
+    padding: 8px 14px;
+    background: var(--color-black);
+  }
+  nav .menu-hamburguer {
+    display: flex;
+    width: 30px;
+    margin-left: 0;
+  }
+  nav .nav-right {
+    display: none;
+    position: absolute;
+    inset: 100% 0 auto;
+    flex-direction: column;
+    padding: 14px 18px 22px;
+    background: var(--color-black);
+  }
+  nav .nav-right.active {
+    display: flex;
+  }
+  nav .nav-right a {
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+    font-size: 2em;
+    transition: 0.5s;
+  }
+  .title-nav {
+    margin-left: 10px;
+    font-size: 1.5rem;
+  }
+
+  .sect-carrosel {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .all-captains {
+    height: auto;
+    padding: 36px 14px;
+  }
+  .box-captains {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  .box-captains .items {
+    width: 100%;
+  }
+  .box-captains .items img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+  }
+  .futsal-division {
+    height: auto;
+    padding: 28px 14px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .futsal-division .left {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+    gap: 5px;
+  }
+  .futsal-division .right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .futsal-division .main-texts {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+  .futsal-division .player-wrapper .player {
+    height: 125px;
+  }
+  .volei-division {
+    height: auto;
+    padding: 28px 14px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .volei-division .left,
+  .volei-division .right {
+    width: 100%;
+  }
+  .volei-division .left {
+    padding: 0;
+    text-align: center;
+  }
+  .volei-division .right {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 112px;
+    gap: 5px;
+  }
+  .volei-division .right .player-wrapper .player {
+    height: 100%;
+  }
+  .basket-division {
+    height: auto;
+    padding: 26px 14px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 125px;
+    gap: 6px;
+  }
+  .basket-division .main-texts {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    text-align: center;
+  }
+  .basket-division .main-texts ul {
+    display: block;
+    padding: 0;
+  }
+  .basket-division .player-wrapper .player {
+    height: 120px;
+    width: 100%;
+  }
+  .main-teams-text {
+    font-size: 1.65rem;
+  }
+  .main-texts ul {
+    padding: 0;
+    font-size: 0.8rem;
+  }
+
+  /* Camisa some sem isto: sem flex-wrap, item-center (flex:1) é espremido a ~0 quando
+     items-left/items-right pedem flex-basis 100% cada, na mesma linha. */
+  .about-uniforme .slide .main-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .about-uniforme .slide .item-center {
+    order: -1;
+    flex: 1 1 100%;
+    width: 100%;
+    min-height: 220px;
+    padding: 0;
+    left: -10px;
+  }
+  .about-uniforme .slide .item-center img {
+    height: 250px;
+  }
+  .about-uniforme .slide .items-left,
+  .about-uniforme .slide .items-right {
+    flex: 1;
+    max-width: 100%;
+    gap: 12px;
+    left: -20px;
+  }
+  .about-uniforme .slide .item {
+    min-height: 76px;
+    max-height: 150px;
+    padding: 12px 16px;
+    gap: 14px;
+  }
+  .about-uniforme .slide .item .icon span,
+  .about-uniforme .slide .item .icon i {
+    font-size: 40px;
+    min-width: 40px;
+  }
+  .about-uniforme .slide .item .text .title-card {
+    font-size: 1.1em;
+  }
+  .about-uniforme .slide .item .text .subtitle-card {
+    font-size: 0.9em;
+  }
+  .about-uniforme .slide .container-titles .main-subtitle {
+    font-size: 2.2em;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .about-uniforme .slide .bottom-container {
+    margin-top: 110px;
+  }
+  .about-uniforme .slide .bottom-container .items-bottom h2 {
+    font-size: 0.85rem;
+  }
+  .about-uniforme .slide .botao-slide {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    padding: 14px 20px;
+    margin-bottom: 50px;
+  }
+
+  /* .sect-apoie: mesma solução do 576-767 — grid de imagens vira fundo fixo,
+     véu escuro por cima, texto flui normalmente acima de tudo (não mais absoluto). */
+  .sect-apoie {
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 56px 16px 36px;
+    overflow: hidden;
+    gap: 0;
+  }
+  .apoie-text,
+  .apoie-img-bottom-left {
+    display: none;
+  }
+  .apoie-left {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .apoie-grid {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    z-index: 0;
+  }
+  .apoie-grid .grid-img {
+    position: static;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    z-index: 0;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .apoie-grid::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.72);
+    z-index: 1;
+  }
+
+  .support-us {
+    height: 100vh;
+    min-height: 480px;
+  }
+  .support-us .title-main {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+  .container-left {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  .container-center-right,
+  .container-bottom-right {
+    display: none;
+  }
+
+  .art-faca-parte {
+    height: 100vh;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .art-faca-parte .card {
+    width: 100%;
+    height: 250px;
+    border-radius: 0;
+  }
+  .art-faca-parte .card .title-main {
+    transform: none;
+    left: 40px;
+    text-align: center;
+  }
+  .jogador .title-main {
+    color: white !important;
+    left: 120px !important;
+  }
+  .torcida .title-main {
+    left: 120px !important;
+  }
+
+  .contact-word {
+    left: -120px;
+    font-size: 20em;
+  }
+  .contact-left {
+    width: 100% !important;
+    background-color: blue !important;
+  }
+  .small-title {
+    z-index: 99;
+    left: 0;
+  }
+  .contact-info {
+    width: 100%;
+    z-index: 99;
+  }
+  .contact-info h2 {
+    font-size: 1.15em;
+    margin-bottom: 30px;
+    z-index: 99;
+  }
+  .bottom-text {
+    width: 100%;
+    text-align: center;
+    z-index: 99;
+    bottom: -60px;
+  }
+  .contact-top {
+    z-index: 99;
+  }
+
+  .contact-images::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #05050560;
+    transition: 0.4s;
+  }
+
+  /* Textos grandes sem escala no base CSS */
+  .sect-uniforme .title-main {
+    font-size: 8em;
+    left: 50px;
+    top: 50px;
+    transform: translate(25%, 90%);
+  }
+  .capitaes .main-captains-text {
+    font-size: 6em;
+  }
+  .capitaes .modalities .modalitie {
+    font-size: clamp(3.2em, 3.4em, 3.8em);
+  }
+  .capitaes .modalitie-volei {
+    font-size: clamp(2.8em, 3em, 3.2em);
+  }
+  .art-about-us .bottom .main-about-us-text h1 {
+    font-size: 5em;
+  }
+  .art-about-us .bottom .main-about-us-text img {
+    height: 100px;
+  }
+  .apoie-title {
+    font-size: 8em;
+    line-height: 1.3;
+  }
+  .apoie-desc {
+    font-size: 1.5em;
+  }
+  .apoie-btn {
+    font-size: 1.5em;
+  }
+  .about-uniforme .container-titles .main-subtitle {
+    font-size: 1.5em;
+  }
+  /* .apoie-text.t1/.t2/.t4 (VISTA O / MOTIVO / *(INCÔMODO).) ficaram display:none acima —
+     removidas as regras de reposicionamento delas, ficariam sem efeito */
+  .sect-carrosel h1 {
+    font-size: 3em;
+    margin: 12px;
+  }
+  .final-text-carrosel {
+    font-size: 2em;
+  }
+  .swiper img {
+    height: 300px;
+    width: 200px;
+  }
+  .swiper-slide {
+    width: 180px;
+  }
+  .swiper h2 {
+    font-size: 2em;
+    padding-top: 5px;
+  }
+}

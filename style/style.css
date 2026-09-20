@@ -339,7 +339,7 @@ nav {
     .top {
         width: 100%;
         height: 40%;
-        background-image: url(../assets/ft-about-us.webp);
+        background-image: url(../assets/ft-whoUs-top.jpeg);
         background-size: cover;
         background-position: center;
         position: relative; /* necessário para o ::after funcionar */
@@ -534,25 +534,26 @@ nav {
         height: 180px;
     }
     .left{
-        height: 75%;
-        width: 60%;
-        display: grid;
-        grid-template-columns: repeat(5, 150px);
-        grid-template-rows: repeat(5, 120px);
-        gap: 8px;
+        width:min(60%,900px);
+        display:grid;
+
+        grid-template-columns:repeat(5,minmax(110px,1fr));
+        grid-auto-rows:minmax(120px,auto);
+
 
         .goleiro{
-            grid-column-start: 2;
+            grid-column-start: 3;
         }
         .fixo{
             grid-row-start: 2;
+            grid-column-start: 2;
         }
         .ala-e{
-            grid-column-start: 2;
+            grid-column-start: 3;
             grid-row-start: 3;
         }
         .ala-d{
-            grid-column-start: 3;
+            grid-column-start: 4;
             grid-row-start: 2;
         }
         .pivo{
@@ -568,7 +569,7 @@ nav {
             grid-row-start: 5;
         }
         .reserva-3{
-            grid-column-start: 1;
+            grid-column-start: 2;
             grid-row-start: 4;
         }
     }
@@ -823,14 +824,12 @@ nav {
         position: relative;
     }
 
-    /* ── RIGHT CORRIGIDO ── */
     .right {
-        height: 75%;
-        width: 60%;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        gap: 8px;
+        width:min(60%,950px);
+        display:grid;
+        grid-template-columns:repeat(5,minmax(120px,1fr));
+        grid-auto-rows:minmax(120px,1fr);
+
         .player-3 {
             grid-column-start: 1;
             grid-row-start: 4;
@@ -853,7 +852,7 @@ nav {
     
         .player-7 {
             grid-column-start: 5;
-            grid-row-start: 1;
+            grid-row-start: 2;
         }
     
         .player-8 {
@@ -1661,7 +1660,7 @@ nav {
     transform: translate(-50%, -20%);
     width: 90%;
     height: 40%;
-    background: url('../assets/ft-apoie-3.jpeg') center/cover no-repeat;
+    background: url('../assets/ft-center.jpeg') center/cover no-repeat;
     z-index: 3; /* Fica acima das outras */
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     border: 2px solid rgba(255, 255, 255, 0.1);
