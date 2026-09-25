@@ -1,184 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cloudflare.com">
-    
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/responsive.css">
-    <title>Picadilhas</title>
-</head>
-<body>
-    <nav class="navbar fixed-top">
-        <div class="nav-left">
-            <!-- Botão Hambúrguer -->
-            <button class="menu-hamburguer" onclick="toggleMenu()" aria-label="Abrir menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <h2 class="title-nav">Picadilhas ©</h2>
-        </div>
-        <div class="nav-right">
-            <a href="#home" onclick="toggleMenu()">Home</a>
-            <a href="#sobre" onclick="toggleMenu()">Sobre</a>
-            <a href="#uniforme" onclick="toggleMenu()">Uniforme</a>
-            <a href="#support" onclick="toggleMenu()">Apoie o time</a>
-            <a href="#part" onclick="toggleMenu()">Faça parte</a>
-            <a href="#contato" onclick="toggleMenu()">Contato</a>
-        </div>
-    </nav> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cloudflare.com" />
 
-    <a href="#home" class="home-fixo">Home</a>  
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/responsive.css" />
+    <link rel="stylesheet" href="../style/uniforme-showcase.css">
+    <title>Picadilhas</title>
+  </head>
+  <body>
+    <nav class="navbar fixed-top">
+      <div class="nav-left">
+        <!-- Botão Hambúrguer -->
+        <button
+          class="menu-hamburguer"
+          onclick="toggleMenu()"
+          aria-label="Abrir menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <h2 class="title-nav">Picadilhas ©</h2>
+      </div>
+      <div class="nav-right">
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+        <a href="#uniforme" onclick="toggleMenu()">Uniforme</a>
+        <a href="#support" onclick="toggleMenu()">Apoie o time</a>
+        <a href="#part" onclick="toggleMenu()">Faça parte</a>
+        <a href="#contato" onclick="toggleMenu()">Contato</a>
+      </div>
+    </nav>
+
+    <a href="#home" class="home-fixo">Home</a>
     <div class="scroll-overlay"></div>
     <main>
-        <div id="home"></div>
-        <article class="main-article" id="home">
-            <div class="box-image">
-                <img src="../assets/img-snoopey.png" class="image-main" alt="">
+      <div id="home"></div>
+      <article class="main-article" id="home">
+        <div class="box-image">
+          <img src="../assets/img-snoopey.png" class="image-main" alt="" />
+        </div>
+        <div class="overlay"></div>
+      </article>
+      <section class="sect-carrosel" id="about">
+        <h1 class="title-carrosel animation-fade">Picadilhas ©</h1>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide carrousel-about-us">
+              <a href="#sobre">
+                <h2 class="text-top">QUEM</h2>
+                <img src="../assets/ft-newCarrosel-1.jpeg" alt="" />
+                <h2 class="text-bottom">NÓS SOMOS?</h2>
+              </a>
             </div>
-            <div class="overlay"></div>
-        </article>
-        <section class="sect-carrosel" id="about">
-            <h1 class="title-carrosel animation-fade">Picadilhas ©</h1>
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide carrousel-about-us">
-                        <a href="#sobre">
-                            <h2 class="text-top">QUEM</h2>
-                            <img src="../assets/ft-newCarrosel-1.jpeg" alt="">
-                            <h2 class="text-bottom">NÓS SOMOS?</h2>
-                        </a>
-                    </div>
 
-                    <div class="swiper-slide carrousel-uniforme">
-                        <a href="#uniforme">
-                            <img src="../assets/ft-carrosel-4.jpeg" alt="">
-                            <h2 class="text-center">UNIFORME.</h2>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide carrousel-support-us">
-                        <a href="#support">
-                            <h2 class="text-center-left">APOIE O TIME.</h2>
-                            <img src="../assets/ft-carrosel-2.jpeg" alt="">
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide carrousel-join-us">
-                        <a href="#part">
-                            <img src="../assets/ft-carrosel.jpeg" alt="">
-                            <h2 class="text-bottom">FAÇA PARTE.</h2>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide carrousel-contact">
-                        <a href="#contato">
-                            <img src="../assets/ft-carrosel-5.jpeg" alt="">
-                            <h2 class="text-center-right">CONTATO.</h2>
-                        </a>
-                    </div>
-
-                    <!-- Clones -->
-                     <div class="swiper-slide carrousel-about-us">
-                        <a href="#sobre">
-                            <h2 class="text-top">QUEM</h2>
-                            <img src="../assets/ft-newCarrosel-1.jpeg" alt="">
-                            <h2 class="text-bottom">NÓS SOMOS?</h2>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide carrousel-uniforme">
-                        <a href="#uniforme">
-                            <img src="../assets/ft-carrosel-4.jpeg" alt="">
-                            <h2 class="text-center">UNIFORME.</h2>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide carrousel-support-us">
-                        <a href="#support">
-                            <h2 class="text-center-left">APOIE O TIME.</h2>
-                            <img src="../assets/ft-carrosel-2.jpeg" alt="">
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide carrousel-join-us">
-                        <a href="#part">
-                            <img src="../assets/ft-carrosel.jpeg" alt="">
-                            <h2 class="text-bottom">FAÇA PARTE.</h2>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide carrousel-contact">
-                        <a href="#contato">
-                            <img src="../assets/ft-carrosel-5.jpeg" alt="">
-                            <h2 class="text-center-right">CONTATO.</h2>
-                        </a>
-                    </div>
-
-                </div>
+            <div class="swiper-slide carrousel-uniforme">
+              <a href="#uniforme">
+                <img src="../assets/ft-carrosel-4.jpeg" alt="" />
+                <h2 class="text-center">UNIFORME.</h2>
+              </a>
             </div>
-            <h2 class="final-text-carrosel">*( Picadilhas © - Is not just a team, is a mindset )</h2>
-        </section>
-        <article id="sobre" class="art-about-us">
-            <div class="overlay-about"></div>
-            <div class="top">
-                <h2 class="main-about-title animation-fade">Picadilhas © - Quem nós somos?</h2>
+
+            <div class="swiper-slide carrousel-support-us">
+              <a href="#support">
+                <h2 class="text-center-left">APOIE O TIME.</h2>
+                <img src="../assets/ft-carrosel-2.jpeg" alt="" />
+              </a>
             </div>
-            <div class="bottom">
-                <div class="main-about-us-text">
-                    <h1 class="animation-fade">Quem</h1>
-                        <h1 class="animation-fade">nós*</h1>
-                            <h1 class="animation-fade">(</h1>
-                            <img src="../assets/foto-text-about-us.jpeg" alt="">
-                            <h1 class="animation-fade">)</h1>
-                        <h1 class="animation-fade">somos?</h1>
-                </div>
+
+            <div class="swiper-slide carrousel-join-us">
+              <a href="#part">
+                <img src="../assets/ft-carrosel.jpeg" alt="" />
+                <h2 class="text-bottom">FAÇA PARTE.</h2>
+              </a>
             </div>
-        </article>
-        <article class="capitaes">
-            <h2 class="main-captains-text animation-fade">Capitães</h2>
-            <div class="modalities">
-                <h2 class="modalitie animation-fade" style="margin-top: 30px;">FUTSAL/</h2>
-                <h2 class="modalitie animation-fade" style="margin-top: 50px;">BASQUETE.</h2>
+
+            <div class="swiper-slide carrousel-contact">
+              <a href="#contato">
+                <img src="../assets/ft-carrosel-5.jpeg" alt="" />
+                <h2 class="text-center-right">CONTATO.</h2>
+              </a>
             </div>
-            <div class="image-captains">
-                <h2 class="modalitie-volei animation-fade">VÔLEI/</h2>
+
+            <!-- Clones -->
+            <div class="swiper-slide carrousel-about-us">
+              <a href="#sobre">
+                <h2 class="text-top">QUEM</h2>
+                <img src="../assets/ft-newCarrosel-1.jpeg" alt="" />
+                <h2 class="text-bottom">NÓS SOMOS?</h2>
+              </a>
             </div>
-        </article>
-        <section class="all-captains">
-            <div class="box-captains">
-                <div class="items futsal">
-                    <h2>FUTSAL</h2>
-                    <div class="image">
-                    </div>
-                    <h2 class="main-captains-box-text">Ryan Uchôa</h2>
-                    <p class="second-captains-box-text">+55 (12) 99260-8321</p>
-                </div>
-                <div class="items volei">
-                    <h2>VÔLEI</h2>
-                    <div class="image">
-                        <img src="../assets/cap-volei.enc" alt="">
-                    </div>
-                    <h2 class="main-captains-box-text">Victor Soares</h2>
-                    <p class="second-captains-box-text">+55 (12) 99117-6582</p>
-                </div>
-                <div class="items basket">
-                    <h2 class="main-captains-box-text">BASQUETE</h2>
-                    <div class="image">
-                        <img src="../assets/cap-basquete.enc" alt="">
-                    </div>
-                    <h2 class="main-captains-box-text">Nicolas Müller</h2>
-                    <p class="second-captains-box-text">+55 (12) 99798-5320</p>
-                </div>
+
+            <div class="swiper-slide carrousel-uniforme">
+              <a href="#uniforme">
+                <img src="../assets/ft-carrosel-4.jpeg" alt="" />
+                <h2 class="text-center">UNIFORME.</h2>
+              </a>
             </div>
-        </section>
-        <!-- <article class="all-divisions">
+
+            <div class="swiper-slide carrousel-support-us">
+              <a href="#support">
+                <h2 class="text-center-left">APOIE O TIME.</h2>
+                <img src="../assets/ft-carrosel-2.jpeg" alt="" />
+              </a>
+            </div>
+
+            <div class="swiper-slide carrousel-join-us">
+              <a href="#part">
+                <img src="../assets/ft-carrosel.jpeg" alt="" />
+                <h2 class="text-bottom">FAÇA PARTE.</h2>
+              </a>
+            </div>
+
+            <div class="swiper-slide carrousel-contact">
+              <a href="#contato">
+                <img src="../assets/ft-carrosel-5.jpeg" alt="" />
+                <h2 class="text-center-right">CONTATO.</h2>
+              </a>
+            </div>
+          </div>
+        </div>
+        <h2 class="final-text-carrosel">
+          *( Picadilhas © - Is not just a team, is a mindset )
+        </h2>
+      </section>
+      <article id="sobre" class="art-about-us">
+        <div class="overlay-about"></div>
+        <div class="top">
+          <h2 class="main-about-title animation-fade">
+            Picadilhas © - Quem nós somos?
+          </h2>
+        </div>
+        <div class="bottom">
+          <div class="main-about-us-text">
+            <h1 class="animation-fade">Quem</h1>
+            <h1 class="animation-fade">nós*</h1>
+            <h1 class="animation-fade">(</h1>
+            <img src="../assets/foto-text-about-us.jpeg" alt="" />
+            <h1 class="animation-fade">)</h1>
+            <h1 class="animation-fade">somos?</h1>
+          </div>
+        </div>
+      </article>
+      <article class="capitaes">
+        <h2 class="main-captains-text animation-fade">Capitães</h2>
+        <div class="modalities">
+          <h2 class="modalitie animation-fade" style="margin-top: 30px">
+            FUTSAL/
+          </h2>
+          <h2 class="modalitie animation-fade" style="margin-top: 50px">
+            BASQUETE.
+          </h2>
+        </div>
+        <div class="image-captains">
+          <h2 class="modalitie-volei animation-fade">VÔLEI/</h2>
+        </div>
+      </article>
+      <section class="all-captains">
+        <div class="box-captains">
+          <div class="items futsal">
+            <h2>FUTSAL</h2>
+            <div class="image"></div>
+            <h2 class="main-captains-box-text">Ryan Uchôa</h2>
+            <p class="second-captains-box-text">+55 (12) 99260-8321</p>
+          </div>
+          <div class="items volei">
+            <h2>VÔLEI</h2>
+            <div class="image">
+              <img src="../assets/cap-volei.enc" alt="" />
+            </div>
+            <h2 class="main-captains-box-text">Victor Soares</h2>
+            <p class="second-captains-box-text">+55 (12) 99117-6582</p>
+          </div>
+          <div class="items basket">
+            <h2 class="main-captains-box-text">BASQUETE</h2>
+            <div class="image">
+              <img src="../assets/cap-basquete.enc" alt="" />
+            </div>
+            <h2 class="main-captains-box-text">Nicolas Müller</h2>
+            <p class="second-captains-box-text">+55 (12) 99798-5320</p>
+          </div>
+        </div>
+      </section>
+      <!-- <article class="all-divisions">
             <section class="futsal-division">
                 <div class="left">
                 <div class="player-wrapper goleiro" data-nome="Flávio Inocêncio" data-pos="Goleiro" data-num="72" data-tooltip-direction="down">
@@ -470,226 +490,264 @@
                 </div>
             </section>
         </article> -->
-        <section class="sect-uniforme" id="uniforme">
-            <h2 class="title-section">Picadlihas © - Uniforme</h2>
-            <h2 class="title-main">Uniformes</h2>
-        </section>
-        <article class="about-uniforme">
-            <div class="slide dark active">
-                <div class="container-titles">
-                    <h2 class="main-subtitle change">*(MODELOS)</h2>
-                </div>
-                <div class="main-container" style="margin-left: 50px;">
-                    <div class="items-left">
-                        <div class="item">
-                            <div class="icon">
-                                <span class="material-symbols-outlined">
-                                    laundry
-                                </span>
-                            </div>
-                            <div class="text">
-                                <h2 class="title-card change">DRY-FIT PLUS</h2>
-                                <p class="subtitle-card change">Respirável, leve e sem elastano</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="icon">
-                                <span class="material-symbols-outlined">
-                                    apparel
-                                </span>
-                            </div>
-                            <div class="text">
-                                <h2 class="title-card change">MODELAGEM</h2>
-                                <p class="subtitle-card change">Masculina, Feminina e Plus Size</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-center">
-                        <img src="../assets/uniforme-black-3d.png" alt="" class="main-img">
-                    </div>
-                    <div class="items-right">
-                        <div class="item">
-                            <div class="icon">
-                                <i class="bi bi-brightness-high"></i>
-                            </div>
-                            <div class="text">
-                                <h2 class="title-card change">PROTEÇÃO UV</h2>
-                                <p class="subtitle-card change">Proteção solar para alta performance em qualquer ocasião</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="icon">
-                                <i class="bi bi-trophy"></i>
-                            </div>
-                            <div class="text">
-                                <h2 class="title-card change">PRODUZIDAS PELA SANRAD</h2>
-                                <p class="subtitle-card change">Qualidade e tecnologia em cada detalhe</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bottom-container">
-                        <div class="items-bottom left-margin">
-                            <h2 class="change">Mesmo tecido da camisa Etec 195 para o Interetec 2025</h2>
-                        </div>
-                        <div class="items-bottom">
-                            <h2 class="change">Dry-Fit: Respirável, leve e sem elastano</h2>
-                        </div>
-                        <div class="items-bottom">
-                            <h2 class="change">*Plus size há acréscimo de 10 reais no valor</h2>
-                        </div>
-                    </div>
-                <button class="botao-slide" id="botaoSlide1">VER MODELO WHITE</button>
+      <section class="sect-uniforme" id="uniforme">
+        <h2 class="title-section">Picadlihas © - Uniforme</h2>
+        <h2 class="title-main">Uniformes</h2>
+      </section>
+      <section class="us-showcase">
+        <div class="us-grid">
+          <!-- PAINEL 1 — BLACK -->
+          <div
+            class="us-panel us-panel--real"
+            style="
+              --us-idle-photo: url(&quot;../assets/uniforme-black-foto.jpg&quot;);
+              --us-detail-photo: url(&quot;../assets/uniforme-black-foto.jpg&quot;);
+            ">
+            <div class="us-idle">
+              <div class="us-idle-label">Midnight<small>Bloom</small></div>
             </div>
-            <div class="slide">
-                    <div class="container-titles">
-                        <h2 class="main-subtitle change">*(MODELOS)</h2>
-                    </div>
-                    <div class="main-container">
-                        <div class="items-left">
-                            <div class="item">
-                                <div class="icon">
-                                    <span class="material-symbols-outlined change">laundry</span>
-                                </div>
-                                <div class="text">
-                                    <h2 class="title-card change">DRY-FIT PLUS</h2>
-                                    <p class="subtitle-card change">Respirável, leve e sem elastano</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="icon">
-                                    <span class="material-symbols-outlined change">apparel</span>
-                                </div>
-                                <div class="text">
-                                    <h2 class="title-card change">MODELAGEM</h2>
-                                    <p class="subtitle-card change">Masculina, Feminina e Plus Size</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-center">
-                            <img src="../assets/uniforme-white-3d.png" alt="Uniforme White" class="main-img">
-                        </div>
-                        <div class="items-right">
-                            <div class="item">
-                                <div class="icon">
-                                    <i class="bi bi-brightness-high change"></i>
-                                </div>
-                                <div class="text">
-                                    <h2 class="title-card change">PROTEÇÃO UV</h2>
-                                    <p class="subtitle-card change">Proteção solar para alta performance em qualquer ocasião</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="icon">
-                                    <i class="bi bi-trophy change"></i>
-                                </div>
-                                <div class="text">
-                                    <h2 class="title-card change">PRODUZIDAS PELA SANRAD</h2>
-                                    <p class="subtitle-card change">Qualidade e tecnologia em cada detalhe</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bottom-container">
-                        <div class="items-bottom">
-                            <h2 class="change">Mesmo tecido da camisa Etec 195 para o Interetec 2025</h2>
-                        </div>
-                        <div class="items-bottom">
-                            <h2 class="change">Dry-Fit: Respirável, leve e sem elastano</h2>
-                        </div>
-                        <div class="items-bottom">
-                            <h2 class="change">*Plus size há acréscimo de 10 reais no valor</h2>
-                        </div>
-                    </div>
-                    <button class="botao-slide" id="botaoSlide2">VER MODELO BLACK</button>
+            <div class="us-detail">
+              <div class="us-detail-photo"></div>
+              <div class="us-detail-3d">
+                <img
+                  src="../assets/uniforme-black-3d.png"
+                  alt="Uniforme Black" />
+              </div>
+              <div class="us-detail-info">
+                <h3>Black</h3>
+                <div class="us-spec">
+                  <span class="material-symbols-outlined">laundry</span>
+                  <div>
+                    <b>Dry-Fit Plus</b
+                    ><span>Respirável, leve e sem elastano</span>
+                  </div>
+                </div>
+                <div class="us-spec">
+                  <span class="material-symbols-outlined">apparel</span>
+                  <div>
+                    <b>Modelagem</b><span>Masculina, feminina e plus size</span>
+                  </div>
+                </div>
+                <div class="us-spec">
+                  <i class="bi bi-brightness-high"></i>
+                  <div>
+                    <b>Proteção UV</b
+                    ><span>Alta performance em qualquer ocasião</span>
+                  </div>
+                </div>
+                <div class="us-spec">
+                  <i class="bi bi-trophy"></i>
+                  <div>
+                    <b>Produzido pela Sanrad</b
+                    ><span>Qualidade e tecnologia em cada detalhe</span>
+                  </div>
+                </div>
+                <p class="us-fine">
+                  Mesmo tecido da camisa Etec 195 do Interetec 2025.<br />*Plus
+                  size: acréscimo de R$10.
+                </p>
+              </div>
             </div>
-        </article>
-       <section class="sect-apoie">
+          </div>
+
+          <!-- PAINEL 2 — WHITE -->
+          <div
+            class="us-panel us-panel--real"
+            style="
+              --us-idle-photo: url(&quot;../assets/uniforme-white-foto.jpg&quot;);
+              --us-detail-photo: url(&quot;../assets/uniforme-white-foto.jpg&quot;);
+            ">
+            <div class="us-idle">
+              <div class="us-idle-label">Solaris<small>Shadow</small></div>
+            </div>
+            <div class="us-detail">
+              <div class="us-detail-photo"></div>
+              <div class="us-detail-3d">
+                <img
+                  src="../assets/uniforme-white-3d.png"
+                  alt="Uniforme White" />
+              </div>
+              <div class="us-detail-info">
+                <h3>White</h3>
+                <div class="us-spec">
+                  <span class="material-symbols-outlined">laundry</span>
+                  <div>
+                    <b>Dry-Fit Plus</b
+                    ><span>Respirável, leve e sem elastano</span>
+                  </div>
+                </div>
+                <div class="us-spec">
+                  <span class="material-symbols-outlined">apparel</span>
+                  <div>
+                    <b>Modelagem</b><span>Masculina, feminina e plus size</span>
+                  </div>
+                </div>
+                <div class="us-spec">
+                  <i class="bi bi-brightness-high"></i>
+                  <div>
+                    <b>Proteção UV</b
+                    ><span>Alta performance em qualquer ocasião</span>
+                  </div>
+                </div>
+                <div class="us-spec">
+                  <i class="bi bi-trophy"></i>
+                  <div>
+                    <b>Produzido pela Sanrad</b
+                    ><span>Qualidade e tecnologia em cada detalhe</span>
+                  </div>
+                </div>
+                <p class="us-fine">
+                  Mesmo tecido da camisa Etec 195 do Interetec 2025.<br />*Plus
+                  size: acréscimo de R$10.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PAINEL 3 — MISTÉRIO A -->
+          <div class="us-panel us-panel--mystery">
+            <div class="us-idle">
+              <div class="us-idle-label us-glitch" data-glitch="EM BREVE">
+                EM BREVE
+              </div>
+            </div>
+            <div class="us-detail">
+              <div class="us-detail-photo us-detail-photo--abstract"></div>
+              <div class="us-detail-3d">
+                <img
+                  src="../assets/uniforme-misterioso.png"
+                  alt="Próximo uniforme — em segredo" />
+              </div>
+              <div class="us-detail-info">
+                <h3 class="us-glitch" data-glitch="PRÓXIMO LANÇAMENTO">
+                  PRÓXIMO LANÇAMENTO
+                </h3>
+                <p class="us-mystery-copy">
+                  Modelo, cor e data ainda em segredo. Fica de olho.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PAINEL 4 — MISTÉRIO B -->
+          <div class="us-panel us-panel--mystery">
+            <div class="us-idle">
+              <div class="us-idle-label us-glitch" data-glitch="AGUARDE">
+                AGUARDE
+              </div>
+            </div>
+            <div class="us-detail">
+              <div class="us-detail-photo us-detail-photo--abstract"></div>
+              <div class="us-detail-3d">
+                <img
+                  src="../assets/uniforme-misterioso.png"
+                  alt="Próximo uniforme — em segredo" />
+              </div>
+              <div class="us-detail-info">
+                <h3 class="us-glitch" data-glitch="EM PRODUÇÃO">EM PRODUÇÃO</h3>
+                <p class="us-mystery-copy">
+                  A segunda surpresa da coleção já está sendo costurada.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sect-apoie">
         <h2 class="apoie-text t1">VISTA O</h2>
         <h2 class="apoie-text t2">MOTIVO</h2>
         <h2 class="apoie-text t3">DO</h2>
         <h2 class="apoie-text t4">*(INCÔMODO).</h2>
 
         <div class="apoie-left">
-            <h1 class="apoie-title">Compre até X/X</h1>
-            <p class="apoie-desc">Clique no botão e tenha acesso ao formulário para compra.</p>
-            <a href="#" class="apoie-btn">*(FORMS)</a>
-            <img src="../assets/ft-about-us.jpeg" class="apoie-img-bottom-left" alt="" style="height: 250px; margin-bottom: 60px;">
+          <h1 class="apoie-title">Compre até X/X</h1>
+          <p class="apoie-desc">
+            Clique no botão e tenha acesso ao formulário para compra.
+          </p>
+          <a href="#" class="apoie-btn">*(FORMS)</a>
+          <img
+            src="../assets/ft-about-us.jpeg"
+            class="apoie-img-bottom-left"
+            alt=""
+            style="height: 250px; margin-bottom: 60px" />
         </div>
 
         <div class="apoie-grid">
-                <img src="../assets/img01-forms.jpeg" alt="" class="grid-img g1">
-                <img src="../assets/img02-forms.jpeg" alt="" class="grid-img g2">
-                <img src="../assets/ft-capitaes.jpeg" alt="" class="grid-img g3">
-                <img src="../assets/img04-forms.jpeg" alt="" class="grid-img g4">
+          <img src="../assets/img01-forms.jpeg" alt="" class="grid-img g1" />
+          <img src="../assets/img02-forms.jpeg" alt="" class="grid-img g2" />
+          <img src="../assets/ft-capitaes.jpeg" alt="" class="grid-img g3" />
+          <img src="../assets/img04-forms.jpeg" alt="" class="grid-img g4" />
         </div>
-    </section>
-    <section class="support-us" id="support">
+      </section>
+      <section class="support-us" id="support">
         <h2 class="title-section">Picadlihas © - Apoie o time</h2>
         <div class="container-left">
-            <div class="image-70"></div>
-            <div class="image-mid"></div>
-            <div class="image-30"></div>
+          <div class="image-70"></div>
+          <div class="image-mid"></div>
+          <div class="image-30"></div>
         </div>
         <h2 class="title-main white">Apoie o time</h2>
         <div class="container-center-right">
-            <div class="image"></div>
+          <div class="image"></div>
         </div>
         <div class="container-bottom-right">
-            <div class="image"></div>
+          <div class="image"></div>
         </div>
-    </section>
-    <article class="art-faca-parte" id="part">
+      </section>
+      <article class="art-faca-parte" id="part">
         <div class="card sponsor">
-            <h2 class="title-main">
-                SEJA
-                <span>*(PATROCINADOR)</span>
-            </h2>
-            <button class="btn-main">*(CLIQUE AQUI)</button>
+          <h2 class="title-main">
+            SEJA
+            <span>*(PATROCINADOR)</span>
+          </h2>
+          <button class="btn-main">*(CLIQUE AQUI)</button>
         </div>
         <div class="card torcida">
-            <h2 class="title-main">
-                SEJA
-                <span>*(TORCIDA)</span>
-            </h2>
-            <button class="btn-main">*(CLIQUE AQUI)</button>
+          <h2 class="title-main">
+            SEJA
+            <span>*(TORCIDA)</span>
+          </h2>
+          <button class="btn-main">*(CLIQUE AQUI)</button>
         </div>
         <div class="card jogador">
-            <h2 class="title-main">
-                SEJA
-                <span>*(JOGADOR)</span>
-            </h2>
-            <button class="btn-main">*(CLIQUE AQUI)</button>
+          <h2 class="title-main">
+            SEJA
+            <span>*(JOGADOR)</span>
+          </h2>
+          <button class="btn-main">*(CLIQUE AQUI)</button>
         </div>
-    </article>
-    <section class="contact-section">
+      </article>
+      <section class="contact-section">
         <div class="contact-left">
-            <p class="small-title">Picadilhas © - Contato.</p>
+          <p class="small-title">Picadilhas © - Contato.</p>
         </div>
         <div class="contact-top">
-            <div class="contact-info">
-                <h2>Entre em contato com o representante do time.</h2>
-                <div class="person">
-                    <h3>Ryan Maciel Uchôa</h3>
-                    <p>(XX) XXXXXXX-XXXX</p>
-                </div>
+          <div class="contact-info">
+            <h2>Entre em contato com o representante do time.</h2>
+            <div class="person">
+              <h3>Ryan Maciel Uchôa</h3>
+              <p>(XX) XXXXXXX-XXXX</p>
             </div>
+          </div>
         </div>
         <div class="contact-images">
-            <div class="contact-player"></div>
-            <div class="contact-ball"></div>
+          <div class="contact-player"></div>
+          <div class="contact-ball"></div>
         </div>
         <h1 class="contact-word">Contato.</h1>
         <p class="bottom-text">
-            *( Picadilhas © - Is not just a team, is a mindset )
+          *( Picadilhas © - Is not just a team, is a mindset )
         </p>
-    </section>
+      </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../script/index.js"></script>
-</body>
+  </body>
 </html>

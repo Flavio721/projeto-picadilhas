@@ -14,42 +14,7 @@ function toggleMenu() {
 }
 
 
-function initSlides() {
-    const slides = document.querySelectorAll('.about-uniforme .slide');
-    const botao1 = document.getElementById('botaoSlide1');
-    const botao2 = document.getElementById('botaoSlide2');
-    let currentSlide = 0;
-    
-    // Garantir que apenas o primeiro slide esteja visível
-    slides.forEach((slide, index) => {
-        if (index === 0) {
-            slide.classList.add('active');
-        } else {
-            slide.classList.remove('active');
-        }
-    });
-    
-    // Função para trocar slide
-    function changeSlide() {
-        // Remover active do slide atual
-        slides[currentSlide].classList.remove('active');
-        
-        // Avançar para próximo slide
-        currentSlide = (currentSlide + 1) % slides.length;
-        
-        // Adicionar active no próximo slide
-        slides[currentSlide].classList.add('active');
-        
-        // Atualizar textos dos botões
-        const isDark = slides[currentSlide].classList.contains('dark');
-        if (botao1) botao1.textContent = isDark ? 'VER MODELO WHITE' : 'VER MODELO BLACK';
-        if (botao2) botao2.textContent = isDark ? 'VER MODELO WHITE' : 'VER MODELO BLACK';
-    }
-    
-    // Adicionar eventos aos botões
-    if (botao1) botao1.addEventListener('click', changeSlide);
-    if (botao2) botao2.addEventListener('click', changeSlide);
-}
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -260,37 +225,45 @@ document.addEventListener('DOMContentLoaded', () => {
       
 
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const slides = document.querySelectorAll('.slide');
-        const botao = document.getElementById('botaoSlide');
-        let currentSlide = 0;
-        
-        // Mostrar primeiro slide inicialmente
-        slides[0].classList.add('active');
-        
-        botao.addEventListener('click', function() {
-            // Esconder slide atual
-            slides[currentSlide].classList.remove('active');
-            
-            // Avançar para próximo slide
-            currentSlide = (currentSlide + 1) % slides.length;
-            
-            // Mostrar próximo slide
-            slides[currentSlide].classList.add('active');
-            
-            // Atualizar texto do botão
-            const isWhite = currentSlide === 0;
-            botao.textContent = isWhite ? 'VER MODELO WHITE' : 'VER MODELO BLACK';
+    /*
+  Efeito glitch dos rótulos de suspense (painéis-mistério da seção de uniformes).
+  Cole no final do seu script/index.js, ou linke como <script> separado antes dele.
+  Não depende de GSAP/Swiper — roda isolado.
+*/
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var glyphs = '@#$%*¿!¥£&/?§±';
+  var nodes = document.querySelectorAll('.us-glitch[data-glitch]');
 
-            const textColor = document.querySelectorAll(".change")
+  if (reduce) {
+    nodes.forEach(function (n) { n.textContent = n.dataset.glitch; });
+    return;
+  }
 
-            textColor.style.color = isWhite ? '#1D1C1C' : '#FCF4E5';
+  nodes.forEach(function (node) {
+    var real = node.dataset.glitch;
+    var frame = 0;
 
-            const container = document.querySelector(".about-uniforme");
+    function scrambled(revealCount) {
+      var out = '';
+      for (var i = 0; i < real.length; i++) {
+        if (real[i] === ' ') { out += ' '; continue; }
+        out += (i < revealCount) ? real[i] : glyphs[Math.floor(Math.random() * glyphs.length)];
+      }
+      return out;
+    }
 
-            container.style.backgroundColor = isMobile ? '#FCF4E5' : '#1D1C1C'
-        });
-    });
+    setInterval(function () {
+      frame++;
+      var cycle = frame % 90;
+      if (cycle < 70) {
+        node.textContent = scrambled(0);
+      } else {
+        var reveal = Math.floor((cycle - 70) / 20 * real.length);
+        node.textContent = scrambled(reveal);
+      }
+    }, 110);
+  });
+})();
 
-    initSlides();
 });

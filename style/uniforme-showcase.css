@@ -1,0 +1,258 @@
+:root{
+    --color-red: #E52C0D;
+    --color-black: #1D1C1C;
+    --color-light: #FCF4E5;
+}
+.us-showcase{
+background-color: #1a1a1a;
+  color:var(--color-light);
+  padding:70px 4% 90px;
+  overflow:hidden;
+  position:relative;
+}
+ 
+.us-head{
+  max-width:1500px;
+  margin:0 auto 40px;
+  display:flex;
+  align-items:baseline;
+  gap:18px;
+}
+.us-eyebrow{
+  font-family:'Sansterdam', sans-serif;
+  font-size:clamp(2.4em,5vw,4.2em);
+  letter-spacing:2px;
+  color:var(--color-red);
+}
+.us-heading{
+  font-family:'Sansterdam', sans-serif;
+  font-weight:100;
+  font-size:clamp(2em,4.6vw,3.8em);
+  letter-spacing:2px;
+  margin:0;
+  color:var(--color-light);
+}
+ 
+/* ---------- GRID DE 4 PAINÉIS ---------- */
+.us-grid{
+  max-width:1500px;
+  margin:0 auto;
+  display:flex;
+  height:580px;
+  gap:3px;
+}
+ 
+.us-panel{
+  position:relative;
+  flex:1 1 0;
+  min-width:0;
+  overflow:hidden;
+  background:var(--us-panel-bg);
+  cursor:pointer;
+  transition:flex-grow .65s cubic-bezier(.22,.68,0,1);
+}
+ 
+/* fita diagonal vermelha entre painéis — mesmo corte da camisa usado como divisor */
+.us-panel + .us-panel::before{
+  content:"";
+  position:absolute;
+  left:-3px; top:0; bottom:0;
+  width:3px;
+  background:var(--color-red);
+  transform:skewX(-12deg);
+  z-index:3;
+}
+ 
+/* ---- estado ocioso ---- */
+.us-idle{
+  position:absolute; inset:0;
+  display:flex; flex-direction:column; justify-content:flex-end;
+  padding:28px 20px;
+  transition:opacity .35s ease;
+}
+.us-idle::before{
+  content:""; position:absolute; inset:0;
+  background-image:var(--us-idle-photo);
+  background-size:cover; background-position:top center;
+  opacity:.55;
+}
+.us-idle::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(29,28,28,0) 40%,rgba(29,28,28,.95) 100%);
+}
+.us-idle-label{
+  position:relative; z-index:2;
+  font-family:'Sansterdam', sans-serif;
+  text-transform:uppercase;
+  white-space:nowrap;
+  font-size:clamp(2.4em,5vw,4.2em);
+  max-width:100%;
+}
+.us-idle-label small{
+  display:block;
+  color:var(--color-red);
+font-size: clamp(.8em, 1.5vw, 1em);
+
+}
+ 
+/* ---- estado detalhado (hover) ---- */
+.us-detail{
+  position:absolute; inset:0;
+  display:flex;
+  opacity:0; pointer-events:none;
+  transition:opacity .45s ease .05s;
+}
+.us-detail-photo{
+  flex:0 0 36%;
+  position:relative;
+  background-image:var(--us-detail-photo);
+  background-size:cover; background-position:top center;
+}
+.us-detail-photo::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(90deg,rgba(29,28,28,0) 55%,var(--us-panel-bg) 100%);
+}
+ 
+.us-detail-3d{
+  flex:0 0 38%;
+  display:flex; align-items:center; justify-content:center;
+  position:relative;
+  padding:18px 6px;
+}
+/* brilho atrás da camisa — mesma linguagem do .item-center::before original */
+.us-detail-3d::before{
+  content:"";
+  position:absolute;
+  width:75%; height:75%;
+  background:radial-gradient(ellipse at center, rgba(229,44,13,.22) 0%, transparent 70%);
+  border-radius:50%;
+  animation:usGlowPulse 3s ease-in-out infinite;
+  pointer-events:none;
+}
+.us-detail-3d img{
+  position:relative; z-index:1;
+  max-width:100%; max-height:100%; width:auto; object-fit:contain;
+  transform:scale(.92);
+  filter:drop-shadow(0 24px 28px rgba(0,0,0,.6));
+  transition:transform .6s cubic-bezier(.22,.68,0,1);
+}
+.us-panel:hover .us-detail-3d img{ transform:scale(1.04); }
+ 
+@keyframes usGlowPulse{
+  0%,100%{ transform:scale(1); opacity:.8; }
+  50%{ transform:scale(1.1); opacity:1; }
+}
+ 
+.us-detail-info{
+  flex:1 1 auto;
+  padding:26px 24px 22px 10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-width:150px;
+  font-family:"Helvetica", sans-serif;
+}
+
+.us-detail-info h3{
+  font-family:'Sansterdam', sans-serif;
+  font-weight:100;
+  font-size:clamp(1.8rem, 3vw, 3rem);
+  line-height:1;
+  margin:0 0 18px;
+  color:var(--color-light);
+  text-transform:uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.us-spec{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  font-size:clamp(.9rem, 1.2vw, 1.1rem);
+  line-height:1.4;
+  margin-bottom:14px;
+  color:var(--color-light);
+  opacity:.92;
+}
+
+.us-spec .material-symbols-outlined,
+.us-spec i{
+  font-size:clamp(1.1rem, 1.5vw, 1.35rem);
+  color:var(--color-red);
+  margin-top:2px;
+  flex-shrink:0;
+}
+
+.us-spec b{
+  display:block;
+  font-size:clamp(.85rem, 1.1vw, 1rem);
+  font-weight:700;
+  margin-bottom:2px;
+}
+
+.us-spec span{
+  opacity:.75;
+  font-size:clamp(.75rem, 1vw, .95rem);
+}
+
+.us-fine{
+  font-size:clamp(.65rem, .8vw, .78rem);
+  opacity:.55;
+  margin-top:8px;
+  line-height:1.45;
+}
+ 
+/* ---------- HOVER (só desktop com mouse) ---------- */
+@media (hover:hover) and (pointer:fine) and (min-width:1024px){
+  .us-panel:hover{ flex-grow:3.4; }
+  .us-grid:has(.us-panel:hover) .us-panel:not(:hover){ flex-grow:.5; }
+  .us-panel:hover .us-idle{ opacity:0; }
+  .us-panel:hover .us-detail{ opacity:1; pointer-events:auto; }
+}
+ 
+/* ---------- MOBILE / TABLET: sem hover, empilhado ---------- */
+@media (max-width:1023px), (hover:none){
+  .us-grid{ flex-direction:column; height:auto; gap:14px; }
+  .us-panel + .us-panel::before{ display:none; }
+  .us-panel{ flex:none; height:auto; overflow:visible; cursor:default; }
+  .us-idle{ display:none; }
+  /* foto e camisa 3D sempre lado a lado; o texto quebra pra linha de baixo */
+  .us-detail{
+    position:relative; opacity:1; pointer-events:auto;
+    flex-direction:row; flex-wrap:wrap; min-height:0;
+  }
+  .us-detail-photo{ flex:1 1 50%; height:190px; min-width:0; }
+  .us-detail-3d{ flex:1 1 50%; height:190px; min-width:0; }
+  .us-detail-3d img{ transform:none; max-width:80%; min-width:0; }
+  .us-detail-info{ flex:1 1 100%; padding:18px 16px 22px; }
+}
+@media (max-width:420px){
+  .us-detail-photo,.us-detail-3d{ height:160px; }
+}
+ 
+/* ---------- PAINÉIS-MISTÉRIO ---------- */
+.us-panel--mystery .us-idle::before{
+  background-image:url('../assets/uniforme-misterioso.png');
+  background-size:cover; background-position:center;
+  filter:contrast(1.05) brightness(.75);
+}
+/* o lado esquerdo do detalhe não repete a mesma foto do bloco 3D: vira
+   um painel abstrato com o mesmo listrado diagonal do divisor */
+.us-detail-photo--abstract{
+  background-image:
+    repeating-linear-gradient(118deg, rgba(229,44,13,.10) 0 2px, transparent 2px 26px),
+    repeating-linear-gradient(118deg, #232221 0 20px, #1c1b1a 20px 40px);
+}
+.us-detail-photo--abstract::after{
+  background:radial-gradient(circle at 30% 70%, rgba(229,44,13,.18), transparent 60%);
+}
+.us-glitch{
+  color:var(--color-red);
+  letter-spacing:.5px;
+}
+.us-mystery-copy{
+  font-size:12px; opacity:.7; line-height:1.5; margin-top:8px;
+  font-family:"Helvetica", sans-serif;
+}
+ 
