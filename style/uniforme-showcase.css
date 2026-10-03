@@ -215,7 +215,7 @@ font-size: clamp(.8em, 1.5vw, 1em);
 @media (max-width:1023px), (hover:none){
   .us-grid{ flex-direction:column; height:auto; gap:14px; }
   .us-panel + .us-panel::before{ display:none; }
-  .us-panel{ flex:none; height:auto; overflow:visible; cursor:default; }
+  .us-panel{ flex:none; height:auto; overflow:visible; cursor:default;;}
   .us-idle{ display:none; }
   /* foto e camisa 3D sempre lado a lado; o texto quebra pra linha de baixo */
   .us-detail{
